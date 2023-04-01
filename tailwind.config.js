@@ -23,10 +23,17 @@ module.exports = {
         },
       },
       fontFamily: {
+        logo: ["Roboto", "sans-serif"],
         sans: ["Noto Sans", "sans-serif"],
         serif: ["Noto Serif", "serif"],
         eksell: ["Eksell Display", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+      },
+      colors: {
+        black: "#222222",
+        white: "#FFFFFF",
+        green: "#1D764A",
+        "light-blue": "#DBEEFE",
       },
     },
   },

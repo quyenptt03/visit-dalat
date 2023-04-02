@@ -8,7 +8,7 @@ import {
 
 import Logo from "../Logo";
 import NavItems from "../Navbar/components/NavItems";
-import Button from "../Button";
+import { TextButton } from "../Button";
 
 const Navbar = () => {
   return (
@@ -19,7 +19,7 @@ const Navbar = () => {
         <Icon>
           <SearchIconContainer />
         </Icon>
-        <Button theme="blackOutlined">Đăng nhập</Button>
+        <TextButton theme="blackOutlined">Đăng nhập</TextButton>
       </NavarRightSide>
     </NavbarContainer>
   );

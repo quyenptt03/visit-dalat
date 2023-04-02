@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: "jit",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
@@ -31,9 +32,12 @@ module.exports = {
       },
       colors: {
         black: "#222222",
+        "raven-black": "#3D3D3D",
         white: "#FFFFFF",
         green: "#1D764A",
         "light-blue": "#DBEEFE",
+        "baby-blue": "#E4F2FE",
+        gray: "#6D6D6D",
       },
     },
   },

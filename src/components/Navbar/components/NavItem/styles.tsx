@@ -1,43 +1,15 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 
-interface IUnderlineProps {
-  isHovered: boolean;
-}
-
 export const Container = styled.li`
-  ${tw`
-    flex
-    flex-col
-  `}
+  ${tw`flex flex-col `}
 `;
 export const NavItemText = styled.a`
-  ${tw`
-    text-black
-    uppercase
-    font-semibold
-    text-lg
-    cursor-pointer
-    hover:text-green
-    transition-all
-    duration-200
-    ease-linear
-  `}}
+  ${tw`text-lg font-semibold text-black uppercase transition-all duration-200 ease-linear cursor-pointer hover:text-green`}}
 `;
-export const UnderLine = styled.span<IUnderlineProps>`
+export const UnderLine = styled.span<{ isHovered: boolean }>`
   height: 2px;
-  ${tw`
-    w-1/2
-    mx-auto
-    bg-green
-    transition-all
-    duration-200
-    ease-linear
-    invisible
-  `}
-  ${({ isHovered }) =>
-    isHovered &&
-    tw`
-      visible
-    `}
+  ${tw`invisible w-1/2 mx-auto transition-all duration-200 ease-linear bg-green`}
+
+  ${({ isHovered }: { isHovered: boolean }) => isHovered && tw`visible `}
 `;

@@ -4,7 +4,7 @@ import tw from "twin.macro";
 export const ActivityContainer = styled.a`
   width: 21.875rem;
   height: 38.75rem;
-  ${tw`block m-16 cursor-pointer`};
+  ${tw`block cursor-pointer`};
 `;
 export const ImageContainer = styled.div`
   ${tw`relative w-full h-full overflow-hidden rounded-lg`}

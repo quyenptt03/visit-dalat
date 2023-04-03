@@ -1,3 +1,4 @@
 import PostsCarousel from "./PostCarousel";
+import ActivitiesCarousel from "./ActivitiesCarousel";
 
-export { PostsCarousel };
+export { PostsCarousel, ActivitiesCarousel };

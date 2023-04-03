@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
-import Post from "../../Post";
+import Activity from "../../Activity";
 import { IconButton } from "../../Button";
 import {
   CarouselContainer,
@@ -13,7 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
-const PostsCarousel = () => {
+const ActivitiesCarousel = () => {
   const slide = useRef<SliderRef>(null);
 
   const settings = {
@@ -91,18 +91,18 @@ const PostsCarousel = () => {
         </NextButtonContainer>
       </SwiperBtns>
       <SliderContainer>
-        <Slider style={{ width: "100%" }} ref={slide} {...settings}>
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
+        <Slider ref={slide} {...settings}>
+          <Activity />
+          <Activity />
+          <Activity />
+          <Activity />
+          <Activity />
+          <Activity />
+          <Activity />
         </Slider>
       </SliderContainer>
     </CarouselContainer>
   );
 };
 
-export default PostsCarousel;
+export default ActivitiesCarousel;

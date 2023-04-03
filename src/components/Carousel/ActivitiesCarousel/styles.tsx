@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const CarouselContainer = styled.div`
-  margin: 0 8.375rem ${tw``};
+  margin: 0 13.75rem ${tw``};
 `;
 
 export const SliderContainer = styled.div`
@@ -17,8 +17,9 @@ export const SwiperBtns = styled.div`
     justify-end
   `}
 `;
+
 export const NextButtonContainer = styled.div`
   ${tw`
-    ml-5 mr-5
+    ml-5 mr-3
   `}
 `;

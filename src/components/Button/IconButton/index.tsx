@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import { SaveButton, SwiperButton, IconContainer } from "./styles";
 import { ReactComponent as SaveIcon } from "../../../assets/icons/save-icon.svg";
 import { ReactComponent as NextIcon } from "../../../assets/icons/next-icon.svg";
@@ -6,13 +6,14 @@ import { ReactComponent as PrevIcon } from "../../../assets/icons/prev-icon.svg"
 
 interface IButtonProps {
   type: "nextBtn" | "prevBtn" | "saveBtn";
+  onClick?: () => void;
 }
 
 const IconButton = (props: IButtonProps) => {
-  const { type } = props;
+  const { type, onClick } = props;
   if (type === "saveBtn")
     return (
-      <SaveButton>
+      <SaveButton onClick={onClick}>
         <IconContainer>
           <SaveIcon />
         </IconContainer>
@@ -20,7 +21,7 @@ const IconButton = (props: IButtonProps) => {
     );
   else if (type === "nextBtn")
     return (
-      <SwiperButton>
+      <SwiperButton onClick={onClick}>
         <IconContainer>
           <NextIcon />
         </IconContainer>
@@ -28,7 +29,7 @@ const IconButton = (props: IButtonProps) => {
     );
   else
     return (
-      <SwiperButton>
+      <SwiperButton onClick={onClick}>
         <IconContainer>
           <PrevIcon />
         </IconContainer>

@@ -6,7 +6,7 @@ export const ButtonContainer = styled.button`
 `;
 
 export const SwiperButton = styled(ButtonContainer)`
-  ${tw`rounded-lg`}
+  ${tw`mr-6 rounded-lg`}
 `;
 
 export const SaveButton = styled(ButtonContainer)`

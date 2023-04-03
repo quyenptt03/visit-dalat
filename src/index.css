@@ -18,3 +18,56 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/*------custom dots slick-------------*/
+.custom-dots-slick {
+  position: absolute;
+  /* bottom: -25px; */
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+.custom-dots-slick li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  cursor: pointer;
+}
+.custom-dots-slick li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: black;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.custom-dots-slick li button:before {
+  font-family: "slick";
+  font-size: 0.6rem;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "•";
+  text-align: center;
+  opacity: 0.25;
+  color: #1d764a;
+  -webkit-font-smoothing: antialiased;
+}
+.custom-dots-slick li.slick-active button:before {
+  font-size: 0.8rem;
+  color: #1d764a;
+  opacity: 1;
+}

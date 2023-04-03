@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const PostContainer = styled.a`
-  ${tw`block mt-20 mb-20 ml-20 w-96`}
+  ${tw`block w-96`}
 `;
 export const ImageContainer = styled.div`
   ${tw`relative w-full overflow-hidden rounded-t-lg rounded-br-lg cursor-pointer`}

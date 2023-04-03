@@ -16,7 +16,7 @@ const PostsCarousel = () => {
     dots: false,
     dotsClass: "custom-dots-slick",
     infinite: false,
-    speed: 500,
+    speed: 200,
     swipeToSlide: true,
     slidesToShow: 4,
     slidesToScroll: 1,

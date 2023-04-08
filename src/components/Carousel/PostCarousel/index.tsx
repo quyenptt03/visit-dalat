@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import Post from "../../Post";
 import { IconButton } from "../../Button";
@@ -14,6 +14,9 @@ import "slick-carousel/slick/slick-theme.css";
 type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
 const PostsCarousel = () => {
+  const [disablePrevBtn, setDisablePrevBtn] = useState(true);
+  const [disableNextBtn, setDisableNextBtn] = useState(false);
+
   const slide = useRef<SliderRef>(null);
 
   const settings = {
@@ -52,28 +55,20 @@ const PostsCarousel = () => {
         },
       },
     ],
-    // appendDots: (dots: any) => (
-    //   <div
-    //     style={{
-    //       backgroundColor: "#ddd",
-    //       borderRadius: "10px",
-    //       padding: "10px",
-    //     }}
-    //   >
-    //     <ul style={{ margin: "0px" }}> {dots} </ul>
-    //   </div>
-    // ),
-    // customPaging: (i: number) => (
-    //   <div
-    //     style={{
-    //       width: "30px",
-    //       color: "blue",
-    //       border: "1px blue solid",
-    //     }}
-    //   >
-    //     {i + 1}
-    //   </div>
-    // ),
+  };
+
+  const handleAfterChange = (currentSlide: number) => {
+    if (currentSlide === 0) {
+      setDisablePrevBtn(true);
+    } else {
+      setDisablePrevBtn(false);
+    }
+
+    if (currentSlide === 3) {
+      setDisableNextBtn(true);
+    } else {
+      setDisableNextBtn(false);
+    }
   };
 
   return (
@@ -81,17 +76,19 @@ const PostsCarousel = () => {
       <SwiperBtns>
         <IconButton
           type="prevBtn"
+          disabled={disablePrevBtn}
           onClick={() => slide?.current?.slickPrev()}
         />
         <NextButtonContainer>
           <IconButton
             type="nextBtn"
+            disabled={disableNextBtn}
             onClick={() => slide?.current?.slickNext()}
           />
         </NextButtonContainer>
       </SwiperBtns>
       <SliderContainer>
-        <Slider style={{ width: "100%" }} ref={slide} {...settings}>
+        <Slider ref={slide} {...settings} afterChange={handleAfterChange}>
           <Post />
           <Post />
           <Post />

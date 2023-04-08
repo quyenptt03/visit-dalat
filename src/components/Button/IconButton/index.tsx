@@ -7,13 +7,14 @@ import { ReactComponent as PrevIcon } from "../../../assets/icons/prev-icon.svg"
 interface IButtonProps {
   type: "nextBtn" | "prevBtn" | "saveBtn";
   onClick?: () => void;
+  disabled?: any;
 }
 
 const IconButton = (props: IButtonProps) => {
-  const { type, onClick } = props;
+  const { type, onClick, disabled } = props;
   if (type === "saveBtn")
     return (
-      <SaveButton onClick={onClick}>
+      <SaveButton onClick={onClick} disabled={disabled}>
         <IconContainer>
           <SaveIcon />
         </IconContainer>
@@ -21,7 +22,7 @@ const IconButton = (props: IButtonProps) => {
     );
   else if (type === "nextBtn")
     return (
-      <SwiperButton onClick={onClick}>
+      <SwiperButton onClick={onClick} disabled={disabled}>
         <IconContainer>
           <NextIcon />
         </IconContainer>
@@ -29,7 +30,7 @@ const IconButton = (props: IButtonProps) => {
     );
   else
     return (
-      <SwiperButton onClick={onClick}>
+      <SwiperButton onClick={onClick} disabled={disabled}>
         <IconContainer>
           <PrevIcon />
         </IconContainer>

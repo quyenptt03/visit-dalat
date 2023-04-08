@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const ButtonContainer = styled.button`
-  ${tw`flex items-center justify-center w-12 h-12 transition-all duration-100 ease-linear bg-light-blue hover:bg-baby-blue `}
+  ${tw`flex items-center justify-center w-12 h-12 transition-all ease-linear bg-light-blue hover:bg-baby-blue disabled:opacity-40`}
 `;
 
 export const SwiperButton = styled(ButtonContainer)`

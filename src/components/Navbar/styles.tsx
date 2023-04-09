@@ -4,31 +4,15 @@ import tw from "twin.macro";
 import { ReactComponent as SearchIcon } from "../../assets/icons/search-icon.svg";
 
 export const NavbarContainer = styled.div`
-  ${tw`
-    mx-auto
-    pl-20
-    pr-32
-    h-24
-    w-full
-    flex
-    items-center
-    border-b-light-blue
-    border-b
-    justify-between
-  `}
+  ${tw`fixed flex items-center justify-between w-full h-24 pl-20 pr-32 mx-auto border-b  border-b-light-blue z-10`}
 `;
 export const NavarRightSide = styled.div`
-  ${tw`
-    flex
-  `}
+  ${tw`flex `}
 `;
 
 export const Icon = styled.button`
-  ${tw`
-    mr-11
-  `}
+  ${tw` mr-11`}
 `;
 export const SearchIconContainer = styled(SearchIcon)`
-  ${tw`
-  `}
+  ${tw``}
 `;

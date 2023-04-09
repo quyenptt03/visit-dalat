@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from "react";
+import React from "react";
 import { SaveButton, SwiperButton, IconContainer } from "./styles";
 import { ReactComponent as SaveIcon } from "../../../assets/icons/save-icon.svg";
 import { ReactComponent as NextIcon } from "../../../assets/icons/next-icon.svg";

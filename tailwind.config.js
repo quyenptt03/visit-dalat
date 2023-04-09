@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: "jit",
+  important: true,
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
@@ -14,7 +15,8 @@ module.exports = {
         tablet: "640px",
         laptop: "1024px",
         desktop: "1280px",
-        "2xl": "1280px",
+        "2xl": "1536px",
+        xxl: "1920px",
       },
       container: {
         center: true,

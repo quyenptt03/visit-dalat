@@ -71,3 +71,16 @@ code {
   color: #1d764a;
   opacity: 1;
 }
+/*custom home carousel dot slick*/
+.home-custom-dots-slick li {
+  position: relative;
+  display: inline-block;
+  width: 2px;
+  height: 80px;
+  padding: 0;
+  cursor: pointer;
+}
+.home-custom-dots-slick li.slick-active {
+  opacity: 1;
+  background-color: white;
+}

@@ -19,7 +19,7 @@ const Navbar = () => {
         <Icon>
           <SearchIconContainer />
         </Icon>
-        <TextButton theme="blackOutlined">Đăng nhập</TextButton>
+        <TextButton theme="whiteOutlined">Đăng nhập</TextButton>
       </NavarRightSide>
     </NavbarContainer>
   );

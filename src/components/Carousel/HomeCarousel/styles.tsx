@@ -70,11 +70,7 @@ export const Slash = styled.span`
   ${tw`ml-1 mr-2 opacity-30`}
 `;
 export const CustomDotsContainer = styled.div`
-  ${tw`
-    absolute
-    bottom-[17rem]
-    right-12
-  `}
+  ${tw`absolute  bottom-72 right-12`}
 `;
 export const DotsList = styled.ul`
   ${tw`flex flex-col m-0 `}
@@ -91,7 +87,7 @@ export const FeaturedLocations = styled.div`
   ${tw`absolute flex bottom-8`}
 `;
 export const FeaturedLocationCard = styled.div`
-  ${tw`before:[content:""] before:absolute before:z-[-1] before:blur-sm  before:-inset-1 before:bg-white/5 flex items-center h-[108px] mx-3 text-white capitalize rounded-md backdrop-blur-sm bg-white/10 w-[416px]`}
+  ${tw`relative flex items-center h-[108px] mx-3 text-white capitalize rounded-md  w-[416px]`}
 `;
 export const LocationIconContainer = styled.div`
   ${tw`mx-9`}
@@ -104,4 +100,7 @@ export const LocationTitle = styled.span`
 `;
 export const LocationSeeMore = styled.a`
   ${tw`text-base font-normal cursor-pointer opacity-40 hover:opacity-100`}
+`;
+export const LocationCardBg = styled.div`
+  ${tw`absolute w-full h-full blur-sm bg-white/10`}
 `;

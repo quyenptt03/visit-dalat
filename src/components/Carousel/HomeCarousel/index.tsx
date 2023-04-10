@@ -25,11 +25,14 @@ import {
   LocationSeeMore,
   LocationTitle,
   LocationTitleWrapper,
+  LocationCardBg,
 } from "./styles";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import home1 from "../../../assets/images/home-1.png";
 import home2 from "../../../assets/images/home-2.png";
+import home3 from "../../../assets/images/home3.png";
+import home4 from "../../../assets/images/home4.png";
 import { ReactComponent as NextIcon } from "../../../assets/icons/next-icon2.svg";
 import { ReactComponent as PrevIcon } from "../../../assets/icons/prev-icon2.svg";
 import { ReactComponent as LocationIcon } from "../../../assets/icons/location-icon.svg";
@@ -37,7 +40,7 @@ import { ReactComponent as LocationIcon } from "../../../assets/icons/location-i
 type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
 const HomeCarousel = () => {
-  const images = [home1, home2, home1, home2];
+  const images = [home1, home2, home3, home4];
   const slide = useRef<SliderRef>(null);
   const [slideIndex, setSlideIndex] = useState(0);
   const [disablePrevBtn, setDisablePrevBtn] = useState(true);
@@ -88,16 +91,17 @@ const HomeCarousel = () => {
             </WrapTitle>
             <FeaturedLocations>
               <FeaturedLocationCard>
+                <LocationCardBg />
                 <LocationIconContainer>
                   <LocationIcon />
                 </LocationIconContainer>
-
                 <LocationTitleWrapper>
                   <LocationTitle>Hồ Tuyền Lâm</LocationTitle>
                   <LocationSeeMore>Tìm hiểu thêm</LocationSeeMore>
                 </LocationTitleWrapper>
               </FeaturedLocationCard>
               <FeaturedLocationCard>
+                <LocationCardBg />
                 <LocationIconContainer>
                   <LocationIcon />
                 </LocationIconContainer>
@@ -107,6 +111,7 @@ const HomeCarousel = () => {
                 </LocationTitleWrapper>
               </FeaturedLocationCard>
               <FeaturedLocationCard>
+                <LocationCardBg />
                 <LocationIconContainer>
                   <LocationIcon />
                 </LocationIconContainer>

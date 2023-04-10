@@ -20,7 +20,7 @@ const ActivitiesCarousel = () => {
 
   const settings = {
     arrows: false,
-    dots: true,
+    dots: false,
     dotsClass: "custom-dots-slick",
     infinite: false,
     speed: 200,

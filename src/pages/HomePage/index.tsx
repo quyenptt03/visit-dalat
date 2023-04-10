@@ -7,6 +7,7 @@ import {
   ActivitiesCarousel,
   PostsCarousel,
   HomeCarousel,
+  PlacesCarousel,
 } from "../../components/Carousel";
 
 const PageContainer = styled.div`
@@ -18,6 +19,7 @@ const HomePage = () => {
       <Navbar />
       <HomeCarousel />
       <ActivitiesCarousel />
+      <PlacesCarousel />
       <PostsCarousel />
     </PageContainer>
   );

@@ -9,16 +9,22 @@ import {
   SubTitle,
   ButtonContainer,
 } from "./styles";
-import Activity1 from "../../assets/images/activity1.png";
 
-const Activity = () => {
+interface IActivityProps {
+  title: string;
+  subTitle: string;
+  image: string;
+}
+
+const Activity = (props: IActivityProps) => {
+  const { title, subTitle, image } = props;
   return (
     <ActivityContainer>
       <ImageContainer>
-        <Image src={Activity1} alt="activity1" />
+        <Image src={image} alt="activity" />
         <Content>
-          <Title>Cắm trại</Title>
-          <SubTitle>230 hoạt động</SubTitle>
+          <Title>{title}</Title>
+          <SubTitle>{subTitle}</SubTitle>
         </Content>
         <ButtonContainer>
           <IconButton type="saveBtn" />

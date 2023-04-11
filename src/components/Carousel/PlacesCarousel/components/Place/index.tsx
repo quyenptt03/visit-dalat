@@ -1,10 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import place1 from "../../../../../assets/images/place1.png";
 import { TextButton } from "../../../../Button";
-import { ReactComponent as Map } from "../../../../../assets/icons/dalat-map.svg";
 import { ReactComponent as ForwardIcon } from "../../../../../assets/icons/forward-icon.svg";
+
+interface IPlaceProps {
+  title: string;
+  p: string;
+  imageAdr: string;
+  mapImg: string;
+  showBtn: boolean;
+}
 
 const PlaceContainer = styled.div`
   ${tw`relative w-full h-screen`}
@@ -24,20 +30,20 @@ const Field = styled.span`
     font-semibold
     uppercase
     tracking-[0.7em]
-    drop-shadow-[1px 1px 10px rgba(0,0,0,0)]
   `}
+  text-shadow: 1px 1px 10px #000000;
 `;
 const Title = styled.h2`
-  ${tw`text-6xl font-bold mt-8 capitalize
-    drop-shadow-[1px 1px 10px rgba(0,0,0,0)]`}
+  ${tw`text-6xl font-bold mt-8 capitalize`}
+  text-shadow: 1px 1px 10px #000000;
 `;
 const Paragraph = styled.p`
-  ${tw`font-semibold text-xl mt-8 mb-14
-    drop-shadow-[1px 1px 10px rgba(0,0,0,0)]`}
+  ${tw`font-semibold text-xl mt-8 mb-14`}
+  text-shadow: 1px 1px 10px #000000;
 `;
 
-const MapContainer = styled.div`
-  ${tw`z-[1] mt-[10%]`}
+const MapContainer = styled.img`
+  ${tw`z-[1] w-[820px] mb-[5%]`}
 `;
 const ButtonContent = styled.div`
   ${tw`flex items-center justify-center`}
@@ -48,29 +54,26 @@ const ButtonText = styled.span`
 const ForwardIconContainer = styled(ForwardIcon)`
   ${tw` stroke-green`}
 `;
-const Place = () => {
+const Place = (props: IPlaceProps) => {
+  const { title, p, imageAdr, mapImg, showBtn } = props;
   return (
     <PlaceContainer>
-      <Image src={place1} alt="place" />
+      <Image src={imageAdr} alt="place" />
       <Wrapper>
         <ContentWrapper>
           <Field>Địa điểm</Field>
-          <Title>Thành phố Đà Lạt</Title>
-          <Paragraph>
-            Bạn muốn du lịch Đà Lạt nhưng không biết bắt đầu từ đâu? Đừng lo,
-            hãy để chúng tôi giới thiệu với bạn những địa điểm tuyệt vời. Tiếp
-            tục cuộn ngang để tìm hiểu thêm.
-          </Paragraph>
-          <TextButton theme="filled">
-            <ButtonContent>
-              <ButtonText>Khám phá</ButtonText>
-              <ForwardIconContainer />
-            </ButtonContent>
-          </TextButton>
+          <Title>{title}</Title>
+          <Paragraph>{p}</Paragraph>
+          {showBtn && (
+            <TextButton theme="filled">
+              <ButtonContent>
+                <ButtonText>Khám phá</ButtonText>
+                <ForwardIconContainer />
+              </ButtonContent>
+            </TextButton>
+          )}
         </ContentWrapper>
-        <MapContainer>
-          <Map />
-        </MapContainer>
+        <MapContainer src={mapImg} />
       </Wrapper>
     </PlaceContainer>
   );

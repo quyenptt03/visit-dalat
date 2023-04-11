@@ -11,6 +11,8 @@ import {
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import Activity1 from "../../../assets/images/activity1.png";
+
 type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
 const ActivitiesCarousel = () => {
@@ -88,13 +90,41 @@ const ActivitiesCarousel = () => {
       </SwiperBtns>
       <SliderContainer>
         <Slider ref={slide} {...settings} afterChange={handleAfterChange}>
-          <Activity />
-          <Activity />
-          <Activity />
-          <Activity />
-          <Activity />
-          <Activity />
-          <Activity />
+          <Activity
+            image={Activity1}
+            title="Chèo thuyền"
+            subTitle="132 hoạt động"
+          />
+          <Activity
+            image={Activity1}
+            title="Chèo thuyền"
+            subTitle="132 hoạt động"
+          />
+          <Activity
+            image={Activity1}
+            title="Chèo thuyền"
+            subTitle="132 hoạt động"
+          />
+          <Activity
+            image={Activity1}
+            title="Chèo thuyền"
+            subTitle="132 hoạt động"
+          />
+          <Activity
+            image={Activity1}
+            title="Chèo thuyền"
+            subTitle="132 hoạt động"
+          />
+          <Activity
+            image={Activity1}
+            title="Chèo thuyền"
+            subTitle="132 hoạt động"
+          />
+          <Activity
+            image={Activity1}
+            title="Chèo thuyền"
+            subTitle="132 hoạt động"
+          />
         </Slider>
       </SliderContainer>
     </CarouselContainer>

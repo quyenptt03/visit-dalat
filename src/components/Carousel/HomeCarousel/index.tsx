@@ -77,7 +77,6 @@ const HomeCarousel = () => {
     } else {
       setDisableNextBtn(false);
     }
-    console.log(slide);
   };
 
   return (

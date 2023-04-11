@@ -7,23 +7,27 @@ import {
   PostDescription,
   PostTitle,
 } from "./styles";
-import postImg from "../../assets/images/post1.png";
+// import postImg from "../../assets/images/post1.png";
 import { IconButton } from "../Button";
 
-const Post = () => {
+interface IPostProps {
+  title: string;
+  p: string;
+  imgSrc: string;
+}
+
+const Post = (props: IPostProps) => {
+  const { title, p, imgSrc } = props;
   return (
     <PostContainer>
       <ImageContainer>
-        <BasePostImage src={postImg} alt="post" />
+        <BasePostImage src={imgSrc} alt="post" />
         <ButtonContainer>
           <IconButton type="saveBtn" />
         </ButtonContainer>
       </ImageContainer>
-      <PostTitle>Top 15 địa điểm săn mây ở Đà Lạt đẹp nhất 2023</PostTitle>
-      <PostDescription>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl
-        hendrerit, aliquet mi sed, scelerisque tortor. Al
-      </PostDescription>
+      <PostTitle>{title}</PostTitle>
+      <PostDescription>{p}</PostDescription>
     </PostContainer>
   );
 };

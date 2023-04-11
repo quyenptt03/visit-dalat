@@ -11,6 +11,8 @@ import {
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import postImg from "../../../assets/images/post1.png";
+
 type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
 const PostsCarousel = () => {
@@ -89,13 +91,41 @@ const PostsCarousel = () => {
       </SwiperBtns>
       <SliderContainer>
         <Slider ref={slide} {...settings} afterChange={handleAfterChange}>
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
+          <Post
+            imgSrc={postImg}
+            title="Top 15 địa điểm săn mây ở Đà Lạt đẹp nhất 2023"
+            p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu ,"
+          />
+          <Post
+            imgSrc={postImg}
+            title="Top 15 địa điểm săn mây ở Đà Lạt đẹp nhất 2023"
+            p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu ,"
+          />
+          <Post
+            imgSrc={postImg}
+            title="Top 15 địa điểm săn mây ở Đà Lạt đẹp nhất 2023"
+            p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu ,"
+          />
+          <Post
+            imgSrc={postImg}
+            title="Top 15 địa điểm săn mây ở Đà Lạt đẹp nhất 2023"
+            p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu ,"
+          />
+          <Post
+            imgSrc={postImg}
+            title="Top 15 địa điểm săn mây ở Đà Lạt đẹp nhất 2023"
+            p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu ,"
+          />
+          <Post
+            imgSrc={postImg}
+            title="Top 15 địa điểm săn mây ở Đà Lạt đẹp nhất 2023"
+            p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu ,"
+          />
+          <Post
+            imgSrc={postImg}
+            title="Top 15 địa điểm săn mây ở Đà Lạt đẹp nhất 2023"
+            p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu ,"
+          />
         </Slider>
       </SliderContainer>
     </CarouselContainer>

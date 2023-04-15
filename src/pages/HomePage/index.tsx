@@ -4,11 +4,11 @@ import tw from "twin.macro";
 
 import Navbar from "../../components/Navbar";
 import {
-  ActivitiesCarousel,
-  PostsCarousel,
-  HomeCarousel,
-  PlacesCarousel,
-} from "../../components/Carousel";
+  TopSection,
+  PostsSection,
+  PlacesSection,
+  ActivitiesSection,
+} from "./components/Sections";
 
 const PageContainer = styled.div`
   ${tw``}
@@ -17,10 +17,10 @@ const HomePage = () => {
   return (
     <PageContainer>
       <Navbar />
-      <HomeCarousel />
-      <ActivitiesCarousel />
-      <PlacesCarousel />
-      <PostsCarousel />
+      <TopSection />
+      <PostsSection />
+      <PlacesSection />
+      <ActivitiesSection />
     </PageContainer>
   );
 };

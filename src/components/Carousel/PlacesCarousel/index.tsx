@@ -1,25 +1,15 @@
 import React, { useRef, useState } from "react";
-import styled from "styled-components";
 import Slider from "react-slick";
-import tw from "twin.macro";
 import Place from "./components/Place";
-import { IconButton } from "../../Button";
-import place1 from "../../../assets/images/place1.png";
-import map from "../../../assets/icons/dalat-map.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-type SliderRef = { slickNext: () => any; slickPrev: () => any };
+import { IconButton } from "../../Button";
+import { CarouselContainer, SwiperBtns, NextButtonContainer } from "./styles";
+import place1 from "../../../assets/images/place1.png";
+import map from "../../../assets/icons/dalat-map.svg";
 
-const CarouselContainer = styled.div`
-  ${tw`relative`}
-`;
-const SwiperBtns = styled.div`
-  ${tw`flex absolute right-[132px] bottom-32 z-[1]`}
-`;
-const NextButtonContainer = styled.div`
-  ${tw`ml-5`}
-`;
+type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
 const PlacesCarousel = () => {
   const [disablePrevBtn, setDisablePrevBtn] = useState(true);
@@ -32,7 +22,7 @@ const PlacesCarousel = () => {
     dots: false,
     dotsClass: "custom-dots-slick",
     infinite: false,
-    speed: 200,
+    speed: 700,
     swipeToSlide: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -73,7 +63,7 @@ const PlacesCarousel = () => {
           title="Thành Phố Đà Lạt"
           p="Bạn muốn du lịch Đà Lạt nhưng không biết bắt đầu từ đâu? Đừng lo, hãy để chúng tôi giới thiệu với bạn những địa điểm tuyệt vời. Tiếp tục cuộn ngang để tìm hiểu thêm."
           imageAdr={place1}
-          showBtn={true}
+          showBtn={false}
           mapImg={map}
         />
         <Place

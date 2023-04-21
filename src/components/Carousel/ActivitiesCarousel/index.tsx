@@ -12,6 +12,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Activity1 from "../../../assets/images/activity1.png";
+import Activity2 from "../../../assets/images/activity2.png";
+import Activity3 from "../../../assets/images/activity3.png";
+import Activity4 from "../../../assets/images/activity4.png";
+import Activity5 from "../../../assets/images/activity5.png";
+import Activity6 from "../../../assets/images/activity6.png";
+import Activity7 from "../../../assets/images/activity7.png";
 
 type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
@@ -92,37 +98,37 @@ const ActivitiesCarousel = () => {
         <Slider ref={slide} {...settings} afterChange={handleAfterChange}>
           <Activity
             image={Activity1}
-            title="Chèo thuyền"
+            title="Cắm trại"
             subTitle="132 hoạt động"
           />
           <Activity
-            image={Activity1}
-            title="Chèo thuyền"
+            image={Activity2}
+            title="Cáp treo"
             subTitle="132 hoạt động"
           />
           <Activity
-            image={Activity1}
-            title="Chèo thuyền"
+            image={Activity3}
+            title="Leo núi"
             subTitle="132 hoạt động"
           />
           <Activity
-            image={Activity1}
-            title="Chèo thuyền"
+            image={Activity4}
+            title="Vượt thác"
             subTitle="132 hoạt động"
           />
           <Activity
-            image={Activity1}
-            title="Chèo thuyền"
+            image={Activity5}
+            title="Đạp vịt"
             subTitle="132 hoạt động"
           />
           <Activity
-            image={Activity1}
-            title="Chèo thuyền"
+            image={Activity6}
+            title="Săn mây"
             subTitle="132 hoạt động"
           />
           <Activity
-            image={Activity1}
-            title="Chèo thuyền"
+            image={Activity7}
+            title="Zipline"
             subTitle="132 hoạt động"
           />
         </Slider>

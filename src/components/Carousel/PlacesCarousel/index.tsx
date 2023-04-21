@@ -1,13 +1,15 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Slider from "react-slick";
-import Place from "./components/Place";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import Place from "./components/Place";
 
-import { IconButton } from "../../Button";
-import { CarouselContainer, SwiperBtns, NextButtonContainer } from "./styles";
-import place1 from "../../../assets/images/place1.png";
 import map from "../../../assets/icons/dalat-map.svg";
+import thungLungTinhYeu from "../../../assets/icons/thung-lung-tinh-yeu.svg";
+import place1 from "../../../assets/images/place1.png";
+import place2 from "../../../assets/images/place2.png";
+import { IconButton } from "../../Button";
+import { CarouselContainer, NextButtonContainer, SwiperBtns } from "./styles";
 
 type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
@@ -67,11 +69,11 @@ const PlacesCarousel = () => {
           mapImg={map}
         />
         <Place
-          title="Thành Phố Đà Lạt"
-          p="Bạn muốn du lịch Đà Lạt nhưng không biết bắt đầu từ đâu? Đừng lo, hãy để chúng tôi giới thiệu với bạn những địa điểm tuyệt vời. Tiếp tục cuộn ngang để tìm hiểu thêm."
-          imageAdr={place1}
+          title="Thung Lũng Tình Yêu"
+          p="Một điểm du lịch nổi tiếng với phong cảnh đẹp và lãng mạn, thu hút nhiều cặp đôi đến đây chụp ảnh cưới hoặc tận hưởng không gian yên tĩnh."
+          imageAdr={place2}
           showBtn={true}
-          mapImg={map}
+          mapImg={thungLungTinhYeu}
         />
         <Place
           title="Thành Phố Đà Lạt"

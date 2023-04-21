@@ -9,6 +9,7 @@ import {
   PlacesSection,
   ActivitiesSection,
 } from "./components/Sections";
+import Footer from "../../components/Footer";
 
 const PageContainer = styled.div`
   ${tw``}
@@ -21,6 +22,7 @@ const HomePage = () => {
       <PostsSection />
       <PlacesSection />
       <ActivitiesSection />
+      <Footer />
     </PageContainer>
   );
 };

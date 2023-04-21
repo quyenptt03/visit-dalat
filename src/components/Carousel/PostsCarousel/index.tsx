@@ -11,7 +11,13 @@ import {
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import postImg from "../../../assets/images/post1.png";
+import postImg1 from "../../../assets/images/post1.png";
+import postImg2 from "../../../assets/images/post2.png";
+import postImg3 from "../../../assets/images/post3.png";
+import postImg4 from "../../../assets/images/post4.png";
+import postImg5 from "../../../assets/images/post5.png";
+import postImg6 from "../../../assets/images/post6.png";
+import postImg7 from "../../../assets/images/post7.png";
 
 type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
@@ -92,37 +98,37 @@ const PostsCarousel = () => {
       <SliderContainer>
         <Slider ref={slide} {...settings} afterChange={handleAfterChange}>
           <Post
-            imgSrc={postImg}
+            imgSrc={postImg1}
             title="Top 15 địa điểm săn mây ở Đà Lạt đẹp nhất 2023"
             p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu ,"
           />
           <Post
-            imgSrc={postImg}
+            imgSrc={postImg2}
             title="Top 15 địa điểm săn mây ở Đà Lạt đẹp nhất 2023"
             p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu ,"
           />
           <Post
-            imgSrc={postImg}
+            imgSrc={postImg3}
             title="Top 15 địa điểm săn mây ở Đà Lạt đẹp nhất 2023"
             p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu ,"
           />
           <Post
-            imgSrc={postImg}
+            imgSrc={postImg4}
             title="Top 15 địa điểm săn mây ở Đà Lạt đẹp nhất 2023"
             p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu ,"
           />
           <Post
-            imgSrc={postImg}
+            imgSrc={postImg5}
             title="Top 15 địa điểm săn mây ở Đà Lạt đẹp nhất 2023"
             p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu ,"
           />
           <Post
-            imgSrc={postImg}
+            imgSrc={postImg6}
             title="Top 15 địa điểm săn mây ở Đà Lạt đẹp nhất 2023"
             p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu ,"
           />
           <Post
-            imgSrc={postImg}
+            imgSrc={postImg7}
             title="Top 15 địa điểm săn mây ở Đà Lạt đẹp nhất 2023"
             p="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et nisl hendrerit, aliquet mi sed, scelerisque tortor. Aliquam eu ,"
           />

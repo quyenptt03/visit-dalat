@@ -4,6 +4,7 @@ import {
   PlacesCarousel,
   ActivitiesCarousel,
 } from "../../../../components/Carousel";
+import Foods from "../Foods";
 import SectionHeader from "../../../../components/SectionHeader";
 import { SectionMarginer } from "../../../../components/Marginer";
 
@@ -33,9 +34,19 @@ const ActivitiesSection = () => {
   );
 };
 
+const FoodsSection = () => {
+  return (
+    <SectionMarginer>
+      <SectionHeader field="Ẩm thực" title="Món ngon Đà Lạt" />
+      <Foods />
+    </SectionMarginer>
+  );
+};
+
 export {
   HomeCarousel as TopSection,
   PostsSection,
   PlacesSection,
   ActivitiesSection,
+  FoodsSection,
 };

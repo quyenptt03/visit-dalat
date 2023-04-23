@@ -1,11 +1,17 @@
 import React from "react";
-import { SaveButton, SwiperButton, IconContainer } from "./styles";
+import {
+  SaveButton,
+  SwiperButton,
+  IconContainer,
+  BackToTopButton,
+} from "./styles";
 import { ReactComponent as SaveIcon } from "../../../assets/icons/save-icon.svg";
 import { ReactComponent as NextIcon } from "../../../assets/icons/next-icon.svg";
 import { ReactComponent as PrevIcon } from "../../../assets/icons/prev-icon.svg";
+import { ReactComponent as BackToTopIcon } from "../../../assets/icons/back-to-top-icon.svg";
 
 interface IButtonProps {
-  type: "nextBtn" | "prevBtn" | "saveBtn";
+  type: "nextBtn" | "prevBtn" | "saveBtn" | "backToTopBtn";
   onClick?: () => void;
   disabled?: any;
 }
@@ -19,6 +25,14 @@ const IconButton = (props: IButtonProps) => {
           <SaveIcon />
         </IconContainer>
       </SaveButton>
+    );
+  else if (type === "backToTopBtn")
+    return (
+      <BackToTopButton onClick={onClick}>
+        <IconContainer>
+          <BackToTopIcon />
+        </IconContainer>
+      </BackToTopButton>
     );
   else if (type === "nextBtn")
     return (

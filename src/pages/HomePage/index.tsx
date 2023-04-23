@@ -13,6 +13,7 @@ import {
   HotelsSection,
 } from "./components/Sections";
 import Footer from "../../components/Footer";
+import BackToTopButton from "../../components/BackToTopButton";
 
 const PageContainer = styled.div`
   ${tw``}
@@ -29,6 +30,7 @@ const HomePage = () => {
       <FoodsSection />
       <HotelsSection />
       <Footer />
+      <BackToTopButton />
     </PageContainer>
   );
 };

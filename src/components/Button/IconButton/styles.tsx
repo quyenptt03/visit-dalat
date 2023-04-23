@@ -10,7 +10,7 @@ export const SwiperButton = styled(ButtonContainer)`
 `;
 
 export const SaveButton = styled(ButtonContainer)`
-  ${tw`rounded-tl-lg rounded-br-lg`}
+  ${tw`w-12 h-12 rounded-tl-lg rounded-br-lg`}
 `;
 
 export const IconContainer = styled.div`

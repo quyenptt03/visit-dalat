@@ -36,7 +36,7 @@ const Foods = () => {
       <Col2>
         <TopRow>
           <TopRowImg>
-            <Food imageSrc={BunBo} caption="Dâu tây Đà Lạt" />
+            <Food imageSrc={BunBo} caption="Bún bò" />
           </TopRowImg>
           <TopRowImg>
             <Food imageSrc={AvocadoCream} caption="Bánh mì xíu mại" />
@@ -44,19 +44,19 @@ const Foods = () => {
         </TopRow>
         <SecondRow>
           <SecondRowImg1>
-            <Food imageSrc={MutDacSan} caption="Dâu tây Đà Lạt" />
+            <Food imageSrc={MutDacSan} caption="Các loại mứt đặc sản" />
           </SecondRowImg1>
           <SecondRowImg2>
-            <Food imageSrc={NemNuong} caption="Bánh mì xíu mại" />
+            <Food imageSrc={NemNuong} caption="Nem nướng" />
           </SecondRowImg2>
         </SecondRow>
       </Col2>
       <Col>
         <AboveImg>
-          <Food imageSrc={BanhCan} caption="Dâu tây Đà Lạt" />
+          <Food imageSrc={BanhCan} caption="Bánh căn Nhà Chung" />
         </AboveImg>
         <BelowImg>
-          <Food imageSrc={BanhTrangNuong} caption="Bánh mì xíu mại" />
+          <Food imageSrc={BanhTrangNuong} caption="Bánh tráng nướng" />
         </BelowImg>
       </Col>
     </Container>

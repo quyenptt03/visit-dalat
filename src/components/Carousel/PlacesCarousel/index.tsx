@@ -62,6 +62,7 @@ const PlacesCarousel = () => {
       </SwiperBtns>
       <Slider ref={slide} {...settings} afterChange={handleAfterChange}>
         <Place
+          field="Điểm đến"
           title="Thành Phố Đà Lạt"
           p="Bạn muốn du lịch Đà Lạt nhưng không biết bắt đầu từ đâu? Đừng lo, hãy để chúng tôi giới thiệu với bạn những địa điểm tuyệt vời. Tiếp tục cuộn ngang để tìm hiểu thêm."
           imageAdr={place1}
@@ -69,6 +70,7 @@ const PlacesCarousel = () => {
           mapImg={map}
         />
         <Place
+          field="Điểm đến"
           title="Thung Lũng Tình Yêu"
           p="Một điểm du lịch nổi tiếng với phong cảnh đẹp và lãng mạn, thu hút nhiều cặp đôi đến đây chụp ảnh cưới hoặc tận hưởng không gian yên tĩnh."
           imageAdr={place2}
@@ -76,6 +78,7 @@ const PlacesCarousel = () => {
           mapImg={thungLungTinhYeu}
         />
         <Place
+          field="Điểm đến"
           title="Thành Phố Đà Lạt"
           p="Bạn muốn du lịch Đà Lạt nhưng không biết bắt đầu từ đâu? Đừng lo, hãy để chúng tôi giới thiệu với bạn những địa điểm tuyệt vời. Tiếp tục cuộn ngang để tìm hiểu thêm."
           imageAdr={place1}
@@ -83,6 +86,7 @@ const PlacesCarousel = () => {
           mapImg={map}
         />
         <Place
+          field="Điểm đến"
           title="Thành Phố Đà Lạt"
           p="Bạn muốn du lịch Đà Lạt nhưng không biết bắt đầu từ đâu? Đừng lo, hãy để chúng tôi giới thiệu với bạn những địa điểm tuyệt vời. Tiếp tục cuộn ngang để tìm hiểu thêm."
           imageAdr={place1}
@@ -90,6 +94,7 @@ const PlacesCarousel = () => {
           mapImg={map}
         />
         <Place
+          field="Điểm đến"
           title="Thành Phố Đà Lạt"
           p="Bạn muốn du lịch Đà Lạt nhưng không biết bắt đầu từ đâu? Đừng lo, hãy để chúng tôi giới thiệu với bạn những địa điểm tuyệt vời. Tiếp tục cuộn ngang để tìm hiểu thêm."
           imageAdr={place1}
@@ -97,6 +102,7 @@ const PlacesCarousel = () => {
           mapImg={map}
         />
         <Place
+          field="Điểm đến"
           title="Thành Phố Đà Lạt"
           p="Bạn muốn du lịch Đà Lạt nhưng không biết bắt đầu từ đâu? Đừng lo, hãy để chúng tôi giới thiệu với bạn những địa điểm tuyệt vời. Tiếp tục cuộn ngang để tìm hiểu thêm."
           imageAdr={place1}

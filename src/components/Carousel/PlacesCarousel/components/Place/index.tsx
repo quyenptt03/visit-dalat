@@ -15,21 +15,22 @@ import {
 } from "./styles";
 
 interface IPlaceProps {
+  field?: string;
   title: string;
   p: string;
   imageAdr: string;
-  mapImg: string;
+  mapImg?: string;
   showBtn: boolean;
 }
 
 const Place = (props: IPlaceProps) => {
-  const { title, p, imageAdr, mapImg, showBtn } = props;
+  const { field, title, p, imageAdr, mapImg, showBtn } = props;
   return (
     <PlaceContainer>
       <Image src={imageAdr} alt="place" />
       <Wrapper>
         <ContentWrapper>
-          <Field>Điểm đến</Field>
+          <Field>{field}</Field>
           <Title>{title}</Title>
           <Paragraph>{p}</Paragraph>
           {showBtn && (

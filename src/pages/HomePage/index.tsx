@@ -9,6 +9,8 @@ import {
   PlacesSection,
   ActivitiesSection,
   FoodsSection,
+  MoreInfoSection,
+  HotelsSection,
 } from "./components/Sections";
 import Footer from "../../components/Footer";
 
@@ -23,7 +25,9 @@ const HomePage = () => {
       <PostsSection />
       <PlacesSection />
       <ActivitiesSection />
+      <MoreInfoSection />
       <FoodsSection />
+      <HotelsSection />
       <Footer />
     </PageContainer>
   );

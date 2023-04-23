@@ -5,7 +5,7 @@ const PlaceContainer = styled.div`
   ${tw`relative w-full h-screen`}
 `;
 const Image = styled.img`
-  ${tw`absolute inset-0 w-full h-full`}
+  ${tw`absolute inset-0 object-cover w-full h-full`}
 `;
 const Wrapper = styled.div`
   ${tw`flex justify-between w-full h-full `}
@@ -23,16 +23,16 @@ const Field = styled.span`
   text-shadow: 1px 1px 10px #000000;
 `;
 const Title = styled.h2`
-  ${tw`text-6xl font-bold mt-8 capitalize`}
+  ${tw`mt-8 text-6xl font-black capitalize`}
   text-shadow: 1px 1px 10px #000000;
 `;
 const Paragraph = styled.p`
-  ${tw`font-semibold text-xl mt-8 mb-14`}
+  ${tw`mt-8 text-xl font-semibold mb-14`}
   text-shadow: 1px 1px 10px #000000;
 `;
 
 const MapContainer = styled.img`
-  ${tw`z-[1] w-[820px] mb-[5%]`}
+  ${tw`z-[1] max-w-[820px] mb-[5%]`}
 `;
 const ButtonContent = styled.div`
   ${tw`flex items-center justify-center`}

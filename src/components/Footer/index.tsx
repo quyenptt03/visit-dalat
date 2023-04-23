@@ -99,7 +99,11 @@ const Footer = () => {
                 </a>
               </ConnectItem>
               <ConnectItem>
-                <a href="facebook.com">
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <TiktokIcon />
                 </a>
               </ConnectItem>

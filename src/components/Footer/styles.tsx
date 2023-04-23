@@ -5,16 +5,16 @@ import footerImg from "../../assets/images/footerImg.png";
 const Container = styled.div`
   background: url(${footerImg});
   height: 474px;
-  ${tw``}; ;
+  ${tw`mt-40`};
 `;
 const Content = styled.div`
   ${tw`px-[8.25rem] pt-[5.25rem]`}
 `;
 const Title = styled.h4`
-  ${tw`text-lg font-semibold text-white capitalize mb-6`}
+  ${tw`mb-6 text-lg font-semibold text-white capitalize`}
 `;
 const Row2 = styled.div`
-  ${tw`grid mt-12 grid-cols-4`}
+  ${tw`grid grid-cols-4 mt-12`}
 `;
 const WorkWithUs = styled.div`
   ${tw`col-span-1`}
@@ -36,14 +36,14 @@ const ConnectList = styled.ul`
 const ConnectItem = styled.li`
   ${tw`mr-8`}
   a {
-    ${tw`text-white`}
+    ${tw`text-white transition-all duration-100 ease-linear hover:text-green`}
   }
 `;
 const Row3 = styled.div`
   ${tw`grid grid-cols-12 mt-12`}
 `;
 const Copyright = styled.span`
-  ${tw`text-base font-normal text-white col-span-3`}
+  ${tw`col-span-3 text-base font-normal text-white`}
 `;
 const LegalInfo = styled.ul`
   ${tw`flex col-span-7`}
@@ -55,10 +55,10 @@ const LegalInfoItem = styled.li`
   }
 `;
 const LanguageContainer = styled.div`
-  ${tw`flex col-span-2 justify-end`}
+  ${tw`flex justify-end col-span-2`}
 `;
 const Language = styled.select`
-  ${tw`bg-transparent text-white appearance-none outline-none cursor-pointer`}
+  ${tw`text-white bg-transparent outline-none appearance-none cursor-pointer`}
 `;
 const LanguageOptions = styled.option`
   ${tw`text-base font-normal text-white `}

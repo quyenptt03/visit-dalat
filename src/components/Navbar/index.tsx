@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  NavbarContainer,
+  NavbarContainer2,
   NavarRightSide,
   Icon,
   SearchIconContainer,
@@ -12,16 +12,16 @@ import { TextButton } from "../Button";
 
 const Navbar = () => {
   return (
-    <NavbarContainer>
-      <Logo />
+    <NavbarContainer2>
+      <Logo theme="dark" />
       <NavItems />
       <NavarRightSide>
         <Icon>
           <SearchIconContainer />
         </Icon>
-        <TextButton theme="whiteOutlined">Đăng nhập</TextButton>
+        <TextButton theme="blackOutlined">Đăng nhập</TextButton>
       </NavarRightSide>
-    </NavbarContainer>
+    </NavbarContainer2>
   );
 };
 

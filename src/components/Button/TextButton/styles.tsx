@@ -20,3 +20,7 @@ export const WhiteOutlineButton = styled(BaseButton)`
 export const FilledButton = styled(BaseButton)`
   ${tw`px-12 py-6 border-transparent text-green bg-light-blue`}
 `;
+
+export const NoOutlineButton = styled(BaseButton)`
+  ${tw`px-6 py-4 capitalize bg-transparent border-none text-green hover:bg-white`}
+`;

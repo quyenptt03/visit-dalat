@@ -5,7 +5,7 @@ export const Container = styled.li`
   ${tw`flex flex-col `}
 `;
 export const NavItemText = styled.a`
-  ${tw`text-base font-semibold text-white uppercase transition-all duration-200 ease-linear cursor-pointer `}}
+  ${tw`text-base font-semibold text-black uppercase transition-all duration-200 ease-linear cursor-pointer `}}
 `;
 export const UnderLine = styled.span<{ isHovered: boolean }>`
   height: 2px;

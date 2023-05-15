@@ -1,14 +1,21 @@
 import React from "react";
-import { LogoContainer, Image, LogoText } from "./styles";
+import { LogoContainer, Image, LightLogo, DarkLogo } from "./styles";
 import logoIcon from "../../assets/images/logo-icon.svg";
-
-const Logo = () => {
+interface ILogoTheme {
+  theme: "light" | "dark";
+}
+const Logo = (props: ILogoTheme) => {
+  const { theme } = props;
   return (
     <LogoContainer href="/">
       <Image>
         <img src={logoIcon} alt="logo" />
       </Image>
-      <LogoText>Visit Dalat</LogoText>
+      {theme === "light" ? (
+        <LightLogo>Visit Dalat</LightLogo>
+      ) : (
+        <DarkLogo>Visit Dalat</DarkLogo>
+      )}
     </LogoContainer>
   );
 };

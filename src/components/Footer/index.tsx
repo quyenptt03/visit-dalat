@@ -34,7 +34,7 @@ const Footer = () => {
   return (
     <Container>
       <Content>
-        <Logo />
+        <Logo theme="light" />
         <Row2>
           <WorkWithUs>
             <Title>Về chúng tôi</Title>

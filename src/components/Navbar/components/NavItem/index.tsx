@@ -3,17 +3,17 @@ import { Container, NavItemText, UnderLine } from "./styles";
 
 interface INavItemProps {
   text: string;
-  href: string;
+  to: string;
 }
 
 const NavItem = (props: INavItemProps) => {
-  const { href, text } = props;
+  const { to, text } = props;
   const [isHovered, setIsHover] = useState(false);
 
   return (
     <Container>
       <NavItemText
-        href={href}
+        to={to}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >

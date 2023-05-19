@@ -5,10 +5,10 @@ import { ListContainer } from "./styles";
 const NavItems = () => {
   return (
     <ListContainer>
-      <NavItem href="/" text="Điểm đến" />
-      <NavItem href="/" text="Hoạt động" />
-      <NavItem href="/" text="Ẩm thực" />
-      <NavItem href="/" text="Bài viết" />
+      <NavItem to="/destinations" text="Điểm đến" />
+      <NavItem to="/" text="Hoạt động" />
+      <NavItem to="/" text="Ẩm thực" />
+      <NavItem to="/" text="Bài viết" />
     </ListContainer>
   );
 };

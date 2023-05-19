@@ -53,7 +53,7 @@ const Foods = () => {
       </Col2>
       <Col>
         <AboveImg>
-          <Food imageSrc={BanhCan} caption="Bánh căn Nhà Chung" />
+          <Food imageSrc={BanhCan} caption="Bánh căn" />
         </AboveImg>
         <BelowImg>
           <Food imageSrc={BanhTrangNuong} caption="Bánh tráng nướng" />

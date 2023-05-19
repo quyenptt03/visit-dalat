@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import {
   NavbarContainer2,
   NavarRightSide,
@@ -19,7 +20,9 @@ const Navbar = () => {
         <Icon>
           <SearchIconContainer />
         </Icon>
-        <TextButton theme="blackOutlined">Đăng nhập</TextButton>
+        <TextButton theme="blackOutlined">
+          <NavLink to="/login">Đăng nhập</NavLink>
+        </TextButton>
       </NavarRightSide>
     </NavbarContainer2>
   );

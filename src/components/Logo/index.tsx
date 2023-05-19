@@ -1,6 +1,6 @@
 import React from "react";
 import { LogoContainer, Image, LightLogo, DarkLogo } from "./styles";
-import logoIcon from "../../assets/images/logo-icon.svg";
+import logoIcon from "../../assets/icons/logo-icon.svg";
 interface ILogoTheme {
   theme: "light" | "dark";
 }

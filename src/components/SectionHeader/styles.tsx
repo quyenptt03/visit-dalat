@@ -14,5 +14,5 @@ export const Field = styled.h4`
   `}
 `;
 export const Title = styled.h1`
-  ${tw`text-5xl font-bold text-black `}
+  ${tw`text-4xl font-bold text-black `}
 `;

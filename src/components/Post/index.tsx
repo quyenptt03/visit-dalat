@@ -4,22 +4,22 @@ import { URL } from "../../api";
 
 import {
   PostContainer,
-  BasePostImage,
+  PostImage,
   ButtonContainer,
   ImageContainer,
   PostDescription,
   PostTitle,
 } from "./styles";
+import { Link } from "react-router-dom";
 
 const Post = (props: any) => {
-  const { name, description, images } = props.data;
+  const { name, description, images, _id } = props.data;
   const thumbnail = URL + images[0];
-  console.log({ thumbnail });
-  const desc = description.slice(0, 120);
+  const desc = description.slice(0, 100);
   return (
-    <PostContainer>
+    <PostContainer as={Link} to={`/destinations/${_id}`}>
       <ImageContainer>
-        <BasePostImage src={thumbnail} alt="post" />
+        <PostImage $size={props.size} src={thumbnail} alt="post" />
         <ButtonContainer>
           <IconButton type="saveBtn" />
         </ButtonContainer>

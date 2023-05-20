@@ -27,7 +27,6 @@ interface IPlaceProps {
 
 const Place = (props: IPlaceProps) => {
   const { field, title, p, imageAdr, mapImg, showBtn, url } = props;
-  console.log({ props });
   return (
     <PlaceContainer>
       <Image src={imageAdr} alt="place" />

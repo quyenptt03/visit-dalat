@@ -1,7 +1,10 @@
 import axios from "axios";
 
-export const URL = "http://localhost:5000/api/v1";
+export const URL = "http://localhost:5000";
 
-export const fetchDestinations = () => axios.get(`${URL}/destinations`);
+export const fetchDestinations = () => axios.get(`${URL}/api/v1/destinations`);
 export const fetchFeaturedDestinations = () =>
-  axios.get(`${URL}/destinations/featured`);
+  axios.get(`${URL}/api/v1/destinations/featured`);
+
+export const fetchSingleDestination = (id: string) =>
+  axios.get(`${URL}/api/v1/destinations/${id}`);

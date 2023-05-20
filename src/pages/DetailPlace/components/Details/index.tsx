@@ -3,6 +3,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { ImagesCarousel } from "../../../../components/Carousel";
 import Description from "../Description";
+import { useAppSelector } from "../../../../redux/hook";
 
 const Container = styled.div`
   ${tw`flex min-h-[80vh]`}
@@ -16,15 +17,24 @@ const Images = styled.div`
 `;
 
 const Details = () => {
+  const { isLoading, destination } = useAppSelector(
+    (state) => state.destination
+  );
   return (
-    <Container>
-      <Images>
-        <ImagesCarousel />
-      </Images>
-      <PlaceDescription>
-        <Description />
-      </PlaceDescription>
-    </Container>
+    <>
+      {isLoading ? (
+        <h3>Loading...</h3>
+      ) : (
+        <Container>
+          <Images>
+            <ImagesCarousel images={destination?.images} />
+          </Images>
+          <PlaceDescription>
+            <Description data={destination} />
+          </PlaceDescription>
+        </Container>
+      )}
+    </>
   );
 };
 

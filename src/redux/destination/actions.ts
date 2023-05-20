@@ -1,6 +1,10 @@
 import { Dispatch } from "redux";
 import { Action } from "./types";
-import { fetchDestinations, fetchFeaturedDestinations } from "../../api";
+import {
+  fetchDestinations,
+  fetchFeaturedDestinations,
+  fetchSingleDestination,
+} from "../../api";
 
 export const getAllDestinations = () => async (dispatch: Dispatch<Action>) => {
   try {
@@ -35,6 +39,25 @@ export const getFeaturedDestinations =
     } catch (error: any) {
       dispatch({
         type: "getFeaturedDestinationsFail",
+        payload: error.response.data,
+      });
+    }
+  };
+
+export const getSingleDestination =
+  (id: string) => async (dispatch: Dispatch<Action>) => {
+    try {
+      dispatch({
+        type: "getSingleDestinationRequest",
+      });
+      const { data } = await fetchSingleDestination(id);
+      dispatch({
+        type: "getSingleDestinationSuccess",
+        payload: data.destination,
+      });
+    } catch (error: any) {
+      dispatch({
+        type: "getSingleDestinationFail",
         payload: error.response.data,
       });
     }

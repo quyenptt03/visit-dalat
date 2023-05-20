@@ -1,4 +1,7 @@
 import React from "react";
+import { IconButton } from "../Button";
+import { URL } from "../../api";
+
 import {
   PostContainer,
   BasePostImage,
@@ -7,11 +10,10 @@ import {
   PostDescription,
   PostTitle,
 } from "./styles";
-import { IconButton } from "../Button";
 
 const Post = (props: any) => {
   const { name, description, images } = props.data;
-  const thumbnail = `http://localhost:5000${images[0]}`;
+  const thumbnail = URL + images[0];
   console.log({ thumbnail });
   const desc = description.slice(0, 120);
   return (

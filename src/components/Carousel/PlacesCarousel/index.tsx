@@ -3,7 +3,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
-import { getFeaturedDestinations } from "../../../redux/destinations/actions";
+import { URL } from "../../../api";
+
+import { getFeaturedDestinations } from "../../../redux/destination/actions";
 import { useAppDispatch, useAppSelector } from "../../../redux/hook";
 import { IconButton } from "../../Button";
 import Place from "./components/Place";
@@ -88,7 +90,7 @@ const PlacesCarousel = () => {
               field="Điểm đến"
               title={destination.name}
               p={`${destination.description.slice(0, 150)}...`}
-              imageAdr={`http://localhost:5000${destination.images[0]}`}
+              imageAdr={URL + destination.images[0]}
               url={`/destinations/${destination._id}`}
               showBtn={true}
             />

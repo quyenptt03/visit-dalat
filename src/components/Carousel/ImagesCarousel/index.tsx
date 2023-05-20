@@ -1,24 +1,14 @@
 import React, { useRef } from "react";
-import tw from "twin.macro";
-import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import places1 from "../../../assets/places/places1.png";
-import img2 from "../../../assets/images/place1.png";
-import img3 from "../../../assets/images/place2.png";
+import { Container, Image } from "./styles";
+import { URL } from "../../../api";
 
 type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
-const Container = styled.div`
-  ${tw`w-full h-full `}
-`;
-const Image = styled.img`
-  ${tw`object-cover w-full h-[80vh] `}
-`;
-
-const ImagesCarousel = () => {
-  const images = [places1, img2, img3, places1, img2];
+const ImagesCarousel = (props: any) => {
+  const images = props.images;
   const slide = useRef<SliderRef>(null);
   const settings = {
     dots: true,
@@ -52,8 +42,8 @@ const ImagesCarousel = () => {
   return (
     <Container onWheel={onWheelSlider}>
       <Slider ref={slide} {...settings}>
-        {images.map((image, index) => {
-          return <Image src={image} key={index} />;
+        {images.map((image: string, index: number) => {
+          return <Image src={URL + image} key={index} />;
         })}
       </Slider>
     </Container>

@@ -32,3 +32,17 @@ export const featuredDestinationsReducer = createReducer(initialState, {
     state.error = action.payload;
   },
 });
+
+export const singleDestinationReducer = createReducer(initialState, {
+  getSingleDestinationRequest: (state) => {
+    state.isLoading = true;
+  },
+  getSingleDestinationSuccess: (state, action) => {
+    state.isLoading = false;
+    state.destination = action.payload;
+  },
+  getSingleDestinationFail: (state, action) => {
+    state.isLoading = false;
+    state.error = action.payload;
+  },
+});

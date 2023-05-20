@@ -3,12 +3,14 @@ import logger from "redux-logger";
 import {
   destinationReducer,
   featuredDestinationsReducer,
-} from "./destinations/reducers";
+  singleDestinationReducer,
+} from "./destination/reducers";
 
 export const store = configureStore({
   reducer: {
     destinations: destinationReducer,
     featuredDestinations: featuredDestinationsReducer,
+    destination: singleDestinationReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });

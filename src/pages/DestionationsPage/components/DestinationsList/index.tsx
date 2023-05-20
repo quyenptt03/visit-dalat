@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useAppSelector } from "../../../../redux/hook";
 import { useAppDispatch } from "../../../../redux/hook";
-import { getAllDestinations } from "../../../../redux/destinations/actions";
+import { getAllDestinations } from "../../../../redux/destination/actions";
 import Post from "../../../../components/Post";
 
 const DestinationsList = () => {

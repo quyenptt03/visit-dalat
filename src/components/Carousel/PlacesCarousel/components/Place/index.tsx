@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { TextButton } from "../../../../Button";
 import {
   PlaceContainer,
@@ -21,10 +22,12 @@ interface IPlaceProps {
   imageAdr: string;
   mapImg?: string;
   showBtn: boolean;
+  url?: string;
 }
 
 const Place = (props: IPlaceProps) => {
-  const { field, title, p, imageAdr, mapImg, showBtn } = props;
+  const { field, title, p, imageAdr, mapImg, showBtn, url } = props;
+  console.log({ props });
   return (
     <PlaceContainer>
       <Image src={imageAdr} alt="place" />
@@ -35,7 +38,7 @@ const Place = (props: IPlaceProps) => {
           <Paragraph>{p}</Paragraph>
           {showBtn && (
             <TextButton theme="filled">
-              <ButtonContent>
+              <ButtonContent as={Link} to={url}>
                 <ButtonText>Khám phá</ButtonText>
                 <ForwardIconContainer />
               </ButtonContent>

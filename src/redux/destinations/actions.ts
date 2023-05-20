@@ -1,6 +1,6 @@
 import { Dispatch } from "redux";
 import { Action } from "./types";
-import { fetchDestinations } from "../../api";
+import { fetchDestinations, fetchFeaturedDestinations } from "../../api";
 
 export const getAllDestinations = () => async (dispatch: Dispatch<Action>) => {
   try {
@@ -26,7 +26,8 @@ export const getFeaturedDestinations =
       dispatch({
         type: "getFeaturedDestinationsRequest",
       });
-      const { data } = await fetchDestinations();
+      const { data } = await fetchFeaturedDestinations();
+      console.log({ data });
       dispatch({
         type: "getFeaturedDestinationsSuccess",
         payload: data.destinations,

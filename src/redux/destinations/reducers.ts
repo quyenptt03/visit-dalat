@@ -20,14 +20,14 @@ export const destinationReducer = createReducer(initialState, {
 });
 
 export const featuredDestinationsReducer = createReducer(initialState, {
-  getAllDestinationsRequest: (state) => {
+  getFeaturedDestinationsRequest: (state) => {
     state.isLoading = true;
   },
-  getAllDestinationsSuccess: (state, action) => {
+  getFeaturedDestinationsSuccess: (state, action) => {
     state.isLoading = false;
-    state.destinations = action.payload;
+    state.featuredDestinations = action.payload;
   },
-  getAllDestinationsFail: (state, action) => {
+  getFeaturedDestinationsFail: (state, action) => {
     state.isLoading = false;
     state.error = action.payload;
   },

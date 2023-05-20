@@ -5,7 +5,7 @@ const PlaceContainer = styled.div`
   ${tw`relative w-full h-screen`}
 `;
 const Image = styled.img`
-  ${tw`absolute inset-0 object-cover w-full h-full`}
+  ${tw`absolute inset-0 object-cover w-full h-full bg-black brightness-75`}
 `;
 const Wrapper = styled.div`
   ${tw`flex justify-between w-full h-full `}

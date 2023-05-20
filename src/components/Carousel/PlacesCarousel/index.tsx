@@ -1,19 +1,33 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+
+import { getFeaturedDestinations } from "../../../redux/destinations/actions";
+import { useAppDispatch, useAppSelector } from "../../../redux/hook";
+import { IconButton } from "../../Button";
 import Place from "./components/Place";
 
 import map from "../../../assets/icons/dalat-map.svg";
-import thungLungTinhYeu from "../../../assets/icons/thung-lung-tinh-yeu.svg";
 import place1 from "../../../assets/images/place1.png";
-import place2 from "../../../assets/images/place2.png";
-import { IconButton } from "../../Button";
+
 import { CarouselContainer, NextButtonContainer, SwiperBtns } from "./styles";
 
 type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
 const PlacesCarousel = () => {
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(getFeaturedDestinations());
+  }, [dispatch]);
+
+  const { featuredDestinations } = useAppSelector(
+    (state) => state.featuredDestinations
+  );
+  let count: number = 3;
+  if (featuredDestinations) count = featuredDestinations.length;
+  console.log({ featuredDestinations });
+
   const [disablePrevBtn, setDisablePrevBtn] = useState(true);
   const [disableNextBtn, setDisableNextBtn] = useState(false);
 
@@ -37,13 +51,12 @@ const PlacesCarousel = () => {
       setDisablePrevBtn(false);
     }
 
-    if (currentSlide === 3) {
+    if (currentSlide === count) {
       setDisableNextBtn(true);
     } else {
       setDisableNextBtn(false);
     }
   };
-
   return (
     <CarouselContainer>
       <SwiperBtns>
@@ -69,46 +82,18 @@ const PlacesCarousel = () => {
           showBtn={false}
           mapImg={map}
         />
-        <Place
-          field="Điểm đến"
-          title="Thung Lũng Tình Yêu"
-          p="Một điểm du lịch nổi tiếng với phong cảnh đẹp và lãng mạn, thu hút nhiều cặp đôi đến đây chụp ảnh cưới hoặc tận hưởng không gian yên tĩnh."
-          imageAdr={place2}
-          showBtn={true}
-          mapImg={thungLungTinhYeu}
-        />
-        <Place
-          field="Điểm đến"
-          title="Thành Phố Đà Lạt"
-          p="Bạn muốn du lịch Đà Lạt nhưng không biết bắt đầu từ đâu? Đừng lo, hãy để chúng tôi giới thiệu với bạn những địa điểm tuyệt vời. Tiếp tục cuộn ngang để tìm hiểu thêm."
-          imageAdr={place1}
-          showBtn={true}
-          mapImg={map}
-        />
-        <Place
-          field="Điểm đến"
-          title="Thành Phố Đà Lạt"
-          p="Bạn muốn du lịch Đà Lạt nhưng không biết bắt đầu từ đâu? Đừng lo, hãy để chúng tôi giới thiệu với bạn những địa điểm tuyệt vời. Tiếp tục cuộn ngang để tìm hiểu thêm."
-          imageAdr={place1}
-          showBtn={true}
-          mapImg={map}
-        />
-        <Place
-          field="Điểm đến"
-          title="Thành Phố Đà Lạt"
-          p="Bạn muốn du lịch Đà Lạt nhưng không biết bắt đầu từ đâu? Đừng lo, hãy để chúng tôi giới thiệu với bạn những địa điểm tuyệt vời. Tiếp tục cuộn ngang để tìm hiểu thêm."
-          imageAdr={place1}
-          showBtn={true}
-          mapImg={map}
-        />
-        <Place
-          field="Điểm đến"
-          title="Thành Phố Đà Lạt"
-          p="Bạn muốn du lịch Đà Lạt nhưng không biết bắt đầu từ đâu? Đừng lo, hãy để chúng tôi giới thiệu với bạn những địa điểm tuyệt vời. Tiếp tục cuộn ngang để tìm hiểu thêm."
-          imageAdr={place1}
-          showBtn={true}
-          mapImg={map}
-        />
+        {featuredDestinations?.map((destination) => {
+          return (
+            <Place
+              field="Điểm đến"
+              title={destination.name}
+              p={`${destination.description.slice(0, 150)}...`}
+              imageAdr={`http://localhost:5000${destination.images[0]}`}
+              url={`/destinations/${destination._id}`}
+              showBtn={true}
+            />
+          );
+        })}
       </Slider>
     </CarouselContainer>
   );

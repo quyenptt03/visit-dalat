@@ -28,7 +28,6 @@ const PlacesCarousel = () => {
   );
   let count: number = 3;
   if (featuredDestinations) count = featuredDestinations.length;
-  console.log({ featuredDestinations });
 
   const [disablePrevBtn, setDisablePrevBtn] = useState(true);
   const [disableNextBtn, setDisableNextBtn] = useState(false);
@@ -87,6 +86,7 @@ const PlacesCarousel = () => {
         {featuredDestinations?.map((destination) => {
           return (
             <Place
+              key={destination._id}
               field="Điểm đến"
               title={destination.name}
               p={`${destination.description.slice(0, 150)}...`}

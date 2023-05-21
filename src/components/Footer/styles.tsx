@@ -5,7 +5,7 @@ import footerImg from "../../assets/images/footerImg.png";
 const Container = styled.div`
   background: url(${footerImg});
   height: 474px;
-  ${tw`mt-40`};
+  ${tw``};
 `;
 const Content = styled.div`
   ${tw`px-[8.25rem] pt-[5.25rem]`}

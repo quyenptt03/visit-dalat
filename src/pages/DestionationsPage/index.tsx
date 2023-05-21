@@ -6,6 +6,7 @@ import bgImg from "../../assets/images/destination-home.png";
 import SectionHeader from "../../components/SectionHeader";
 import { SectionMarginer } from "../../components/Marginer";
 import BackToTopButton from "../../components/BackToTopButton";
+import { HotelsCarousel } from "../../components/Carousel";
 const DestinationsPage = () => {
   return (
     <div>
@@ -21,6 +22,10 @@ const DestinationsPage = () => {
           title="Những Địa Điểm Du Lịch ở Đà Lạt"
         />
         <DestinationsList />
+      </SectionMarginer>
+      <SectionMarginer background={true}>
+        <SectionHeader field="Lưu trú" title="Nơi nghỉ chân tuyệt vời" />
+        <HotelsCarousel />
       </SectionMarginer>
       <BackToTopButton />
       <Footer />

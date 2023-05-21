@@ -1,29 +1,56 @@
-import React, { useEffect } from "react";
-import { useAppSelector } from "../../../../redux/hook";
-import { useAppDispatch } from "../../../../redux/hook";
-import { getAllDestinations } from "../../../../redux/destination/actions";
-import Post from "../../../../components/Post";
-import styled from "styled-components";
-import tw from "twin.macro";
+import queryString from "query-string";
+import { useEffect, useMemo, useState } from "react";
+import ReactPaginate from "react-paginate";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const Container = styled.div`
-  ${tw`grid grid-cols-12 mx-11`}
-`;
-const List = styled.div`
-  ${tw` col-span-8 col-start-3 grid grid-cols-3 gap-7`}
-`;
-const ListCol = styled.div`
-  ${tw``}
-`;
+import { fetchDestinationsTotal } from "../../../../api";
+import Post from "../../../../components/Post";
+import { getAllDestinations } from "../../../../redux/destination/actions";
+import { useAppDispatch, useAppSelector } from "../../../../redux/hook";
+
+import { ReactComponent as NextIcon } from "../../../../assets/icons/next-icon.svg";
+import { ReactComponent as PrevIcon } from "../../../../assets/icons/prev-icon.svg";
+
+import { Container, List, ListCol, PaginationContainer } from "./styles";
+
 const DestinationsList = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const queryParams = useMemo(() => {
+    const params = queryString.parse(location.search);
+    return {
+      ...params,
+      page: Number.parseInt(params.page as string) || 1,
+    };
+  }, [location.search]);
+  const perPage = 12;
+  const [pageCount, setPageCount] = useState(0);
   const { destinations, isLoading } = useAppSelector(
     (state) => state.destinations
   );
 
   const dispatch = useAppDispatch();
   useEffect(() => {
-    dispatch(getAllDestinations());
-  }, [dispatch]);
+    dispatch(getAllDestinations(queryParams));
+    window.scroll(0, 0);
+  }, [queryParams, dispatch]);
+
+  useEffect(() => {
+    const getPageCount = async () => {
+      const totalDestinations = await fetchDestinationsTotal();
+      setPageCount(Math.ceil(totalDestinations.data.count / perPage));
+    };
+    getPageCount();
+  }, []);
+
+  const handlePageChange = (event: { selected: number }) => {
+    const filters = {
+      ...queryParams,
+      page: event.selected + 1,
+    };
+    const updatedQueryString = queryString.stringify(filters);
+    navigate(`?${updatedQueryString}`, { replace: true });
+  };
   return (
     <>
       {isLoading ? (
@@ -68,6 +95,24 @@ const DestinationsList = () => {
               )}
             </ListCol>
           </List>
+          <PaginationContainer className="custom-pagination">
+            {pageCount > 1 && (
+              <ReactPaginate
+                breakLabel="..."
+                previousLabel={<PrevIcon />}
+                nextLabel={<NextIcon />}
+                pageCount={pageCount}
+                forcePage={queryParams.page - 1}
+                onPageChange={handlePageChange}
+                className="custom-pagination"
+                activeClassName="active-page"
+                pageLinkClassName="page-link-custom"
+                disabledLinkClassName="disabled-button"
+                previousLinkClassName="custom-nav-btn"
+                nextLinkClassName="custom-nav-btn"
+              />
+            )}
+          </PaginationContainer>
         </Container>
       )}
     </>

@@ -6,23 +6,24 @@ import {
   fetchSingleDestination,
 } from "../../api";
 
-export const getAllDestinations = () => async (dispatch: Dispatch<Action>) => {
-  try {
-    dispatch({
-      type: "getAllDestinationsRequest",
-    });
-    const { data } = await fetchDestinations();
-    dispatch({
-      type: "getAllDestinationsSuccess",
-      payload: data.destinations,
-    });
-  } catch (error: any) {
-    dispatch({
-      type: "getAllDestinationsFail",
-      payload: error.response.data,
-    });
-  }
-};
+export const getAllDestinations =
+  (params: object) => async (dispatch: Dispatch<Action>) => {
+    try {
+      dispatch({
+        type: "getAllDestinationsRequest",
+      });
+      const { data } = await fetchDestinations(params);
+      dispatch({
+        type: "getAllDestinationsSuccess",
+        payload: data.destinations,
+      });
+    } catch (error: any) {
+      dispatch({
+        type: "getAllDestinationsFail",
+        payload: error.response.data,
+      });
+    }
+  };
 
 export const getFeaturedDestinations =
   () => async (dispatch: Dispatch<Action>) => {

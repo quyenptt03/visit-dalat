@@ -5,6 +5,7 @@ import Background from "../../components/Background";
 import bgImg from "../../assets/images/destination-home.png";
 import SectionHeader from "../../components/SectionHeader";
 import { SectionMarginer } from "../../components/Marginer";
+import BackToTopButton from "../../components/BackToTopButton";
 const DestinationsPage = () => {
   return (
     <div>
@@ -21,6 +22,7 @@ const DestinationsPage = () => {
         />
         <DestinationsList />
       </SectionMarginer>
+      <BackToTopButton />
       <Footer />
     </div>
   );

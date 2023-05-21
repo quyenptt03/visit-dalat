@@ -96,3 +96,44 @@ code {
   height: 60vh;
   z-index: 1;
 }
+/*react paginate*/
+
+.custom-pagination {
+  align-items: center;
+  justify-content: center;
+}
+.custom-pagination ul {
+  display: flex;
+}
+.custom-pagination ul li {
+  width: 44px;
+  height: 44px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e5e5;
+  margin: 0 2px;
+}
+.custom-pagination ul li:hover {
+  color: #1d764a;
+  background-color: #dbeefe;
+}
+.page-link-custom {
+  font-weight: 600;
+}
+.active-page {
+  color: #1d764a;
+  background-color: #dbeefe;
+}
+.disabled-button {
+  opacity: 0.8;
+}
+.disabled-button:hover {
+  cursor: not-allowed;
+}
+.custom-nav-btn svg {
+  color: #1d764a;
+  width: 16px;
+  height: 16px;
+}

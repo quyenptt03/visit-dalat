@@ -6,6 +6,6 @@ export const ListContainer = styled.ul`
     flex
     list-none
     w-[38%]
-    justify-between
+    justify-center
   `}
 `;

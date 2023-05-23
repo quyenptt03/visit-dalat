@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import DetailPlace from "./pages/DetailPlace";
 import DestinationsPage from "./pages/DestionationsPage";
 import { Route, Routes, useLocation } from "react-router-dom";
+import ArticlesPage from "./pages/ArticlesPage";
 function App() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/destinations" element={<DestinationsPage />} />
         <Route path="/destinations/:id" element={<DetailPlace />} />
+        <Route path="/articles" element={<ArticlesPage />} />
       </Routes>
     </>
   );

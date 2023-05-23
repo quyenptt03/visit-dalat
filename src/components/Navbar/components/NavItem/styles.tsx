@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import { NavLink } from "react-router-dom";
 
 export const Container = styled.li`
-  ${tw`flex flex-col `}
+  ${tw`flex flex-col mx-10`}
 `;
 export const NavItemText = styled(NavLink)`
   ${tw`text-base font-semibold text-black uppercase transition-all duration-200 ease-linear cursor-pointer `}}

@@ -32,7 +32,6 @@ export const getFeaturedDestinations =
         type: "getFeaturedDestinationsRequest",
       });
       const { data } = await fetchFeaturedDestinations();
-      console.log({ data });
       dispatch({
         type: "getFeaturedDestinationsSuccess",
         payload: data.destinations,

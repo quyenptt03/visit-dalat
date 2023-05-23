@@ -12,3 +12,8 @@ export const fetchSingleDestination = (id: string) =>
 
 export const fetchDestinationsTotal = () =>
   axios.get(`${URL}/api/v1/destinations/total`);
+
+// export const fetchArticles = (params: object) => {
+//   axios.get(`${URL}/api/v1/articles`, { params });
+// };
+export const fetchArticles = () => axios.get(`${URL}/api/v1/articles`);

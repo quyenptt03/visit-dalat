@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import ReactPaginate from "react-paginate";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import { fetchDestinationsTotal } from "../../../../api";
+import { fetchDestinationsTotal, URL } from "../../../../api";
 import Post from "../../../../components/Post";
 import { getAllDestinations } from "../../../../redux/destination/actions";
 import { useAppDispatch, useAppSelector } from "../../../../redux/hook";
@@ -28,7 +28,7 @@ const DestinationsList = () => {
   const { destinations, isLoading } = useAppSelector(
     (state) => state.destinations
   );
-
+  console.log(destinations);
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(getAllDestinations(queryParams));
@@ -64,7 +64,10 @@ const DestinationsList = () => {
                   index % 3 === 0 && (
                     <Post
                       size={index % 2 === 0 ? "short" : "high"}
-                      data={destination}
+                      name={destination.name}
+                      description={destination.description}
+                      imgSrc={URL + destination.images[0]}
+                      url={`/destinations/${destination._id}`}
                       key={destination._id}
                     />
                   )
@@ -76,7 +79,10 @@ const DestinationsList = () => {
                   index % 3 === 1 && (
                     <Post
                       size={index % 2 === 0 ? "short" : "high"}
-                      data={destination}
+                      name={destination.name}
+                      description={destination.description}
+                      imgSrc={URL + destination.images[0]}
+                      url={`/destinations/${destination._id}`}
                       key={destination._id}
                     />
                   )
@@ -88,7 +94,10 @@ const DestinationsList = () => {
                   index % 3 === 2 && (
                     <Post
                       size={index % 2 === 0 ? "short" : "high"}
-                      data={destination}
+                      name={destination.name}
+                      description={destination.description}
+                      imgSrc={URL + destination.images[0]}
+                      url={`/destinations/${destination._id}`}
                       key={destination._id}
                     />
                   )

@@ -17,3 +17,5 @@ export const fetchDestinationsTotal = () =>
 //   axios.get(`${URL}/api/v1/articles`, { params });
 // };
 export const fetchArticles = () => axios.get(`${URL}/api/v1/articles`);
+export const fetchFeaturedArticles = () =>
+  axios.get(`${URL}/api/v1/articles/featured`);

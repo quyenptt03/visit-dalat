@@ -23,7 +23,7 @@ const HomePage = () => {
     <PageContainer>
       <Navbar />
       <TopSection />
-      {/* <PostsSection /> */}
+      <PostsSection />
       <PlacesSection />
       <ActivitiesSection />
       <MoreInfoSection />

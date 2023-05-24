@@ -12,14 +12,21 @@ import {
 } from "./styles";
 import { Link } from "react-router-dom";
 
-const Post = (props: any) => {
-  const { name, description, images, _id } = props.data;
-  const thumbnail = URL + images[0];
+interface IPostProps {
+  name: string;
+  description: string;
+  imgSrc: string;
+  url?: string;
+  size?: string;
+}
+
+const Post = (props: IPostProps) => {
+  const { name, description, imgSrc, url, size } = props;
   const desc = description.slice(0, 90);
   return (
-    <PostContainer as={Link} to={`/destinations/${_id}`}>
+    <PostContainer as={Link} to={url}>
       <ImageContainer>
-        <PostImage $size={props.size} src={thumbnail} alt="post" />
+        <PostImage $size={size} src={imgSrc} alt="post" />
         <ButtonContainer>
           <IconButton type="saveBtn" />
         </ButtonContainer>

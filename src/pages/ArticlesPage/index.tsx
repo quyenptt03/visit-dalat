@@ -1,10 +1,11 @@
 import ArticlesList from "./ArticlesList";
-
+import Navbar from "../../components/Navbar";
 const ArticlesPage = () => {
   return (
-    <div>
+    <>
+      <Navbar />
       <ArticlesList />
-    </div>
+    </>
   );
 };
 

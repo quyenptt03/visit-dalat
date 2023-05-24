@@ -11,34 +11,36 @@ const Wrapper = styled.div`
   ${tw`flex justify-between w-full h-full `}
 `;
 const ContentWrapper = styled.div`
-  ${tw`w-1/3 ml-56 text-white mt-44 z-[1]`}
+  ${tw`w-1/3 xxl:ml-56 text-white xxl:mt-44 z-[1] laptop:ml-44 laptop:mt-36`}
 `;
 const Field = styled.span`
   ${tw`
-    text-base
+    xxl:text-base
+    laptop:text-[13px]
+    laptop:tracking-[0.5em]
     font-semibold
     uppercase
-    tracking-[0.7em]
+    xxl:tracking-[0.7em]
   `}
   text-shadow: 1px 1px 10px #000000;
 `;
 const Title = styled.h2`
-  ${tw`mt-8 text-6xl font-black capitalize`}
+  ${tw`font-black capitalize xxl:mt-8 xxl:text-6xl laptop:mt-6 laptop:text-5xl`}
   text-shadow: 1px 1px 10px #000000;
 `;
 const Paragraph = styled.p`
-  ${tw`mt-8 text-xl font-semibold mb-14`}
+  ${tw`font-semibold xxl:mt-8 xxl:text-xl mb-14 laptop:mb-11 laptop:text-base`}
   text-shadow: 1px 1px 10px #000000;
 `;
 
 const MapContainer = styled.img`
-  ${tw`z-[1] max-w-[820px] mb-[5%]`}
+  ${tw`z-[1] xxl:max-w-[820px] mb-[5%] laptop:max-w-screen-tablet`}
 `;
 const ButtonContent = styled.div`
   ${tw`flex items-center justify-center`}
 `;
 const ButtonText = styled.span`
-  ${tw`mr-5 text-xl font-bold`}
+  ${tw`mr-5 font-bold xxl:text-xl laptop:text-base`}
 `;
 const ForwardIconContainer = styled(ForwardIcon)`
   ${tw` stroke-green`}

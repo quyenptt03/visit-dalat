@@ -7,8 +7,10 @@ export const LogoContainer = styled.a`
 const LogoText = styled.div`
   ${tw`
     ml-4
-    text-lg
-    tracking-[0.2em]
+    xxl:text-lg
+    laptop:text-sm
+    xxl:tracking-[0.2em]
+    laptop:tracking-widest
     uppercase
     font-black
     font-logo
@@ -22,7 +24,6 @@ export const DarkLogo = styled(LogoText)`
 `;
 export const Image = styled.div`
   img {
-    width: auto;
-    height: 100%;
+    ${tw`w-auto h-full laptop:h-11 xxl:h-full`}
   }
 `;

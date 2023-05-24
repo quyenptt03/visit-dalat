@@ -4,7 +4,7 @@ export const CarouselContainer = styled.div`
   ${tw`relative`}
 `;
 export const SwiperBtns = styled.div`
-  ${tw`flex absolute right-[132px] bottom-32 z-[1]`}
+  ${tw`flex absolute xxl:right-[132px] xxl:bottom-32 z-[1] laptop:bottom-24 laptop:right-[108px]`}
 `;
 export const NextButtonContainer = styled.div`
   ${tw`ml-5`}

@@ -13,7 +13,7 @@ import { useAppDispatch } from "../../redux/hook";
 import { getSingleDestination } from "../../redux/destination/actions";
 import { useLocation } from "react-router-dom";
 const PageContainer = styled.div`
-  ${tw`mt-24`}
+  ${tw`mt-20 xxl:mt-24`}
 `;
 const DetailPlace = () => {
   const location = useLocation();

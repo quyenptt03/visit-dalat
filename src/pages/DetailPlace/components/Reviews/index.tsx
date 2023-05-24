@@ -6,7 +6,7 @@ const Container = styled.div`
   ${tw``}
 `;
 const Title = styled.h3`
-  ${tw`mb-16 text-4xl font-bold text-center`}
+  ${tw`mb-16 xxl:text-4xl text-3xl font-bold text-center`}
 `;
 const ReviewContainer = styled.div`
   ${tw``}

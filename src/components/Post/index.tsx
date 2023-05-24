@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 const Post = (props: any) => {
   const { name, description, images, _id } = props.data;
   const thumbnail = URL + images[0];
-  const desc = description.slice(0, 100);
+  const desc = description.slice(0, 90);
   return (
     <PostContainer as={Link} to={`/destinations/${_id}`}>
       <ImageContainer>

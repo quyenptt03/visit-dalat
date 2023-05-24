@@ -6,19 +6,15 @@ const BaseButton = styled.button`
 `;
 
 export const BlackOutlineButton = styled(BaseButton)`
-  padding-top: 0.875rem;
-  padding-bottom: 0.875rem;
-  ${tw`px-4 text-lg leading-5 text-black border-black border-solid hover:text-green hover:bg-light-blue hover:border-transparent`}
+  ${tw`px-4 leading-5 text-black border-black border-solid xxl:text-lg laptop:py-3 laptop:text-sm hover:text-green hover:bg-light-blue hover:border-transparent`}
 `;
 
 export const WhiteOutlineButton = styled(BaseButton)`
-  padding-top: 0.875rem;
-  padding-bottom: 0.875rem;
-  ${tw`px-4 text-base leading-5 text-white border-white border-solid hover:text-green hover:bg-light-blue hover:border-transparent`}
+  ${tw`px-4 leading-5 text-white border-white border-solid xxl:text-base laptop:py-3 laptop:text-sm hover:text-green hover:bg-light-blue hover:border-transparent`}
 `;
 
 export const FilledButton = styled(BaseButton)`
-  ${tw`px-12 py-6 border-transparent text-green bg-light-blue`}
+  ${tw`border-transparent xxl:px-12 xxl:py-6 text-green bg-light-blue laptop:px-10 laptop:py-5`}
 `;
 
 export const NoOutlineButton = styled(BaseButton)`

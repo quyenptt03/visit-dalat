@@ -6,7 +6,7 @@ export const Container = styled.div`
   ${tw`w-full `}
 `;
 export const Title = styled.h3`
-  ${tw`mb-16 text-4xl font-bold text-center text-black`}
+  ${tw`mb-16 text-3xl font-bold text-center text-black xxl:text-4xl`}
 `;
 export const Image = styled.img``;
 export const PopUpContent = styled.div`

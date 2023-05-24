@@ -6,7 +6,7 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  ${tw`ml-11 pt-20 mr-[340px]`}
+  ${tw`ml-11 pt-20 mr-[17%]`}
 `;
 const Buttons = styled.div`
   ${tw`flex justify-end`}
@@ -20,7 +20,7 @@ const ButtonContent = styled.div`
   ${tw`flex items-center justify-center text-green`}
 `;
 const IconText = styled.span`
-  ${tw`mr-2 text-base font-bold`}
+  ${tw`mr-2 text-sm font-bold xxl:text-base`}
 `;
 const Icon = styled.div`
   svg path {
@@ -28,7 +28,7 @@ const Icon = styled.div`
   }
 `;
 const Title = styled.h1`
-  ${tw`mb-6 text-6xl font-extrabold text-black mt-9`}
+  ${tw`mb-6 text-5xl font-extrabold text-black xxl:text-6xl xxl:mt-9 mt-7`}
 `;
 const Info = styled.div`
   ${tw`flex items-center w-full mb-4 bg-white h-14`}
@@ -37,10 +37,10 @@ const InfoItem = styled.div`
   ${tw`flex ml-3 mr-10 `}
 `;
 const Text = styled.span`
-  ${tw`ml-4 text-base font-medium text-black`}
+  ${tw`ml-4 text-sm font-medium text-black xxl:text-base`}
 `;
 const Paragraph = styled.p`
-  ${tw`mt-6 mb-8 text-base font-normal leading-5 text-black`}
+  ${tw`mt-6 mb-8 text-sm font-normal leading-5 text-black xxl:text-base`}
 `;
 
 export {

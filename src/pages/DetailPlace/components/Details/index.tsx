@@ -1,21 +1,8 @@
 import React from "react";
-import styled from "styled-components";
-import tw from "twin.macro";
 import { ImagesCarousel } from "../../../../components/Carousel";
 import Description from "../Description";
 import { useAppSelector } from "../../../../redux/hook";
-
-const Container = styled.div`
-  ${tw`flex min-h-[80vh]`}
-`;
-
-const PlaceDescription = styled.div`
-  ${tw`w-1/2`}
-`;
-const Images = styled.div`
-  ${tw`w-1/2 h-full`}
-`;
-
+import { Container, Images, PlaceDescription } from "./styles";
 const Details = () => {
   const { isLoading, destination } = useAppSelector(
     (state) => state.destination

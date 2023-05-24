@@ -4,17 +4,16 @@ import footerImg from "../../assets/images/footerImg.png";
 
 const Container = styled.div`
   background: url(${footerImg});
-  height: 474px;
-  ${tw``};
+  ${tw`laptop:h-96 xxl:h-[474px]`};
 `;
 const Content = styled.div`
-  ${tw`px-[8.25rem] pt-[5.25rem]`}
+  ${tw`xxl:px-[8.25rem] xxl:pt-[5.25rem] laptop:px-24 laptop:pt-16`}
 `;
 const Title = styled.h4`
-  ${tw`mb-6 text-lg font-semibold text-white capitalize`}
+  ${tw`font-semibold text-white capitalize xxl:mb-6 xxl:text-lg laptop:mb-5 laptop:text-base`}
 `;
 const Row2 = styled.div`
-  ${tw`grid grid-cols-4 mt-12`}
+  ${tw`grid grid-cols-4 xxl:mt-12 laptop:mt-10`}
 `;
 const WorkWithUs = styled.div`
   ${tw`col-span-1`}
@@ -24,7 +23,7 @@ const WorkWithUsList = styled.ul``;
 const WorkWithUsItem = styled.li`
   ${tw`mb-2`}
   a {
-    ${tw`text-lg font-medium text-white capitalize`}
+    ${tw`font-medium text-white capitalize xxl:text-lg laptop:text-sm`}
   }
 `;
 const Connect = styled.div`
@@ -43,7 +42,7 @@ const Row3 = styled.div`
   ${tw`grid grid-cols-12 mt-12`}
 `;
 const Copyright = styled.span`
-  ${tw`col-span-3 text-base font-normal text-white`}
+  ${tw`col-span-3 font-normal text-white xxl:text-base laptop:text-xs`}
 `;
 const LegalInfo = styled.ul`
   ${tw`flex col-span-7`}
@@ -51,17 +50,17 @@ const LegalInfo = styled.ul`
 const LegalInfoItem = styled.li`
   ${tw`mr-10`}
   a {
-    ${tw`text-base font-normal text-white `}
+    ${tw`font-normal text-white xxl:text-base laptop:text-sm`}
   }
 `;
 const LanguageContainer = styled.div`
-  ${tw`flex justify-end col-span-2`}
+  ${tw`flex justify-end col-span-2 laptop:text-sm`}
 `;
 const Language = styled.select`
   ${tw`text-white bg-transparent outline-none appearance-none cursor-pointer`}
 `;
 const LanguageOptions = styled.option`
-  ${tw`text-base font-normal text-white `}
+  ${tw`text-base font-normal text-white laptop:text-2xl`}
 `;
 const LanguageLabel = styled.label`
   ${tw`mr-3 text-white`}

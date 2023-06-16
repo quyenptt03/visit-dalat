@@ -16,6 +16,7 @@ export type Article = {
 
 export type ArticlesType = {
   articles?: Article[];
+  article?: Article;
   total?: number;
   isLoading?: boolean;
   error?: any;

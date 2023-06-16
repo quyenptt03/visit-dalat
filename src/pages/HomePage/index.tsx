@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 
-import Navbar from "../../components/Navbar";
 import {
   TopSection,
   PostsSection,
@@ -12,8 +11,6 @@ import {
   MoreInfoSection,
   HotelsSection,
 } from "./components/Sections";
-import Footer from "../../components/Footer";
-import BackToTopButton from "../../components/BackToTopButton";
 
 const PageContainer = styled.div`
   ${tw``}
@@ -21,7 +18,6 @@ const PageContainer = styled.div`
 const HomePage = () => {
   return (
     <PageContainer>
-      <Navbar />
       <TopSection />
       <PostsSection />
       <PlacesSection />
@@ -29,8 +25,6 @@ const HomePage = () => {
       <MoreInfoSection />
       <FoodsSection />
       <HotelsSection />
-      <Footer />
-      <BackToTopButton />
     </PageContainer>
   );
 };

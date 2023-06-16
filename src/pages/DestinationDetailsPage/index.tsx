@@ -2,9 +2,6 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import BackToTopButton from "../../components/BackToTopButton";
 import Details from "./components/Details";
 import Map from "./components/Map";
 import Reviews from "./components/Reviews";
@@ -26,7 +23,6 @@ const DetailPlace = () => {
 
   return (
     <>
-      <Navbar />
       <PageContainer>
         <Details />
         <SectionMarginer>
@@ -35,8 +31,6 @@ const DetailPlace = () => {
         <SectionMarginer>
           <Reviews />
         </SectionMarginer>
-        <Footer />
-        <BackToTopButton />
       </PageContainer>
     </>
   );

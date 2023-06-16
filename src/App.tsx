@@ -1,9 +1,17 @@
 import React, { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import DetailPlace from "./pages/DetailPlace";
-import DestinationsPage from "./pages/DestionationsPage";
-import ArticlesPage from "./pages/ArticlesPage";
+import {
+  HomePage,
+  DestinationsPage,
+  DestinationDetailsPage,
+  ArticlesPage,
+  ArticleDetailsPage,
+  ErrorPage,
+} from "./pages";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import BackToTopButton from "./components/BackToTopButton";
+
 function App() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -11,12 +19,17 @@ function App() {
   }, [pathname]);
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/destinations" element={<DestinationsPage />} />
-        <Route path="/destinations/:id" element={<DetailPlace />} />
+        <Route path="/destinations/:id" element={<DestinationDetailsPage />} />
         <Route path="/articles" element={<ArticlesPage />} />
+        <Route path="/articles/:id" element={<ArticleDetailsPage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
+      <BackToTopButton />
     </>
   );
 }

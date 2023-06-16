@@ -32,3 +32,17 @@ export const featuredArticlesReducers = createReducer(initialState, {
     state.error = action.payload;
   },
 });
+
+export const singleArticleReducer = createReducer(initialState, {
+  getSingleArticleRequest: (state) => {
+    state.isLoading = true;
+  },
+  getSingleArticleSuccess: (state, action) => {
+    state.isLoading = false;
+    state.article = action.payload;
+  },
+  getSingleArticleFail: (state, action) => {
+    state.isLoading = false;
+    state.error = action.payload;
+  },
+});

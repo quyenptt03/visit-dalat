@@ -20,7 +20,7 @@ export const getAllDestinations =
     } catch (error: any) {
       dispatch({
         type: "getAllDestinationsFail",
-        payload: error.response.data,
+        payload: error.response.data.msg,
       });
     }
   };
@@ -39,7 +39,7 @@ export const getFeaturedDestinations =
     } catch (error: any) {
       dispatch({
         type: "getFeaturedDestinationsFail",
-        payload: error.response.data,
+        payload: error.response.data.msg,
       });
     }
   };
@@ -58,7 +58,7 @@ export const getSingleDestination =
     } catch (error: any) {
       dispatch({
         type: "getSingleDestinationFail",
-        payload: error.response.data,
+        payload: error.response.data.msg,
       });
     }
   };

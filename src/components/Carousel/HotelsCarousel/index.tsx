@@ -11,6 +11,8 @@ import {
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Hotel1 from "../../../assets/hotels/hotel1.png";
+import Hotel2 from "../../../assets/hotels/hotel2.png";
+import Hotel3 from "../../../assets/hotels/hotel3.png";
 
 type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
@@ -95,13 +97,13 @@ const HotelsCarousel = () => {
             star={4.5}
           />
           <HotelCard
-            imgSrc={Hotel1}
-            title="Ana Mandara Villas Dalat Resort & Spa"
+            imgSrc={Hotel2}
+            title="Dalat Palace Heritage Hotel"
             star={4.5}
           />
           <HotelCard
-            imgSrc={Hotel1}
-            title="Ana Mandara Villas Dalat Resort & Spa"
+            imgSrc={Hotel3}
+            title="Terracotta Hotel and Resort Dalat"
             star={4.5}
           />
           <HotelCard
@@ -110,12 +112,12 @@ const HotelsCarousel = () => {
             star={4}
           />
           <HotelCard
-            imgSrc={Hotel1}
+            imgSrc={Hotel2}
             title="Ana Mandara Villas Dalat Resort & Spa"
             star={3.5}
           />
           <HotelCard
-            imgSrc={Hotel1}
+            imgSrc={Hotel3}
             title="Ana Mandara Villas Dalat Resort & Spa"
             star={5}
           />

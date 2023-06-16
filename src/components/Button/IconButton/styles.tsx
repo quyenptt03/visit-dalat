@@ -20,7 +20,7 @@ export const BackToTopButton = styled(ButtonContainer)`
     transition: all 0.5s ease;
   }
   &:hover svg {
-    stroke: #1d764a !important;
+    color: #1d764a !important;
   }
 `;
 

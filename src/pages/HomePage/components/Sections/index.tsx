@@ -15,7 +15,7 @@ import DalatGreen from "../../../../assets/images/dalat-green.png";
 const PostsSection = () => {
   return (
     <SectionMarginer>
-      <SectionHeader field="Bài viết" title="Bài viết mới nhất" />
+      <SectionHeader field="Bài viết" title="Bài viết nổi bật" />
       <PostsCarousel />
     </SectionMarginer>
   );

@@ -6,6 +6,7 @@ import {
   singleDestinationReducer,
 } from "./destination/reducers";
 import { articlesReducer, featuredArticlesReducers } from "./article/reducers";
+import { categoriesReducer } from "./category/reducers";
 
 export const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ export const store = configureStore({
     destination: singleDestinationReducer,
     articles: articlesReducer,
     featuredArticles: featuredArticlesReducers,
+    categories: categoriesReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });

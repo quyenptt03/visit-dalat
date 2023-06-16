@@ -25,7 +25,8 @@ const PostsCarousel = () => {
   const { isLoading, articles } = useAppSelector(
     (state) => state.featuredArticles
   );
-  console.log({ isLoading, articles });
+  let count: number = 0;
+  if (articles) count = articles.length - 4;
 
   const [disablePrevBtn, setDisablePrevBtn] = useState(true);
   const [disableNextBtn, setDisableNextBtn] = useState(false);
@@ -77,7 +78,7 @@ const PostsCarousel = () => {
       setDisablePrevBtn(false);
     }
 
-    if (currentSlide === 3) {
+    if (currentSlide === count) {
       setDisableNextBtn(true);
     } else {
       setDisableNextBtn(false);
@@ -108,10 +109,11 @@ const PostsCarousel = () => {
             <Slider ref={slide} {...settings} afterChange={handleAfterChange}>
               {articles?.map((article, index) => (
                 <Post
-                  imgSrc={URL + article.featuredImage}
+                  imgSrc={article.featuredImage}
                   name={article.title}
                   description=""
                   url={`/articles/${article._id}`}
+                  key={article._id}
                 />
               ))}
             </Slider>

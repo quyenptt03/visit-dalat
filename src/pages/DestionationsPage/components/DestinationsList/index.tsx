@@ -28,7 +28,6 @@ const DestinationsList = () => {
   const { destinations, isLoading } = useAppSelector(
     (state) => state.destinations
   );
-  console.log(destinations);
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(getAllDestinations(queryParams));

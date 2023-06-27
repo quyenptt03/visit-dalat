@@ -36,41 +36,45 @@ const Article = () => {
 
   return (
     <Container>
-      <ArticleContainer>
-        <ArticleHero>
-          <Title>{article?.title}</Title>
-          <Action>
-            <Buttons>
-              <TextButton theme="noOutlined">
-                <ButtonContent>
-                  <IconText>Lưu</IconText>
-                  <Icon>
-                    <SaveIcon />
-                  </Icon>
-                </ButtonContent>
-              </TextButton>
-              <TextButton theme="noOutlined">
-                <ButtonContent>
-                  <IconText>Chia sẻ</IconText>
-                  <Icon>
-                    <ShareIcon />
-                  </Icon>
-                </ButtonContent>
-              </TextButton>
-            </Buttons>
-          </Action>
-          <Image src={article?.featuredImage} alt="hero image" />
-        </ArticleHero>
-        <ParagraphContainer>
-          {article?.body.map((paragraph, index) => (
-            <Paragraph key={index}>
-              <ParagraphTitle>{paragraph.pTitle}</ParagraphTitle>
-              <ParagraphContent>{paragraph.pContent}</ParagraphContent>
-              <Image src={paragraph.image} alt="paragraph image" />
-            </Paragraph>
-          ))}
-        </ParagraphContainer>
-      </ArticleContainer>
+      {isLoading ? (
+        <h3>Loading...</h3>
+      ) : (
+        <ArticleContainer>
+          <ArticleHero>
+            <Title>{article?.title}</Title>
+            <Action>
+              <Buttons>
+                <TextButton theme="noOutlined">
+                  <ButtonContent>
+                    <IconText>Lưu</IconText>
+                    <Icon>
+                      <SaveIcon />
+                    </Icon>
+                  </ButtonContent>
+                </TextButton>
+                <TextButton theme="noOutlined">
+                  <ButtonContent>
+                    <IconText>Chia sẻ</IconText>
+                    <Icon>
+                      <ShareIcon />
+                    </Icon>
+                  </ButtonContent>
+                </TextButton>
+              </Buttons>
+            </Action>
+            <Image src={article?.featuredImage} alt="hero image" />
+          </ArticleHero>
+          <ParagraphContainer>
+            {article?.body.map((paragraph, index) => (
+              <Paragraph key={index}>
+                <ParagraphTitle>{paragraph.pTitle}</ParagraphTitle>
+                <ParagraphContent>{paragraph.pContent}</ParagraphContent>
+                <Image src={paragraph.image} alt="paragraph image" />
+              </Paragraph>
+            ))}
+          </ParagraphContainer>
+        </ArticleContainer>
+      )}
     </Container>
   );
 };

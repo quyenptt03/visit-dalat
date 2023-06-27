@@ -13,6 +13,7 @@ import {
   SliderContainer,
   SwiperBtns,
 } from "./styles";
+import Loading from "../../Loading";
 
 type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
@@ -88,7 +89,7 @@ const PostsCarousel = () => {
   return (
     <CarouselContainer>
       {isLoading ? (
-        <h3>Loading...</h3>
+        <Loading loading={isLoading} />
       ) : (
         <>
           <SwiperBtns>

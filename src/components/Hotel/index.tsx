@@ -14,7 +14,7 @@ const HotelCard = (props: IHotelProps) => {
   return (
     <Container>
       <ImageContainer>
-        <Image src={imgSrc} alt="hotel" />
+        <Image src={imgSrc} alt="hotel" loading="lazy" />
       </ImageContainer>
       <Title>{title}</Title>
       <StarRatings

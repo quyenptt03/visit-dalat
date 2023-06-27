@@ -1,6 +1,5 @@
 import React from "react";
 import { IconButton } from "../Button";
-import { URL } from "../../api";
 
 import {
   PostContainer,
@@ -22,7 +21,8 @@ interface IPostProps {
 
 const Post = (props: IPostProps) => {
   const { name, description, imgSrc, url, size } = props;
-  const desc = description.slice(0, 90);
+  const desc =
+    description.length > 90 ? description.slice(0, 90) + "..." : description;
   return (
     <PostContainer as={Link} to={url}>
       <ImageContainer>
@@ -32,7 +32,7 @@ const Post = (props: IPostProps) => {
         </ButtonContainer>
       </ImageContainer>
       <PostTitle>{name}</PostTitle>
-      <PostDescription>{desc}...</PostDescription>
+      <PostDescription>{desc}</PostDescription>
     </PostContainer>
   );
 };

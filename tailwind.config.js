@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   mode: "jit",
   important: true,
@@ -36,7 +37,7 @@ module.exports = {
         black: "#222222",
         "raven-black": "#3D3D3D",
         white: "#FFFFFF",
-        green: "#1D764A",
+        primary: "var(--primary-color)",
         "light-blue": "#DBEEFE",
         "baby-blue": "#E4F2FE",
         "bg-blue": "#F1F8FF",

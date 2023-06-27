@@ -11,13 +11,13 @@ const CategoryItem = styled.div`
   ${tw`cursor-pointer`}
 `;
 const CheckboxContainer = styled.div`
-  ${tw`border-solid border-[1px] border-green rounded-3xl w-fit px-7 py-3 mr-4 mb-2 hover:bg-bg-blue flex`}
+  ${tw`border-solid border-[1px] border-primary rounded-3xl w-fit px-7 py-3 mr-4 mb-2 hover:bg-bg-blue flex`}
 `;
 const CheckboxInput = styled.input`
   ${tw`appearance-none`}
 `;
 const CheckboxLabel = styled.label`
-  ${tw`text-green font-bold text-sm cursor-pointer flex`}
+  ${tw`text-primary font-bold text-sm cursor-pointer flex`}
 `;
 const CheckboxName = styled.span`
   ${tw`mr-1`}

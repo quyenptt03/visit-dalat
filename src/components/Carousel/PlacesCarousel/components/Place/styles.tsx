@@ -43,7 +43,7 @@ const ButtonText = styled.span`
   ${tw`mr-5 font-bold xxl:text-xl laptop:text-base`}
 `;
 const ForwardIconContainer = styled(ForwardIcon)`
-  ${tw` stroke-green`}
+  ${tw` stroke-primary`}
 `;
 
 export {

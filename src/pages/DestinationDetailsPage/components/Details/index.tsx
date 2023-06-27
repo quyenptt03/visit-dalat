@@ -3,6 +3,7 @@ import { ImagesCarousel } from "../../../../components/Carousel";
 import Description from "../Description";
 import { useAppSelector } from "../../../../redux/hook";
 import { Container, Images, PlaceDescription } from "./styles";
+import Loading from "../../../../components/Loading";
 const Details = () => {
   const { isLoading, destination } = useAppSelector(
     (state) => state.destination
@@ -10,7 +11,7 @@ const Details = () => {
   return (
     <>
       {isLoading ? (
-        <h3>Loading...</h3>
+        <Loading loading={isLoading} />
       ) : (
         <Container>
           <Images>

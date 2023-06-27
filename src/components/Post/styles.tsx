@@ -6,7 +6,7 @@ interface ButtonProps {
 }
 
 export const PostContainer = styled.div`
-  ${tw`block mb-10 xxl:w-96 laptop:w-80`}
+  ${tw`block mb-14 xxl:w-96 laptop:w-80`}
 `;
 export const ImageContainer = styled.div`
   ${tw`relative w-full overflow-hidden rounded-t-lg rounded-br-lg cursor-pointer`}
@@ -29,7 +29,7 @@ export const PostImage = styled.img`
   }
 `;
 export const PostTitle = styled.div`
-  ${tw`w-[calc(100%-3rem)] mt-5 mb-1 xxl:text-lg font-bold capitalize text-raven-black cursor-pointer laptop:text-base`}
+  ${tw`w-[calc(100%-3rem)] mt-5 mb-1 xxl:text-lg font-bold capitalize text-raven-black cursor-pointer laptop:text-base h-8`}
 `;
 export const PostDescription = styled.div`
   ${tw`w-[calc(100%-3rem)] xxl:text-base font-medium  leading-7 text-gray laptop:text-sm`}

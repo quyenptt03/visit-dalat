@@ -21,6 +21,7 @@ import {
   ParagraphTitle,
   ParagraphContent,
 } from "./styles";
+import Loading from "../../../../components/Loading";
 
 const Article = () => {
   const dispatch = useAppDispatch();
@@ -37,7 +38,7 @@ const Article = () => {
   return (
     <Container>
       {isLoading ? (
-        <h3>Loading...</h3>
+        <Loading loading={isLoading} />
       ) : (
         <ArticleContainer>
           <ArticleHero>

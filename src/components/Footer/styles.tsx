@@ -35,7 +35,7 @@ const ConnectList = styled.ul`
 const ConnectItem = styled.li`
   ${tw`mr-8`}
   a {
-    ${tw`text-white transition-all duration-100 ease-linear hover:text-green`}
+    ${tw`text-white transition-all duration-100 ease-linear hover:text-primary`}
   }
 `;
 const Row3 = styled.div`

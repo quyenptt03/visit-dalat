@@ -17,7 +17,7 @@ const Button = styled.button`
   }
 `;
 const ButtonContent = styled.div`
-  ${tw`flex items-center justify-center text-green`}
+  ${tw`flex items-center justify-center text-primary`}
 `;
 const IconText = styled.span`
   ${tw`mr-2 text-sm font-bold xxl:text-base`}

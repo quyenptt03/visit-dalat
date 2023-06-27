@@ -29,7 +29,7 @@ const Place = (props: IPlaceProps) => {
   const { field, title, p, imageAdr, mapImg, showBtn, url } = props;
   return (
     <PlaceContainer>
-      <Image src={imageAdr} alt="place" />
+      <Image src={imageAdr} alt="place" loading="lazy" />
       <Wrapper>
         <ContentWrapper>
           <Field>{field}</Field>
@@ -44,7 +44,7 @@ const Place = (props: IPlaceProps) => {
             </TextButton>
           )}
         </ContentWrapper>
-        <MapContainer src={mapImg} />
+        <MapContainer src={mapImg} alt="dalat-map" loading="lazy" />
       </Wrapper>
     </PlaceContainer>
   );

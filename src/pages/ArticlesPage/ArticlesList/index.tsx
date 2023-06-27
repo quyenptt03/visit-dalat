@@ -21,6 +21,7 @@ import {
   ClearBtn,
 } from "./styles";
 import Pagination from "../../../components/Pagination";
+import Loading from "../../../components/Loading";
 
 interface Filters {
   page: number;
@@ -114,7 +115,7 @@ const ArticlesList = () => {
   return (
     <>
       {isLoading ? (
-        <h3>Loading...</h3>
+        <Loading loading={isLoading} />
       ) : (
         <Container>
           <FilterContainer>

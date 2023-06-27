@@ -29,5 +29,5 @@ export const Title = styled.h5`
   ${tw`text-black font-bold `}
 `;
 export const ClearBtn = styled.button`
-  ${tw`text-sm font-bold text-green ml-7 items-center`}
+  ${tw`text-sm font-bold text-primary ml-7 items-center`}
 `;

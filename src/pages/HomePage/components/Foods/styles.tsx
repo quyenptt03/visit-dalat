@@ -17,7 +17,7 @@ const CaptionContainer = styled.div`
     isHovered && tw`visible translate-y-0`}
 `;
 const Caption = styled.h4`
-  ${tw`font-semibold xxl:text-lg text-green laptop:text-sm`}
+  ${tw`font-semibold xxl:text-lg text-primary laptop:text-sm`}
 `;
 const FoodItem = styled.div`
   ${tw`relative w-full h-full overflow-hidden cursor-pointer`}

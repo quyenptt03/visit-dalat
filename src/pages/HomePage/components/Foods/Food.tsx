@@ -14,7 +14,7 @@ const Food = (props: IFoodProps) => {
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
-      <FoodImg src={imageSrc} alt="food" isHovered={isHovered} />
+      <FoodImg src={imageSrc} alt="food" isHovered={isHovered} loading="lazy" />
       <CaptionContainer isHovered={isHovered}>
         <Caption>{caption}</Caption>
       </CaptionContainer>

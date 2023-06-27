@@ -10,7 +10,7 @@ export const NavItemText = styled(NavLink)`
 `;
 export const UnderLine = styled.span<{ isHovered: boolean }>`
   height: 2px;
-  ${tw`invisible w-1/2 mx-auto transition-all duration-200 ease-linear bg-green`}
+  ${tw`invisible w-1/2 mx-auto transition-all duration-200 ease-linear bg-primary`}
 
   ${({ isHovered }: { isHovered: boolean }) => isHovered && tw`visible `}
 `;

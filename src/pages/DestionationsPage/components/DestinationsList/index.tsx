@@ -12,6 +12,7 @@ import { ReactComponent as NextIcon } from "../../../../assets/icons/next-icon.s
 import { ReactComponent as PrevIcon } from "../../../../assets/icons/prev-icon.svg";
 
 import { Container, List, ListCol, PaginationContainer } from "./styles";
+import Loading from "../../../../components/Loading";
 
 const DestinationsList = () => {
   const navigate = useNavigate();
@@ -53,7 +54,7 @@ const DestinationsList = () => {
   return (
     <>
       {isLoading ? (
-        <h3>Loading...</h3>
+        <Loading loading={isLoading} />
       ) : (
         <Container>
           <List>

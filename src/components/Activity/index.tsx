@@ -21,7 +21,7 @@ const Activity = (props: IActivityProps) => {
   return (
     <ActivityContainer>
       <ImageContainer>
-        <Image src={image} alt="activity" />
+        <Image src={image} alt="activity" loading="lazy" />
         <Content>
           <Title>{title}</Title>
           <SubTitle>{subTitle}</SubTitle>

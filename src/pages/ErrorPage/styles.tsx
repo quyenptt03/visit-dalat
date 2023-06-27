@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   ${tw`flex flex-col items-center justify-center gap-7`}
 `;
 const Title = styled.h1`
-  ${tw`font-extrabold text-8xl text-green`}
+  ${tw`font-extrabold text-8xl text-primary`}
 `;
 const SubTitle = styled.h2`
   ${tw`text-3xl font-bold text-black`}
@@ -21,7 +21,7 @@ const ButtonText = styled.span`
   ${tw`mr-5 text-base font-bold xxl:text-xl`}
 `;
 const ForwardIconContainer = styled(ForwardIcon)`
-  ${tw` stroke-green`}
+  ${tw` stroke-primary`}
 `;
 const ErrorImage = styled.img`
   ${tw`h-2/3`}

@@ -96,7 +96,9 @@ const HomeCarousel = () => {
                 </LocationIconContainer>
                 <LocationTitleWrapper>
                   <LocationTitle>Hồ Tuyền Lâm</LocationTitle>
-                  <LocationSeeMore>Tìm hiểu thêm</LocationSeeMore>
+                  <LocationSeeMore href="/destinations/646845f80c759a65d4fcf817">
+                    Tìm hiểu thêm
+                  </LocationSeeMore>
                 </LocationTitleWrapper>
               </FeaturedLocationCard>
               <FeaturedLocationCard>
@@ -106,7 +108,9 @@ const HomeCarousel = () => {
                 </LocationIconContainer>
                 <LocationTitleWrapper>
                   <LocationTitle>Thung lũng tình yêu</LocationTitle>
-                  <LocationSeeMore>Tìm hiểu thêm</LocationSeeMore>
+                  <LocationSeeMore href="/destinations/646845f80c759a65d4fcf818">
+                    Tìm hiểu thêm
+                  </LocationSeeMore>
                 </LocationTitleWrapper>
               </FeaturedLocationCard>
               <FeaturedLocationCard>
@@ -116,7 +120,9 @@ const HomeCarousel = () => {
                 </LocationIconContainer>
                 <LocationTitleWrapper>
                   <LocationTitle>Núi Langbiang</LocationTitle>
-                  <LocationSeeMore>Tìm hiểu thêm</LocationSeeMore>
+                  <LocationSeeMore href="/destinations/646845f80c759a65d4fcf815">
+                    Tìm hiểu thêm
+                  </LocationSeeMore>
                 </LocationTitleWrapper>
               </FeaturedLocationCard>
             </FeaturedLocations>

@@ -2,15 +2,14 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const LogoContainer = styled.a`
-  ${tw`flex items-center `}
+  ${tw`flex items-center mt-5 ml-5 laptop:m-0`}
 `;
 const LogoText = styled.div`
   ${tw`
     ml-4
-    xxl:text-lg
-    laptop:text-sm
-    xxl:tracking-[0.2em]
-    laptop:tracking-widest
+    text-base
+    tablet:text-lg
+    tracking-[0.2em]
     uppercase
     font-black
     font-logo
@@ -24,6 +23,6 @@ export const DarkLogo = styled(LogoText)`
 `;
 export const Image = styled.div`
   img {
-    ${tw`w-auto h-full laptop:h-11 xxl:h-full`}
+    ${tw`w-auto h-12 xxl:h-full`}
   }
 `;

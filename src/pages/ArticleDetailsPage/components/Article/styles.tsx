@@ -5,19 +5,19 @@ const Container = styled.div`
   ${tw`grid grid-cols-12 my-24 mx-11`}
 `;
 const ArticleContainer = styled.div`
-  ${tw`col-span-8 col-start-3 mt-10`}
+  ${tw`col-span-12 mt-10 laptop:col-span-8 laptop:col-start-3`}
 `;
 const ArticleHero = styled.div`
   ${tw`grid grid-cols-6 mb-12`}
 `;
 const Title = styled.h1`
-  ${tw`col-span-4 col-start-2 text-5xl xxl:text-6xl font-extrabold text-center text-black`}
+  ${tw`col-span-6 text-3xl font-extrabold text-center text-black laptop:col-span-4 laptop:col-start-2 xxl:text-6xl`}
 `;
 const Action = styled.div`
-  ${tw`col-span-4 col-start-2 text-center my-5`}
+  ${tw`col-span-6 my-5 text-center laptop:col-span-4 laptop:col-start-2`}
 `;
 const Buttons = styled.div`
-  ${tw``}
+  ${tw`flex justify-center`}
 `;
 const ButtonContent = styled.div`
   ${tw`flex items-center justify-center text-primary`}
@@ -37,13 +37,13 @@ const ParagraphContainer = styled.div`
   ${tw`border-t-[1px] border-gray border-opacity-50 `}
 `;
 const Paragraph = styled.div`
-  ${tw` pt-5 `}
+  ${tw`pt-5 `}
 `;
 const ParagraphTitle = styled.h2`
-  ${tw`text-lg font-semibold mb-5`}
+  ${tw`mb-5 text-lg font-semibold`}
 `;
 const ParagraphContent = styled.p`
-  ${tw`text-base mb-8`}
+  ${tw`mb-8 text-base`}
 `;
 
 export {

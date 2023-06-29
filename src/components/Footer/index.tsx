@@ -15,10 +15,6 @@ import {
   Copyright,
   LegalInfo,
   LegalInfoItem,
-  LanguageContainer,
-  Language,
-  LanguageOptions,
-  LanguageLabel,
 } from "./styles";
 
 import { ReactComponent as FacebookIcon } from "../../assets/icons/facebook-icon.svg";
@@ -26,9 +22,6 @@ import { ReactComponent as InstagramIcon } from "../../assets/icons/instagram-ic
 import { ReactComponent as YoutubeIcon } from "../../assets/icons/youtube-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../assets/icons/twitter-icon.svg";
 import { ReactComponent as GithubIcon } from "../../assets/icons/github-icon.svg";
-import { ReactComponent as TiktokIcon } from "../../assets/icons/tiktok-icon.svg";
-import { ReactComponent as PinterestIcon } from "../../assets/icons/pinterest-icon.svg";
-import { ReactComponent as LanguageIcon } from "../../assets/icons/language-icon.svg";
 
 const Footer = () => {
   return (
@@ -98,24 +91,6 @@ const Footer = () => {
                   <GithubIcon />
                 </a>
               </ConnectItem>
-              <ConnectItem>
-                <a
-                  href="https://www.facebook.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <TiktokIcon />
-                </a>
-              </ConnectItem>
-              <ConnectItem>
-                <a
-                  href="https://www.facebook.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <PinterestIcon />
-                </a>
-              </ConnectItem>
             </ConnectList>
           </Connect>
         </Row2>
@@ -138,15 +113,6 @@ const Footer = () => {
               <a href="/">Phản hồi</a>
             </LegalInfoItem>
           </LegalInfo>
-          <LanguageContainer>
-            <LanguageLabel htmlFor="lang">
-              <LanguageIcon />
-            </LanguageLabel>
-            <Language id="lang">
-              <LanguageOptions>Tiếng Việt</LanguageOptions>
-              <LanguageOptions>English</LanguageOptions>
-            </Language>
-          </LanguageContainer>
         </Row3>
       </Content>
     </Container>

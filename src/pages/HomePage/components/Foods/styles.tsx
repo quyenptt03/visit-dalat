@@ -12,7 +12,7 @@ const FoodImg = styled.img`
   ${({ isHovered }: { isHovered: boolean }) => isHovered && tw`-translate-y-10`}
 `;
 const CaptionContainer = styled.div`
-  ${tw`absolute bottom-0 flex items-center justify-center invisible w-full transition-all duration-300 ease-in-out translate-y-20 xxl:h-20 laptop:h-16 bg-light-blue`}
+  ${tw`absolute bottom-0 flex items-center justify-center invisible w-full transition-all duration-300 ease-in-out translate-y-20 xxl:h-20 laptop:h-16 bg-secondary`}
   ${({ isHovered }: { isHovered: boolean }) =>
     isHovered && tw`visible translate-y-0`}
 `;

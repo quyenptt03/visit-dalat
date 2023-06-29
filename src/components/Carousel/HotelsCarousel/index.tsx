@@ -7,6 +7,7 @@ import {
   SliderContainer,
   SwiperBtns,
   NextButtonContainer,
+  ItemContainer,
 } from "./styles";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -34,10 +35,10 @@ const HotelsCarousel = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -51,7 +52,7 @@ const HotelsCarousel = () => {
       {
         breakpoint: 480,
         settings: {
-          dots: true,
+          dots: false,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -91,36 +92,48 @@ const HotelsCarousel = () => {
       </SwiperBtns>
       <SliderContainer>
         <Slider ref={slide} {...settings} afterChange={handleAfterChange}>
-          <HotelCard
-            imgSrc={Hotel1}
-            title="Ana Mandara Villas Dalat Resort & Spa"
-            star={4.5}
-          />
-          <HotelCard
-            imgSrc={Hotel2}
-            title="Dalat Palace Heritage Hotel"
-            star={4.5}
-          />
-          <HotelCard
-            imgSrc={Hotel3}
-            title="Terracotta Hotel and Resort Dalat"
-            star={4.5}
-          />
-          <HotelCard
-            imgSrc={Hotel1}
-            title="Ana Mandara Villas Dalat Resort & Spa"
-            star={4}
-          />
-          <HotelCard
-            imgSrc={Hotel2}
-            title="Ana Mandara Villas Dalat Resort & Spa"
-            star={3.5}
-          />
-          <HotelCard
-            imgSrc={Hotel3}
-            title="Ana Mandara Villas Dalat Resort & Spa"
-            star={5}
-          />
+          <ItemContainer>
+            <HotelCard
+              imgSrc={Hotel1}
+              title="Ana Mandara Villas Dalat Resort & Spa"
+              star={4.5}
+            />
+          </ItemContainer>
+          <ItemContainer>
+            <HotelCard
+              imgSrc={Hotel2}
+              title="Dalat Palace Heritage Hotel"
+              star={4.5}
+            />
+          </ItemContainer>
+          <ItemContainer>
+            <HotelCard
+              imgSrc={Hotel3}
+              title="Terracotta Hotel and Resort Dalat"
+              star={4.5}
+            />
+          </ItemContainer>
+          <ItemContainer>
+            <HotelCard
+              imgSrc={Hotel1}
+              title="Ana Mandara Villas Dalat Resort & Spa"
+              star={4}
+            />
+          </ItemContainer>
+          <ItemContainer>
+            <HotelCard
+              imgSrc={Hotel2}
+              title="Ana Mandara Villas Dalat Resort & Spa"
+              star={3.5}
+            />
+          </ItemContainer>
+          <ItemContainer>
+            <HotelCard
+              imgSrc={Hotel3}
+              title="Ana Mandara Villas Dalat Resort & Spa"
+              star={5}
+            />
+          </ItemContainer>
         </Slider>
       </SliderContainer>
     </CarouselContainer>

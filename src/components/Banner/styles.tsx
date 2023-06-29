@@ -5,13 +5,13 @@ const Container = styled.div`
   ${tw`relative grid w-full grid-cols-12 mt-20 h-80 xxl:mt-24 bg-bg-blue `}
 `;
 const Background = styled.img`
-  ${tw`absolute h-full`}
+  ${tw`absolute h-full tablet:block hidden`}
 `;
 const Wrapper = styled.div`
-  ${tw`z-10 flex justify-between col-span-8 col-start-3 mt-16 mx-6`}
+  ${tw`z-10 flex flex-col tablet:flex-row justify-evenly tablet:justify-between col-span-12 desktop:col-span-8 desktop:col-start-3 mt-16 mx-6 tablet:col-span-10 tablet:col-start-2`}
 `;
 const Texts = styled.div`
-  ${tw`w-1/2`}
+  ${tw`tablet:w-1/2 w-full`}
 `;
 const Title = styled.h1`
   ${tw`text-3xl font-bold xxl:text-4xl mb-5`}

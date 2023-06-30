@@ -11,7 +11,7 @@ export const ListCol = styled.div`
   ${tw`col-span-6 tablet:col-span-3 desktop:col-span-2`}
 `;
 export const FilterContainer = styled.div`
-  ${tw`col-span-12 tablet:col-span-10 tablet:col-start-2 xxl:col-span-8 xxl:col-start-3 mb-8`}
+  ${tw`mx-5 col-span-12 tablet:col-span-10 tablet:col-start-2 xxl:col-span-8 xxl:col-start-3 mb-8`}
 `;
 export const PaginationContainer = styled.div`
   ${tw`col-span-8 col-start-3 grid mt-14`}

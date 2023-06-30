@@ -11,13 +11,13 @@ export const Image = styled.img`
   ${tw`w-full h-full transition-all duration-300 ease-linear rounded-lg hover:transform hover:scale-105 `}
 `;
 export const Content = styled.div`
-  ${tw`absolute laptop:ml-11 laptop:bottom-9 xxl:ml-14 xxl:bottom-12`}
+  ${tw`absolute ml-6 laptop:ml-11 laptop:bottom-9 xxl:ml-14 xxl:bottom-12 bottom-7`}
 `;
 export const Title = styled.h1`
-  ${tw`mb-2 font-semibold text-white capitalize xxl:text-3xl laptop:text-2xl`}
+  ${tw`mb-2 text-xl font-semibold text-white capitalize xxl:text-3xl laptop:text-2xl`}
 `;
 export const SubTitle = styled.span`
-  ${tw`font-medium text-white xxl:text-base opacity-70 laptop:text-xs`}
+  ${tw`text-sm font-medium text-white laptop:text-base opacity-70 `}
 `;
 export const ButtonContainer = styled.div`
   ${tw`absolute bottom-0 right-0`}

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const Container = styled.div`
-  ${tw`grid grid-cols-12 2xl:mx-11 2xl:my-16 mx-8 my-7`}
+  ${tw`grid grid-cols-12 2xl:mx-11 2xl:my-16 my-7`}
 `;
 export const List = styled.div`
   ${tw`col-span-12 tablet:col-span-10 tablet:col-start-2 xxl:col-span-8 xxl:col-start-3 grid grid-cols-6 gap-7`}

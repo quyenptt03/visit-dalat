@@ -9,9 +9,11 @@ import { SectionMarginer } from "../../components/Marginer";
 import { useAppDispatch } from "../../redux/hook";
 import { getSingleDestination } from "../../redux/destination/actions";
 import { useLocation } from "react-router-dom";
+
 const PageContainer = styled.div`
   ${tw`mt-20 xxl:mt-24`}
 `;
+
 const DetailPlace = () => {
   const location = useLocation();
   const destinationsId = location.pathname.split("/destinations/")[1];

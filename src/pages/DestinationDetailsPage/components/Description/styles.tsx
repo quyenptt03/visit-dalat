@@ -6,12 +6,13 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-  ${tw`ml-11 pt-20 mr-[17%]`}
+  ${tw`laptop:ml-11 pt-10 laptop:pt-20 laptop:mr-[17%] mx-5`}
 `;
 const Buttons = styled.div`
   ${tw`flex justify-end`}
 `;
 const Button = styled.button`
+  ${tw`mb-5`}
   span {
     ${tw`text-sm`}
   }
@@ -28,13 +29,13 @@ const Icon = styled.div`
   }
 `;
 const Title = styled.h1`
-  ${tw`mb-6 text-5xl font-extrabold text-black xxl:text-6xl xxl:mt-9 mt-7`}
+  ${tw`mb-6 text-4xl font-extrabold text-black laptop:text-5xl xxl:text-6xl xxl:mt-9 mt-7`}
 `;
 const Info = styled.div`
-  ${tw`flex items-center w-full mb-4 bg-white h-14`}
+  ${tw`flex flex-col justify-center w-full mb-4 bg-white laptop:justify-normal laptop:items-center laptop:flex-row h-14`}
 `;
 const InfoItem = styled.div`
-  ${tw`flex ml-3 mr-10 `}
+  ${tw`flex mt-1 ml-3 mr-10 laptop:my-0`}
 `;
 const Text = styled.span`
   ${tw`ml-4 text-sm font-medium text-black xxl:text-base`}

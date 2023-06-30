@@ -49,14 +49,6 @@ const HotelsCarousel = () => {
           initialSlide: 0,
         },
       },
-      {
-        breakpoint: 480,
-        settings: {
-          dots: false,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
     ],
   };
 

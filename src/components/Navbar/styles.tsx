@@ -14,7 +14,7 @@ export const NavbarContainer2 = styled.div<{ $open?: boolean }>`
     props.$open === true ? "var(--secondary-color)" : "#fff"};
 `;
 export const NavarRightSide = styled.div`
-  ${tw`flex items-center w-full justify-evenly laptop:w-auto laptop:justify-normal`}
+  ${tw`flex items-center w-full mb-20 justify-evenly laptop:w-auto laptop:justify-normal laptop:mb-0`}
 `;
 
 export const Icon = styled.button`

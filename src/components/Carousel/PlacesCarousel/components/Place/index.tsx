@@ -44,7 +44,7 @@ const Place = (props: IPlaceProps) => {
             </TextButton>
           )}
         </ContentWrapper>
-        <MapContainer src={mapImg} alt="dalat-map" loading="lazy" />
+        <MapContainer src={mapImg} loading="lazy" />
       </Wrapper>
     </PlaceContainer>
   );

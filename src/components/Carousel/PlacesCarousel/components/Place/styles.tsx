@@ -8,28 +8,28 @@ const Image = styled.img`
   ${tw`absolute inset-0 object-cover w-full h-full bg-black brightness-75`}
 `;
 const Wrapper = styled.div`
-  ${tw`flex justify-between w-full h-full `}
+  ${tw`flex flex-col justify-between w-full h-full laptop:flex-row`}
 `;
 const ContentWrapper = styled.div`
-  ${tw`w-1/3 xxl:ml-56 text-white xxl:mt-44 z-[1] laptop:ml-44 laptop:mt-36`}
+  ${tw`w-full mt-28 desktop:w-1/3 xxl:ml-56 xxl:mr-0 laptop:mr-0 text-white xxl:mt-44 z-[1] laptop:ml-44 laptop:mt-36 laptop:p-0 px-5`}
 `;
 const Field = styled.span`
   ${tw`
     xxl:text-base
-    laptop:text-[13px]
-    laptop:tracking-[0.5em]
+    text-sm
     font-semibold
     uppercase
     xxl:tracking-[0.7em]
+    tracking-[0.5em]
   `}
   text-shadow: 1px 1px 10px #000000;
 `;
 const Title = styled.h2`
-  ${tw`font-black capitalize xxl:mt-8 xxl:text-6xl laptop:mt-6 laptop:text-5xl`}
+  ${tw`mt-4 text-3xl font-black capitalize xxl:mt-8 xxl:text-6xl laptop:mt-6 laptop:text-5xl`}
   text-shadow: 1px 1px 10px #000000;
 `;
 const Paragraph = styled.p`
-  ${tw`font-semibold xxl:mt-8 xxl:text-xl mb-14 laptop:mb-11 laptop:text-base`}
+  ${tw`mt-4 text-base font-semibold xxl:mt-8 xxl:text-xl mb-14 laptop:mb-11 tablet:mt-6`}
   text-shadow: 1px 1px 10px #000000;
 `;
 

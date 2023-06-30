@@ -95,6 +95,11 @@ code {
   opacity: 1;
   background-color: white;
 }
+@media screen and (max-width: 1023px) {
+  .home-custom-dots-slick {
+    display: none;
+  }
+}
 /*leaflet-map*/
 .leaflet-container {
   width: 100%;

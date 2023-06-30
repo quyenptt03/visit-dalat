@@ -11,6 +11,7 @@ import {
   NextButtonContainer,
   SliderContainer,
   SwiperBtns,
+  ItemContainer,
 } from "./styles";
 import Loading from "../../Loading";
 
@@ -44,12 +45,21 @@ const PostsCarousel = () => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1281,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -58,14 +68,7 @@ const PostsCarousel = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 0,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          dots: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          dots: false,
         },
       },
     ],
@@ -108,13 +111,14 @@ const PostsCarousel = () => {
           <SliderContainer>
             <Slider ref={slide} {...settings} afterChange={handleAfterChange}>
               {articles?.map((article, index) => (
-                <Post
-                  imgSrc={article.featuredImage}
-                  name={article.title}
-                  description=""
-                  url={`/articles/${article._id}`}
-                  key={article._id}
-                />
+                <ItemContainer key={article._id}>
+                  <Post
+                    imgSrc={article.featuredImage}
+                    name={article.title}
+                    description=""
+                    url={`/articles/${article._id}`}
+                  />
+                </ItemContainer>
               ))}
             </Slider>
           </SliderContainer>

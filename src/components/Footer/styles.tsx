@@ -4,7 +4,7 @@ const Container = styled.div`
   ${tw`laptop:h-96 xxl:h-[474px] bg-dark-green`};
 `;
 const Content = styled.div`
-  ${tw`xxl:px-[8.25rem] xxl:pt-[5.25rem] laptop:px-24 laptop:pt-16 pt-1 m-0 tablet:m-10 tablet:mb-0`}
+  ${tw`xxl:px-[8.25rem] xxl:pt-[5.25rem] laptop:px-24 laptop:pt-16 pt-1 tablet:mb-0`}
 `;
 const Title = styled.h4`
   ${tw`mt-3 mb-3 font-semibold text-white capitalize xxl:mb-6 xxl:text-lg laptop:mb-5 laptop:text-base laptop:mt-0`}

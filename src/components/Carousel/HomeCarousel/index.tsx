@@ -126,7 +126,7 @@ const HomeCarousel = () => {
                 </LocationTitleWrapper>
               </FeaturedLocationCard>
             </FeaturedLocations>
-            <Image src={image} alt={"home slide " + index} />
+            <Image src={image} alt={"home slide " + index} loading="lazy" />
           </HomeContainer>
         ))}
       </Slider>

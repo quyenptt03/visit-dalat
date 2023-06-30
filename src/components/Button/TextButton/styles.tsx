@@ -14,7 +14,7 @@ export const WhiteOutlineButton = styled(BaseButton)`
 `;
 
 export const FilledButton = styled(BaseButton)`
-  ${tw`border-transparent xxl:px-12 xxl:py-6 text-primary bg-secondary laptop:px-10 laptop:py-5`}
+  ${tw`px-8 py-4 border-transparent laptop:px-10 laptop:py-5 xxl:px-12 xxl:py-6 text-primary bg-secondary`}
 `;
 
 export const NoOutlineButton = styled(BaseButton)`

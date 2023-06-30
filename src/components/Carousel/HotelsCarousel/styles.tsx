@@ -6,7 +6,7 @@ export const CarouselContainer = styled.div`
 `;
 
 export const SliderContainer = styled.div`
-  ${tw`mt-5  xxl:mt-7`};
+  ${tw`mt-5 xxl:mt-7`};
 `;
 
 export const SwiperBtns = styled.div`

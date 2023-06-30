@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import tw from "twin.macro";
-interface NavbarProps {
-  $open?: boolean;
-}
+
 export const ListContainer = styled.ul`
   ${tw`
     laptop:flex

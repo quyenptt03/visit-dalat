@@ -39,7 +39,7 @@ const Foods = () => {
             <Food imageSrc={BunBo} caption="Bún bò" />
           </TopRowImg>
           <TopRowImg>
-            <Food imageSrc={AvocadoCream} caption="Bánh mì xíu mại" />
+            <Food imageSrc={AvocadoCream} caption="Kem bơ" />
           </TopRowImg>
         </TopRow>
         <SecondRow>

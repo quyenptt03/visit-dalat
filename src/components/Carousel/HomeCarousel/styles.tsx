@@ -5,7 +5,7 @@ export const Container = styled.div`
   ${tw`relative w-full h-screen`}
 `;
 export const Image = styled.img`
-  ${tw`w-full h-screen `}
+  ${tw`object-cover w-full h-screen`}
 `;
 export const HomeContainer = styled.div`
   ${tw`relative !flex justify-center`}
@@ -27,10 +27,11 @@ export const SubTitle = styled.h2`
 
 export const Title = styled.h1`
   ${tw`
-    text-[135px]
+    text-7xl
+    tablet:text-[135px]
     text-white
     font-bold
-    leading-[12.5rem]
+    my-5
     capitalize
     z-10
     xxl:text-[200px]
@@ -38,7 +39,7 @@ export const Title = styled.h1`
 `;
 
 export const SeeMoreBtn = styled.a`
-  ${tw`absolute flex items-center -rotate-90 cursor-pointer xxl:left-4 xxl:bottom-60 laptop:bottom-48 laptop:left-3 opacity-60 hover:opacity-100`}
+  ${tw`absolute items-center hidden -rotate-90 cursor-pointer laptop:flex xxl:left-4 xxl:bottom-60 laptop:bottom-48 laptop:left-3 opacity-60 hover:opacity-100`}
 `;
 export const SeeMoreSpan = styled.span`
   ${tw`
@@ -54,13 +55,13 @@ export const SeeMoreTitle = styled.span`
 `;
 
 export const ArrowBtns = styled.div`
-  ${tw`absolute flex right-7 bottom-12`}
+  ${tw`absolute hidden right-7 bottom-12 laptop:flex`}
 `;
 export const IconContainer = styled.button`
   ${tw`flex items-center justify-center w-12 h-12 ml-3 transition-all ease-linear disabled:opacity-40`}
 `;
 export const SlideNumberContainer = styled.div`
-  ${tw`absolute right-[52px] xxl:bottom-44 laptop:bottom-36 flex items-end xxl:text-lg font-semibold text-white laptop:text-base`}
+  ${tw`absolute right-[52px] xxl:bottom-44 laptop:bottom-36 laptop:flex items-end xxl:text-lg font-semibold text-white laptop:text-base hidden`}
 `;
 export const CurrentSlideNumber = styled.span`
   ${tw`text-3xl`}
@@ -86,7 +87,7 @@ export const CustomDot = styled.div`
   `}
 `;
 export const FeaturedLocations = styled.div`
-  ${tw`absolute flex bottom-8`}
+  ${tw`absolute hidden bottom-8 laptop:flex`}
 `;
 export const FeaturedLocationCard = styled.div`
   ${tw`relative flex items-center xxl:h-[108px] mx-3 text-white capitalize rounded-md  xxl:w-[416px] laptop:h-[86px] laptop:w-[332px]`}

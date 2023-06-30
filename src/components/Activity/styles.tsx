@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const ActivityContainer = styled.a`
-  ${tw`block cursor-pointer laptop:h-[31rem] laptop:w-[17.5rem] xxl:w-[21.875rem] xxl:h-[38.75rem]`};
+  ${tw`block cursor-pointer laptop:h-[31rem] w-full px-5  xxl:h-[38.75rem]`};
 `;
 export const ImageContainer = styled.div`
   ${tw`relative w-full h-full overflow-hidden rounded-lg`}

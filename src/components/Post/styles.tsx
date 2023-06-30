@@ -5,8 +5,11 @@ interface ButtonProps {
   $size?: string;
 }
 
+// export const PostContainer = styled.div`
+//   ${tw`block mb-14 xxl:w-96 laptop:w-80`}
+// `;
 export const PostContainer = styled.div`
-  ${tw`block mb-14 xxl:w-96 laptop:w-80`}
+  ${tw`block w-full px-5 mb-14`}
 `;
 export const ImageContainer = styled.div`
   ${tw`relative w-full overflow-hidden rounded-t-lg rounded-br-lg cursor-pointer`}

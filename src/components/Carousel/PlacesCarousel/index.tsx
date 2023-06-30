@@ -23,11 +23,11 @@ const PlacesCarousel = () => {
     dispatch(getFeaturedDestinations());
   }, [dispatch]);
 
-  const { featuredDestinations } = useAppSelector(
+  const { destinations } = useAppSelector(
     (state) => state.featuredDestinations
   );
   let count: number = 3;
-  if (featuredDestinations) count = featuredDestinations.length;
+  if (destinations) count = destinations.length;
 
   const [disablePrevBtn, setDisablePrevBtn] = useState(true);
   const [disableNextBtn, setDisableNextBtn] = useState(false);
@@ -83,7 +83,7 @@ const PlacesCarousel = () => {
           showBtn={false}
           mapImg={map}
         />
-        {featuredDestinations?.map((destination) => {
+        {destinations?.map((destination) => {
           return (
             <Place
               key={destination._id}

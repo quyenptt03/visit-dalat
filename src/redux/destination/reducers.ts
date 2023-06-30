@@ -25,7 +25,7 @@ export const featuredDestinationsReducer = createReducer(initialState, {
   },
   getFeaturedDestinationsSuccess: (state, action) => {
     state.isLoading = false;
-    state.featuredDestinations = action.payload;
+    state.destinations = action.payload;
   },
   getFeaturedDestinationsFail: (state, action) => {
     state.isLoading = false;

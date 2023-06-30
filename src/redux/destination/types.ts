@@ -16,7 +16,6 @@ export type Destination = {
 
 export type DestinationsType = {
   destinations?: Destination[];
-  featuredDestinations?: Destination[];
   destination?: Destination;
   isLoading?: boolean;
   error?: any;

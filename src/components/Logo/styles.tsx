@@ -13,6 +13,7 @@ const LogoText = styled.div`
     uppercase
     font-black
     font-logo
+    w-fit
   `}
 `;
 export const LightLogo = styled(LogoText)`

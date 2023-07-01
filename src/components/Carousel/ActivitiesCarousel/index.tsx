@@ -89,7 +89,7 @@ const ActivitiesCarousel = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: true,
+          infinite: false,
           dots: false,
         },
       },
@@ -100,6 +100,7 @@ const ActivitiesCarousel = () => {
           slidesToScroll: 1,
           initialSlide: 0,
           dots: false,
+          infinite: false,
         },
       },
     ],

@@ -37,7 +37,7 @@ const HotelsCarousel = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: true,
+          infinite: false,
           dots: false,
         },
       },
@@ -47,6 +47,7 @@ const HotelsCarousel = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 0,
+          infinite: false,
         },
       },
     ],

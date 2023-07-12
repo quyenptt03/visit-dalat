@@ -1,7 +1,6 @@
 import axios from "axios";
 
-// export const URL = "http://localhost:5000";
-export const URL = "https://visit-dalat-api.vercel.app";
+export const URL = "http://localhost:5000";
 
 export const fetchDestinations = (params: object) =>
   axios.get(`${URL}/api/v1/destinations`, { params });

@@ -5,9 +5,12 @@ import SectionHeader from "../../components/SectionHeader";
 import { SectionMarginer } from "../../components/Marginer";
 import BackToTopButton from "../../components/BackToTopButton";
 import { HotelsCarousel } from "../../components/Carousel";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 const DestinationsPage = () => {
   return (
     <>
+      <Navbar />
       <Background
         title="Địa Điểm Nổi Bật Ở Đà Lạt"
         subtitle="Lorrem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
@@ -24,6 +27,7 @@ const DestinationsPage = () => {
         <SectionHeader field="Lưu trú" title="Nơi nghỉ chân tuyệt vời" />
         <HotelsCarousel />
       </SectionMarginer>
+      <Footer />
       <BackToTopButton />
     </>
   );

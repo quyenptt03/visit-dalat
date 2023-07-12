@@ -11,21 +11,29 @@ import {
   MoreInfoSection,
   HotelsSection,
 } from "./components/Sections";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import BackToTopButton from "../../components/BackToTopButton";
 
 const PageContainer = styled.div`
   ${tw``}
 `;
 const HomePage = () => {
   return (
-    <PageContainer>
-      <TopSection />
-      <PostsSection />
-      <PlacesSection />
-      <ActivitiesSection />
-      <MoreInfoSection />
-      <FoodsSection />
-      <HotelsSection />
-    </PageContainer>
+    <>
+      <Navbar />
+      <PageContainer>
+        <TopSection />
+        <PostsSection />
+        <PlacesSection />
+        <ActivitiesSection />
+        <MoreInfoSection />
+        <FoodsSection />
+        <HotelsSection />
+      </PageContainer>
+      <Footer />
+      <BackToTopButton />
+    </>
   );
 };
 

@@ -9,6 +9,10 @@ import { SectionMarginer } from "../../components/Marginer";
 import { useAppDispatch } from "../../redux/hook";
 import { getSingleDestination } from "../../redux/destination/actions";
 import { useLocation } from "react-router-dom";
+import { HotelsCarousel } from "../../components/Carousel";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import BackToTopButton from "../../components/BackToTopButton";
 
 const PageContainer = styled.div`
   ${tw`mt-20 xxl:mt-24`}
@@ -25,6 +29,7 @@ const DetailPlace = () => {
 
   return (
     <>
+      <Navbar />
       <PageContainer>
         <Details />
         <SectionMarginer>
@@ -34,6 +39,8 @@ const DetailPlace = () => {
           <Reviews />
         </SectionMarginer>
       </PageContainer>
+      <Footer />
+      <BackToTopButton />
     </>
   );
 };

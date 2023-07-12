@@ -12,22 +12,30 @@ import {
   ForwardIconContainer,
   ErrorImage,
 } from "./styles";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import BackToTopButton from "../../components/BackToTopButton";
 
 const ErrorPage = () => {
   return (
-    <Container>
-      <Wrapper>
-        <Title>404</Title>
-        <SubTitle>Không tìm thấy trang</SubTitle>
-        <TextButton theme="filled">
-          <ButtonContent as={Link} to={"/"}>
-            <ButtonText>Go back</ButtonText>
-            <ForwardIconContainer />
-          </ButtonContent>
-        </TextButton>
-      </Wrapper>
-      <ErrorImage src={ErrorIcon} alt="404 error" />
-    </Container>
+    <>
+      <Navbar />
+      <Container>
+        <Wrapper>
+          <Title>404</Title>
+          <SubTitle>Không tìm thấy trang</SubTitle>
+          <TextButton theme="filled">
+            <ButtonContent as={Link} to={"/"}>
+              <ButtonText>Go back</ButtonText>
+              <ForwardIconContainer />
+            </ButtonContent>
+          </TextButton>
+        </Wrapper>
+        <ErrorImage src={ErrorIcon} alt="404 error" />
+      </Container>
+      <Footer />
+      <BackToTopButton />
+    </>
   );
 };
 

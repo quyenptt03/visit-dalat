@@ -8,9 +8,8 @@ import {
   ArticleDetailsPage,
   ErrorPage,
 } from "./pages";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import BackToTopButton from "./components/BackToTopButton";
+import LoginPage from "./pages/auth/LoginPage";
+import RegisterPage from "./pages/auth/RegisterPage";
 
 function App() {
   const { pathname } = useLocation();
@@ -19,17 +18,16 @@ function App() {
   }, [pathname]);
   return (
     <>
-      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
         <Route path="/destinations" element={<DestinationsPage />} />
         <Route path="/destinations/:id" element={<DestinationDetailsPage />} />
         <Route path="/articles" element={<ArticlesPage />} />
         <Route path="/articles/:id" element={<ArticleDetailsPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-      <Footer />
-      <BackToTopButton />
     </>
   );
 }

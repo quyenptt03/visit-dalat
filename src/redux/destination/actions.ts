@@ -1,10 +1,6 @@
 import { Dispatch } from "redux";
+import destinationApi from "../../api/destinationApi";
 import { Action } from "./types";
-import {
-  fetchDestinations,
-  fetchFeaturedDestinations,
-  fetchSingleDestination,
-} from "../../api";
 
 export const getAllDestinations =
   (params: object) => async (dispatch: Dispatch<Action>) => {
@@ -12,7 +8,7 @@ export const getAllDestinations =
       dispatch({
         type: "getAllDestinationsRequest",
       });
-      const { data } = await fetchDestinations(params);
+      const { data } = await destinationApi.getAll(params);
       dispatch({
         type: "getAllDestinationsSuccess",
         payload: data.destinations,
@@ -31,7 +27,7 @@ export const getFeaturedDestinations =
       dispatch({
         type: "getFeaturedDestinationsRequest",
       });
-      const { data } = await fetchFeaturedDestinations();
+      const { data } = await destinationApi.getFeatured();
       dispatch({
         type: "getFeaturedDestinationsSuccess",
         payload: data.destinations,
@@ -50,7 +46,7 @@ export const getSingleDestination =
       dispatch({
         type: "getSingleDestinationRequest",
       });
-      const { data } = await fetchSingleDestination(id);
+      const { data } = await destinationApi.get(id);
       dispatch({
         type: "getSingleDestinationSuccess",
         payload: data.destination,

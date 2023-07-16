@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import ReactPaginate from "react-paginate";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import { fetchDestinationsTotal, URL } from "../../../../api";
+import { URL } from "../../../../api";
 import Post from "../../../../components/Post";
 import { getAllDestinations } from "../../../../redux/destination/actions";
 import { useAppDispatch, useAppSelector } from "../../../../redux/hook";
@@ -11,8 +11,9 @@ import { useAppDispatch, useAppSelector } from "../../../../redux/hook";
 import { ReactComponent as NextIcon } from "../../../../assets/icons/next-icon.svg";
 import { ReactComponent as PrevIcon } from "../../../../assets/icons/prev-icon.svg";
 
-import { Container, List, ListCol, PaginationContainer } from "./styles";
+import destinationApi from "../../../../api/destinationApi";
 import Loading from "../../../../components/Loading";
+import { Container, List, ListCol, PaginationContainer } from "./styles";
 
 const DestinationsList = () => {
   const navigate = useNavigate();
@@ -37,7 +38,7 @@ const DestinationsList = () => {
 
   useEffect(() => {
     const getPageCount = async () => {
-      const totalDestinations = await fetchDestinationsTotal();
+      const totalDestinations = await destinationApi.getTotal();
       setPageCount(Math.ceil(totalDestinations.data.count / perPage));
     };
     getPageCount();

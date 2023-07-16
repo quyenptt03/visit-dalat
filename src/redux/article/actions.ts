@@ -1,10 +1,7 @@
 import { Dispatch } from "redux";
 import { Action } from "./types";
-import {
-  fetchArticles,
-  fetchFeaturedArticles,
-  fetchSingleArticle,
-} from "../../api";
+
+import articleApi from "../../api/articleApi";
 
 export const getAllArticles =
   (params: object) => async (dispatch: Dispatch<Action>) => {
@@ -12,7 +9,7 @@ export const getAllArticles =
       dispatch({
         type: "getAllArticlesRequest",
       });
-      const { data } = await fetchArticles(params);
+      const { data } = await articleApi.getAll(params);
       dispatch({
         type: "getAllArticlesSuccess",
         payload: data.articles,
@@ -30,7 +27,7 @@ export const getFeaturedArticles = () => async (dispatch: Dispatch<Action>) => {
     dispatch({
       type: "getFeaturedArticlesRequest",
     });
-    const { data } = await fetchFeaturedArticles();
+    const { data } = await articleApi.getFeatured();
     dispatch({
       type: "getFeaturedArticlesSuccess",
       payload: data.articles,
@@ -49,7 +46,7 @@ export const getSingleArticle =
       dispatch({
         type: "getSingleArticleRequest",
       });
-      const { data } = await fetchSingleArticle(id);
+      const { data } = await articleApi.get(id);
       dispatch({
         type: "getSingleArticleSuccess",
         payload: data.article,

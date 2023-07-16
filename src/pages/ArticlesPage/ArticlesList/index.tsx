@@ -22,6 +22,7 @@ import {
 } from "./styles";
 import Pagination from "../../../components/Pagination";
 import Loading from "../../../components/Loading";
+import articleApi from "../../../api/articleApi";
 
 interface Filters {
   page: number;
@@ -58,7 +59,7 @@ const ArticlesList = () => {
 
   useEffect(() => {
     const getTotal = async () => {
-      const totalArticles = await fetchArticlesTotal(filters);
+      const totalArticles = await articleApi.getTotal(filters);
       setTotalArticles(totalArticles.data.count);
     };
     getTotal();

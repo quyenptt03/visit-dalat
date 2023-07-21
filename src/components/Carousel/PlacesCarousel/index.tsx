@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
-import { URL } from "../../../api";
+import { URL } from "../../../api/axiosClient";
 
 import { getFeaturedDestinations } from "../../../redux/destination/actions";
 import { useAppDispatch, useAppSelector } from "../../../redux/hook";

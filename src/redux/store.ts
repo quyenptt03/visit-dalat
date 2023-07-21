@@ -11,9 +11,11 @@ import {
   singleArticleReducer,
 } from "./article/reducers";
 import { categoriesReducer } from "./category/reducers";
+import authReducer from "./auth/authSlice";
 
 export const store = configureStore({
   reducer: {
+    user: authReducer,
     destinations: destinationReducer,
     featuredDestinations: featuredDestinationsReducer,
     destination: singleDestinationReducer,

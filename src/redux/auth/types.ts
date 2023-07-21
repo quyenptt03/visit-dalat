@@ -4,8 +4,8 @@ export type User = {
   password: string;
 };
 
-export type UsersType = {
-  users?: User[];
+export type UserType = {
+  user: User;
   isLoading?: boolean;
   error?: any;
 };

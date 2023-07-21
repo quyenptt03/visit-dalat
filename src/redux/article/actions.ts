@@ -1,7 +1,7 @@
 import { Dispatch } from "redux";
 import { Action } from "./types";
 
-import articleApi from "../../api/articleApi";
+import { articleApi } from "../../api";
 
 export const getAllArticles =
   (params: object) => async (dispatch: Dispatch<Action>) => {

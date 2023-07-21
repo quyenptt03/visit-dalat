@@ -3,7 +3,6 @@ import queryString from "query-string";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../../redux/hook";
 import { getAllArticles } from "../../../redux/article/actions";
-import { fetchArticlesTotal } from "../../../api";
 import Post from "../../../components/Post";
 import CategoriesList from "../../../components/CategoriesList";
 import SearchBar from "../../../components/SearchBar";
@@ -22,7 +21,7 @@ import {
 } from "./styles";
 import Pagination from "../../../components/Pagination";
 import Loading from "../../../components/Loading";
-import articleApi from "../../../api/articleApi";
+import { articleApi } from "../../../api";
 
 interface Filters {
   page: number;
@@ -116,7 +115,7 @@ const ArticlesList = () => {
   return (
     <>
       {isLoading ? (
-        <Loading loading={isLoading} />
+        <Loading loading={isLoading} color="#1d764a" size={50} />
       ) : (
         <Container>
           <FilterContainer>

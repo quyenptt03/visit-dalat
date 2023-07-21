@@ -1,5 +1,5 @@
 import { Dispatch } from "redux";
-import destinationApi from "../../api/destinationApi";
+import { destinationApi } from "../../api";
 import { Action } from "./types";
 
 export const getAllDestinations =

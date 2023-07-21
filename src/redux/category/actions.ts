@@ -1,5 +1,5 @@
 import { Dispatch } from "redux";
-import categoryApi from "../../api/categoryApi";
+import { categoryApi } from "../../api";
 import { Action } from "./types";
 
 export const getAllCategories = () => async (dispatch: Dispatch<Action>) => {

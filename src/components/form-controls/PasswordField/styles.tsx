@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 const Container = styled.fieldset`
-  ${tw`h-28 `}
+  ${tw`min-h-[7rem] `}
 `;
 const Label = styled.label`
   ${tw`text-base capitalize`}

@@ -91,7 +91,7 @@ const PostsCarousel = () => {
   return (
     <CarouselContainer>
       {isLoading ? (
-        <Loading loading={isLoading} />
+        <Loading loading={isLoading} color="#1d764a" size={50} />
       ) : (
         <>
           <SwiperBtns>

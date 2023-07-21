@@ -11,7 +11,7 @@ const Details = () => {
   return (
     <>
       {isLoading ? (
-        <Loading loading={isLoading} />
+        <Loading loading={isLoading} color="#1d764a" size={50} />
       ) : (
         <Container>
           <Images>

@@ -10,19 +10,34 @@ import {
   LanguageLabel,
   Language,
   LanguageOptions,
+  UserContainer,
+  AvatarContainer,
+  Avatar,
 } from "./styles";
 
 import Logo from "../Logo";
 import NavItems from "../Navbar/components/NavItems";
+import PopupMenu from "./components/PopupMenu";
 import { TextButton } from "../Button";
+import defaultAvt from "../../assets/images/avtImg.png";
 import { ReactComponent as MenuIcon } from "../../assets/icons/menu-icon.svg";
 import { ReactComponent as CloseIcon } from "../../assets/icons/close-icon.svg";
 import { ReactComponent as SearchIcon } from "../../assets/icons/search-icon.svg";
 import { ReactComponent as LanguageIcon } from "../../assets/icons/language-icon.svg";
+import { useAppSelector } from "../../redux/hook";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+
+  const loggedInUser = useAppSelector((state) => state.user.current);
+  const isLoggedIn = !!loggedInUser.userId;
+
+  const handleUserIconClick = () => {
+    setIsUserMenuOpen(!isUserMenuOpen);
+  };
+
   return (
     <NavbarContainer2>
       <Logo theme="dark" />
@@ -45,9 +60,18 @@ const Navbar = () => {
             {/* <SearchIconContainer /> */}
             {isSearchOpen ? <CloseIcon /> : <SearchIcon />}
           </SearchIconWrapper>
-          <TextButton theme="blackOutlined">
-            <NavLink to="/login">Đăng nhập</NavLink>
-          </TextButton>
+          {isLoggedIn ? (
+            <UserContainer>
+              <AvatarContainer onClick={handleUserIconClick}>
+                <Avatar src={defaultAvt} alt="avatar" />
+              </AvatarContainer>
+              {isUserMenuOpen && <PopupMenu />}
+            </UserContainer>
+          ) : (
+            <TextButton theme="blackOutlined">
+              <NavLink to="/login">Đăng nhập</NavLink>
+            </TextButton>
+          )}
         </NavarRightSide>
       </Nav>
     </NavbarContainer2>

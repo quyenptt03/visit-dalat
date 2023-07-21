@@ -51,3 +51,12 @@ export const LanguageOptions = styled.option`
 export const LanguageLabel = styled.label`
   ${tw`mr-3 text-black`}
 `;
+export const UserContainer = styled.div`
+  ${tw`relative`}
+`;
+export const AvatarContainer = styled.button`
+  ${tw`w-10 h-10 rounded-full`}
+`;
+export const Avatar = styled.img`
+  ${tw`w-full h-full rounded-full `}
+`;

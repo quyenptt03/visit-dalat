@@ -1,23 +1,28 @@
-import React from "react";
-import tw from "twin.macro";
-import styled from "styled-components";
-import LoginForm from "./components/LoginForm";
-import Logo from "../../../components/Logo";
+import { useNavigate } from "react-router-dom";
 import LoginBG from "../../../assets/images/login-bg.png";
-
-const LogoContainer = styled.div`
-  ${tw`m-0 laptop:mt-5 laptop:ml-20`}
-`;
-const Container = styled.div`
-  ${tw`flex items-center justify-center`}
-`;
-const Background = styled.img`
-  ${tw`ml-[7%] hidden laptop:block`}
-`;
+import Logo from "../../../components/Logo";
+import { useAppDispatch } from "../../../redux/hook";
+import LoginForm from "./components/LoginForm";
+import { Background, Container, LogoContainer } from "./styles";
+import { login } from "../../../redux/auth/authSlice";
+import { unwrapResult } from "@reduxjs/toolkit";
+import { enqueueSnackbar } from "notistack";
 
 const LoginPage = () => {
-  const handleFormSubmit = (values: any) => {
-    console.log("Form submit: ", values);
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
+  const handleFormSubmit = async (values: any) => {
+    try {
+      const action = login(values);
+      const resultAction = await dispatch(action);
+      unwrapResult(resultAction);
+
+      navigate("/");
+      enqueueSnackbar("Login successfully!!!", { variant: "success" });
+    } catch (error: any) {
+      enqueueSnackbar(error.message, { variant: "error" });
+    }
   };
   return (
     <>

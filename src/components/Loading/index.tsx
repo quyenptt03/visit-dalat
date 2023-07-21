@@ -1,18 +1,19 @@
 import React, { CSSProperties } from "react";
-import CircleLoader from "react-spinners/CircleLoader";
+import ClipLoader from "react-spinners/ClipLoader";
+
 const override: CSSProperties = {
   display: "block",
-  margin: "3rem auto",
+  margin: "0 auto",
 };
 
-const Loading = (props: { loading: boolean }) => {
+const Loading = (props: { loading: boolean; color: string; size: number }) => {
   return (
     <>
-      <CircleLoader
-        color={"#1d764a"}
+      <ClipLoader
+        color={props.color}
         loading={props.loading}
         cssOverride={override}
-        size={50}
+        size={props.size}
         aria-label="Loading Spinner"
         data-testid="loader"
       />

@@ -1,7 +1,7 @@
 import { Icon } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import { URL } from "../../../../api";
+import { URL } from "../../../../api/axiosClient";
 import { useAppSelector } from "../../../../redux/hook";
 import { Container, Image, PopUpContent, Title } from "./styles";
 import Loading from "../../../../components/Loading";
@@ -21,7 +21,7 @@ const Map = () => {
     <Container>
       <Title>Bản đồ</Title>
       {isLoading ? (
-        <Loading loading={isLoading} />
+        <Loading loading={isLoading} color="#1d764a" size={50} />
       ) : (
         <MapContainer center={[lat, long]} zoom={13} scrollWheelZoom={false}>
           <TileLayer

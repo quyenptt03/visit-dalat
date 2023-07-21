@@ -14,25 +14,21 @@ import {
   SubmitButton,
   Title,
 } from "./styles";
+import Loading from "../../../../../components/Loading";
 
 type FormData = {
   email: string;
   password: string;
 };
-const LoginForm = (onSubmit: any) => {
+
+const LoginForm = ({ onSubmit }: any) => {
   const schema = yup
     .object({
       email: yup
         .string()
         .required("Please enter you email")
         .email("Please enter a valid email address."),
-      password: yup
-        .string()
-        .required("Please enter your password")
-        .matches(
-          /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
-          "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
-        ),
+      password: yup.string().required("Please enter your password"),
     })
     .required();
 
@@ -43,9 +39,12 @@ const LoginForm = (onSubmit: any) => {
     },
     resolver: yupResolver(schema),
   });
-  const handleSubmit = (values: any) => {
-    console.log("LoginForm submit: ", values);
+  const handleSubmit = async (values: any) => {
+    if (onSubmit) await onSubmit(values);
   };
+
+  const { isSubmitting } = form.formState;
+
   return (
     <Container>
       <Greeting>Welcome!</Greeting>
@@ -66,7 +65,13 @@ const LoginForm = (onSubmit: any) => {
           placeholder="Enter you password"
           form={form}
         />
-        <SubmitButton type="submit">Login</SubmitButton>
+        <SubmitButton type="submit" disabled={isSubmitting}>
+          {isSubmitting ? (
+            <Loading loading={isSubmitting} size={20} color="#fff" />
+          ) : (
+            "Login"
+          )}
+        </SubmitButton>
       </Form>
       <Span>
         Don't have an Account ? <AuthLink href="/register">Register</AuthLink>

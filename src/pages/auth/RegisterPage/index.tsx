@@ -1,23 +1,27 @@
-import React from "react";
-import tw from "twin.macro";
-import styled from "styled-components";
-import RegisterForm from "./components/RegisterForm";
-import Logo from "../../../components/Logo";
+import { unwrapResult } from "@reduxjs/toolkit";
 import LoginBG from "../../../assets/images/login-bg.png";
-
-const LogoContainer = styled.div`
-  ${tw`m-0 laptop:mt-5 laptop:ml-20`}
-`;
-const Container = styled.div`
-  ${tw`flex items-center justify-center`}
-`;
-const Background = styled.img`
-  ${tw`ml-[7%] hidden laptop:block`}
-`;
+import Logo from "../../../components/Logo";
+import { register } from "../../../redux/auth/authSlice";
+import { useAppDispatch } from "../../../redux/hook";
+import RegisterForm from "./components/RegisterForm";
+import { Background, Container, LogoContainer } from "./styles";
+import { enqueueSnackbar } from "notistack";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
-  const handleFormSubmit = (values: any) => {
-    console.log("Form submit: ", values);
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
+  const handleFormSubmit = async (values: object) => {
+    try {
+      const action = register(values);
+      const actionResult = await dispatch(action);
+      unwrapResult(actionResult);
+      navigate("/");
+      enqueueSnackbar("Register successfully!!!", { variant: "success" });
+    } catch (error: any) {
+      enqueueSnackbar(error.message, { variant: "error" });
+    }
   };
   return (
     <>

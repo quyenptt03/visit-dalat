@@ -14,7 +14,7 @@ const MenuItemLink = styled.a`
   ${tw``}
 `;
 const UserInfo = styled.div`
-  ${tw`flex items-center justify-center px-5`}
+  ${tw`flex items-center px-5`}
 `;
 const Avatar = styled.img`
   ${tw`rounded-full w-9 h-9`}

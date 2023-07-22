@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import {
   NavbarContainer2,
@@ -26,6 +26,23 @@ import { ReactComponent as SearchIcon } from "../../assets/icons/search-icon.svg
 import { ReactComponent as LanguageIcon } from "../../assets/icons/language-icon.svg";
 import { useAppSelector } from "../../redux/hook";
 
+const useOutsideClick = (handler: Function) => {
+  let domNode = useRef<any>();
+  useEffect(() => {
+    let handleFunction = (event: Event) => {
+      if (domNode.current && !domNode.current.contains(event.target)) {
+        handler();
+      }
+    };
+    document.addEventListener("mousedown", handleFunction);
+
+    return () => {
+      document.removeEventListener("mousedown", handleFunction);
+    };
+  }, [domNode]);
+  return domNode;
+};
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -37,6 +54,10 @@ const Navbar = () => {
   const handleUserIconClick = () => {
     setIsUserMenuOpen(!isUserMenuOpen);
   };
+
+  const nodeDom = useOutsideClick(() => {
+    setIsUserMenuOpen(false);
+  });
 
   return (
     <NavbarContainer2>
@@ -61,7 +82,7 @@ const Navbar = () => {
             {isSearchOpen ? <CloseIcon /> : <SearchIcon />}
           </SearchIconWrapper>
           {isLoggedIn ? (
-            <UserContainer>
+            <UserContainer ref={nodeDom}>
               <AvatarContainer onClick={handleUserIconClick}>
                 <Avatar src={defaultAvt} alt="avatar" />
               </AvatarContainer>

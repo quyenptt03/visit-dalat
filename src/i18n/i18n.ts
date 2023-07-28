@@ -20,6 +20,8 @@ import REGISTER_EN from "./locales/en/register.json";
 import REGISTER_VI from "./locales/vi/register.json";
 import ERRORPAGE_EN from "./locales/en/errorpage.json";
 import ERRORPAGE_VI from "./locales/vi/errorpage.json";
+import USER_EN from "./locales/en/user.json";
+import USER_VI from "./locales/vi/user.json";
 
 export const defaultNS = "home" as const;
 
@@ -35,6 +37,7 @@ export const resources = {
     login: LOGIN_EN,
     register: REGISTER_EN,
     errorpage: ERRORPAGE_EN,
+    user: USER_EN,
   },
   vi: {
     nav: NAV_VI,
@@ -47,6 +50,7 @@ export const resources = {
     login: LOGIN_VI,
     register: REGISTER_VI,
     errorpage: ERRORPAGE_VI,
+    user: USER_VI,
   },
 } as const;
 
@@ -64,6 +68,7 @@ i18n.use(initReactI18next).init({
     "login",
     "register",
     "errorpage",
+    "user",
   ],
   fallbackLng: "vi",
   defaultNS,

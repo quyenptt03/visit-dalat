@@ -13,8 +13,10 @@ import {
   Email,
   Name,
 } from "./styles";
+import { useTranslation } from "react-i18next";
 
 const PopupMenu = () => {
+  const { t } = useTranslation("user");
   const dispatch = useAppDispatch();
   const currentUser = useAppSelector((state) => state.user.current);
 
@@ -34,15 +36,12 @@ const PopupMenu = () => {
       </UserInfo>
       <Menu>
         <MenuItem>
-          <MenuItemLink href="/your-profile">Your profile</MenuItemLink>
+          <MenuItemLink href="/your-profile">{t("your profile")}</MenuItemLink>
         </MenuItem>
         <MenuItem>
-          <MenuItemLink>Wish list</MenuItemLink>
+          <MenuItemLink>{t("change password")}</MenuItemLink>
         </MenuItem>
-        <MenuItem>
-          <MenuItemLink>Change password</MenuItemLink>
-        </MenuItem>
-        <MenuItem onClick={handleLogoutClick}>Logout</MenuItem>
+        <MenuItem onClick={handleLogoutClick}>{t("logout")}</MenuItem>
       </Menu>
     </Container>
   );

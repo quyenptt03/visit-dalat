@@ -35,14 +35,14 @@ const Icon = styled.div`
 `;
 
 export {
-  Container,
   Background,
-  Wrapper,
+  ButtonContent,
+  Buttons,
+  Container,
+  Desc,
+  Icon,
+  IconText,
   Texts,
   Title,
-  Desc,
-  Buttons,
-  ButtonContent,
-  IconText,
-  Icon,
+  Wrapper,
 };

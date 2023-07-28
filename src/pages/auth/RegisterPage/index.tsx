@@ -1,5 +1,5 @@
 import { unwrapResult } from "@reduxjs/toolkit";
-import LoginBG from "../../../assets/images/login-bg.png";
+import LoginBG from "../../../assets/images/login-bg-img.png";
 import Logo from "../../../components/Logo";
 import { register } from "../../../redux/auth/authSlice";
 import { useAppDispatch } from "../../../redux/hook";

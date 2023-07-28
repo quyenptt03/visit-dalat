@@ -1,7 +1,7 @@
 import React from "react";
 import { TextButton } from "../../components/Button";
 import { Link } from "react-router-dom";
-import ErrorIcon from "../../assets/icons/ErrorIcon.svg";
+import ErrorIcon from "../../assets/icons/error-icon.svg";
 import {
   Container,
   Wrapper,

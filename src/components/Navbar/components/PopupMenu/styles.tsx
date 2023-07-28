@@ -2,7 +2,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 
 const Container = styled.div`
-  ${tw`absolute right-0 py-5 border-slate-300 border-solid border-[1px] bg-secondary rounded-lg min-w-[300px] text-black`}
+  ${tw`absolute right-0 py-5 border-slate-300 border-solid border-[1px] bg-baby-blue rounded-lg min-w-[300px] text-black`}
 `;
 const Menu = styled.ul`
   ${tw`mt-4 border-t-[1px] border-slate-300 border-solid`}

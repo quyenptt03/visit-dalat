@@ -1,30 +1,30 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import {
-  NavbarContainer2,
-  NavarRightSide,
+  Avatar,
+  AvatarContainer,
   Icon,
-  SearchIconWrapper,
-  Nav,
+  Language,
   LanguageContainer,
   LanguageLabel,
-  Language,
   LanguageOptions,
+  Nav,
+  NavarRightSide,
+  NavbarContainer2,
   UserContainer,
-  AvatarContainer,
-  Avatar,
+  WishListContainer,
 } from "./styles";
 
+import { ReactComponent as CloseIcon } from "../../assets/icons/close-icon.svg";
+import { ReactComponent as LanguageIcon } from "../../assets/icons/language-icon.svg";
+import { ReactComponent as MenuIcon } from "../../assets/icons/menu-icon.svg";
+import { ReactComponent as SaveIcon } from "../../assets/icons/save-icon.svg";
+import defaultAvt from "../../assets/images/avtImg.png";
+import { useAppSelector } from "../../redux/hook";
+import { TextButton } from "../Button";
 import Logo from "../Logo";
 import NavItems from "../Navbar/components/NavItems";
 import PopupMenu from "./components/PopupMenu";
-import { TextButton } from "../Button";
-import defaultAvt from "../../assets/images/avtImg.png";
-import { ReactComponent as MenuIcon } from "../../assets/icons/menu-icon.svg";
-import { ReactComponent as CloseIcon } from "../../assets/icons/close-icon.svg";
-import { ReactComponent as SearchIcon } from "../../assets/icons/search-icon.svg";
-import { ReactComponent as LanguageIcon } from "../../assets/icons/language-icon.svg";
-import { useAppSelector } from "../../redux/hook";
 
 const useOutsideClick = (handler: Function) => {
   let domNode = useRef<any>();
@@ -45,7 +45,6 @@ const useOutsideClick = (handler: Function) => {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
 
   const loggedInUser = useAppSelector((state) => state.user.current);
@@ -77,10 +76,9 @@ const Navbar = () => {
               <LanguageIcon />
             </LanguageLabel>
           </LanguageContainer>
-          <SearchIconWrapper onClick={() => setIsSearchOpen(!isSearchOpen)}>
-            {/* <SearchIconContainer /> */}
-            {isSearchOpen ? <CloseIcon /> : <SearchIcon />}
-          </SearchIconWrapper>
+          <WishListContainer href="/wishlist">
+            <SaveIcon />
+          </WishListContainer>
           {isLoggedIn ? (
             <UserContainer ref={nodeDom}>
               <AvatarContainer onClick={handleUserIconClick}>

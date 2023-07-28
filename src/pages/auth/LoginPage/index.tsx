@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import LoginBG from "../../../assets/images/login-bg.png";
+import LoginBG from "../../../assets/images/login-bg-img.png";
 import Logo from "../../../components/Logo";
 import { useAppDispatch } from "../../../redux/hook";
 import LoginForm from "./components/LoginForm";

@@ -1,26 +1,26 @@
-import React, { useState } from "react";
-import { TextButton } from "../../../../components/Button";
-import {
-  Container,
-  Wrapper,
-  Buttons,
-  Button,
-  ButtonContent,
-  IconText,
-  Icon,
-  Title,
-  Info,
-  InfoItem,
-  Text,
-  Paragraph,
-} from "./styles";
+import { useState } from "react";
+import { ReactComponent as AddressIcon } from "../../../../assets/icons/address-icon.svg";
+import { ReactComponent as ArrowDownIcon } from "../../../../assets/icons/arrow-down-icon.svg";
+import { ReactComponent as ArrowUpIcon } from "../../../../assets/icons/arrow-up-icon.svg";
+import { ReactComponent as ClockIcon } from "../../../../assets/icons/clock-icon.svg";
+import { ReactComponent as MoneyIcon } from "../../../../assets/icons/money-icon.svg";
 import { ReactComponent as SaveIcon } from "../../../../assets/icons/save-icon.svg";
 import { ReactComponent as ShareIcon } from "../../../../assets/icons/share-icon.svg";
-import { ReactComponent as MoneyIcon } from "../../../../assets/icons/money-icon.svg";
-import { ReactComponent as ClockIcon } from "../../../../assets/icons/clock-icon.svg";
-import { ReactComponent as AddressIcon } from "../../../../assets/icons/address-icon.svg";
-import { ReactComponent as ArrowUpIcon } from "../../../../assets/icons/arrow-up-icon.svg";
-import { ReactComponent as ArrowDownIcon } from "../../../../assets/icons/arrow-down-icon.svg";
+import { TextButton } from "../../../../components/Button";
+import {
+  Button,
+  ButtonContent,
+  Buttons,
+  Container,
+  Icon,
+  IconText,
+  Info,
+  InfoItem,
+  Paragraph,
+  Text,
+  Title,
+  Wrapper,
+} from "./styles";
 
 const Description = (props: any) => {
   const { data } = props;

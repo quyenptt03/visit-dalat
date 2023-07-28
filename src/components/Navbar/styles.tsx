@@ -26,10 +26,13 @@ export const Icon = styled.button`
 export const SearchIconContainer = styled(SearchIcon)`
   ${tw`hidden stroke-black laptop:w-5 laptop:h-5 xxl:w-full xxl:h-full laptop:block`}
 `;
-export const SearchIconWrapper = styled.button`
+export const WishListContainer = styled.a`
   ${tw`laptop:mr-11`}
   svg {
-    ${tw`w-6 h-6`}
+    ${tw`w-7 h-7 stroke-black `}
+  }
+  svg path {
+    ${tw`stroke-[1.5]`}
   }
 `;
 

@@ -1,18 +1,16 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 
+import { useLocation } from "react-router-dom";
+import BackToTopButton from "../../components/BackToTopButton";
+import Footer from "../../components/Footer";
+import { SectionMarginer } from "../../components/Marginer";
+import Navbar from "../../components/Navbar";
+import { getSingleDestination } from "../../redux/destination/actions";
+import { useAppDispatch } from "../../redux/hook";
 import Details from "./components/Details";
 import Map from "./components/Map";
-import Reviews from "./components/Reviews";
-import { SectionMarginer } from "../../components/Marginer";
-import { useAppDispatch } from "../../redux/hook";
-import { getSingleDestination } from "../../redux/destination/actions";
-import { useLocation } from "react-router-dom";
-import { HotelsCarousel } from "../../components/Carousel";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import BackToTopButton from "../../components/BackToTopButton";
 
 const PageContainer = styled.div`
   ${tw`mt-20 xxl:mt-24`}
@@ -34,9 +32,6 @@ const DetailPlace = () => {
         <Details />
         <SectionMarginer>
           <Map />
-        </SectionMarginer>
-        <SectionMarginer>
-          <Reviews />
         </SectionMarginer>
       </PageContainer>
       <Footer />

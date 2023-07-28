@@ -21,8 +21,10 @@ import {
   Title,
   Wrapper,
 } from "./styles";
+import { useTranslation } from "react-i18next";
 
 const Description = (props: any) => {
+  const { t } = useTranslation("destination");
   const { data } = props;
   const [isReadMore, setIsReadMore] = useState(true);
   const toggleReadMore = () => {
@@ -34,7 +36,7 @@ const Description = (props: any) => {
         <Buttons>
           <TextButton theme="noOutlined">
             <ButtonContent>
-              <IconText>Lưu</IconText>
+              <IconText>{t("save")}</IconText>
               <Icon>
                 <SaveIcon />
               </Icon>
@@ -42,7 +44,7 @@ const Description = (props: any) => {
           </TextButton>
           <TextButton theme="noOutlined">
             <ButtonContent>
-              <IconText>Chia sẻ</IconText>
+              <IconText>{t("share")}</IconText>
               <Icon>
                 <ShareIcon />
               </Icon>
@@ -54,13 +56,14 @@ const Description = (props: any) => {
           <InfoItem>
             <MoneyIcon />
             <Text>
-              Từ {data.pricePerTicket} đ / {data.timePerTicket} phút
+              {t("from")} {data.pricePerTicket} đ / {data.timePerTicket}{" "}
+              {t("minutes")}
             </Text>
           </InfoItem>
           <InfoItem>
             <ClockIcon />
             <Text>
-              Mở cửa: {data.openingTime} - {data.closingTime}
+              {t("open")}: {data.openingTime} - {data.closingTime}
             </Text>
           </InfoItem>
         </Info>
@@ -77,14 +80,14 @@ const Description = (props: any) => {
           <Button onClick={toggleReadMore}>
             {isReadMore ? (
               <ButtonContent>
-                <IconText>Đọc thêm</IconText>
+                <IconText>{t("read more")}</IconText>
                 <Icon>
                   <ArrowDownIcon />
                 </Icon>
               </ButtonContent>
             ) : (
               <ButtonContent>
-                <IconText>Ẩn bớt</IconText>
+                <IconText>{t("read less")}</IconText>
                 <Icon>
                   <ArrowUpIcon />
                 </Icon>

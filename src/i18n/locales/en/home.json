@@ -1,0 +1,54 @@
+{
+  "hero image": {
+    "explore": "explore",
+    "Dalat": "dalat",
+    "see more": "see more",
+    "read more": "read more",
+    "Tuyen Lam lake": "Tuyen Lam Lake",
+    "love valley": "Love Valley",
+    "Langbiang mountain": "Langbiang Mountain"
+  },
+  "featured articles": {
+    "articles": "articles",
+    "featured articles": "Featured articles"
+  },
+  "featured destinations": {
+    "destinations": "destinations",
+    "Dalat city": "Dalat city",
+    "description": "Planning a trip to Dalat but don’t know where to start? No worries. Let us introduce you to our four main regions, or as we like to call them, the fantastic four. Keep scrolling to learn more."
+  },
+  "featured activities": {
+    "activities": "activities",
+    "featured activities": "Featured activities",
+    "camping": "Camping",
+    "cable car": "Cable car",
+    "climbing": "Climbing",
+    "water rafting": "Water rafting",
+    "pedalo": "Pedalo",
+    "cloud hunting": "Cloud hunting",
+    "zipline": "Zipline"
+  },
+  "another information": {
+    "green travel": "Green travel",
+    "description": "Honored as a clean tourist city of ASEAN. Let's find out more to exprerience great travel in Dalat"
+  },
+  "foods and drinks": {
+    "foods and drinks": "foods and drinks",
+    "cuisine": "Dalat cuisine",
+    "strawberry": "Dalat strawberry",
+    "beef noddle": "Beef noddle",
+    "avocado icecream": "Avocado icecream",
+    "banh can": "Banh can",
+    "banh mi xiu mai": "Banh mi xiu mai",
+    "sweet jams": "Sweet jams",
+    "nem nuong": "Nem nuong",
+    "banh trang nuong": "Banh trang nuong"
+  },
+  "places to stay": {
+    "places to stay": "Places to stay",
+    "best places to stay in Dalat": "Best places to stay in Dalat"
+  },
+  "button": {
+    "explore": "explore"
+  }
+}

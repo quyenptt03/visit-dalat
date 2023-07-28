@@ -13,11 +13,14 @@ import Place from "./components/Place";
 import map from "../../../assets/icons/dalat-map.svg";
 import place1 from "../../../assets/images/place1.png";
 
+import { useTranslation } from "react-i18next";
 import { CarouselContainer, NextButtonContainer, SwiperBtns } from "./styles";
 
 type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
 const PlacesCarousel = () => {
+  const { t } = useTranslation("home");
+
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(getFeaturedDestinations());
@@ -76,9 +79,9 @@ const PlacesCarousel = () => {
       </SwiperBtns>
       <Slider ref={slide} {...settings} afterChange={handleAfterChange}>
         <Place
-          field="Điểm đến"
-          title="Thành Phố Đà Lạt"
-          p="Bạn muốn du lịch Đà Lạt nhưng không biết bắt đầu từ đâu? Đừng lo, hãy để chúng tôi giới thiệu với bạn những địa điểm tuyệt vời. Tiếp tục cuộn ngang để tìm hiểu thêm."
+          field={t("featured destinations.destinations")}
+          title={t("featured destinations.Dalat city")}
+          p={t("featured destinations.description")}
           imageAdr={place1}
           showBtn={false}
           mapImg={map}
@@ -87,7 +90,7 @@ const PlacesCarousel = () => {
           return (
             <Place
               key={destination._id}
-              field="Điểm đến"
+              field={t("featured destinations.destinations")}
               title={destination.name}
               p={`${destination.description.slice(0, 150)}...`}
               imageAdr={URL + destination.images[0]}

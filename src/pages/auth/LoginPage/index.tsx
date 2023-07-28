@@ -7,8 +7,10 @@ import { Background, Container, LogoContainer } from "./styles";
 import { login } from "../../../redux/auth/authSlice";
 import { unwrapResult } from "@reduxjs/toolkit";
 import { enqueueSnackbar } from "notistack";
+import { useTranslation } from "react-i18next";
 
 const LoginPage = () => {
+  const { t } = useTranslation("login");
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
@@ -19,7 +21,7 @@ const LoginPage = () => {
       unwrapResult(resultAction);
 
       navigate("/");
-      enqueueSnackbar("Login successfully!!!", { variant: "success" });
+      enqueueSnackbar(t("login success noti"), { variant: "success" });
     } catch (error: any) {
       enqueueSnackbar(error.message, { variant: "error" });
     }

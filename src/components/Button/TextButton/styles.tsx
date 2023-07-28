@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 const BaseButton = styled.button`
-  ${tw`font-semibold uppercase transition-all duration-200 ease-linear border-2 rounded-lg outline-none focus:outline-none`}
+  ${tw`font-semibold uppercase transition-all duration-200 ease-linear border-2 rounded-lg outline-none focus:outline-none min-w-[160px]`}
 `;
 
 export const BlackOutlineButton = styled(BaseButton)`

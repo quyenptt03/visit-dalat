@@ -1,32 +1,33 @@
-import React from "react";
-import { TextButton } from "../../components/Button";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import ErrorIcon from "../../assets/icons/error-icon.svg";
+import BackToTopButton from "../../components/BackToTopButton";
+import { TextButton } from "../../components/Button";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
 import {
-  Container,
-  Wrapper,
-  Title,
-  SubTitle,
   ButtonContent,
   ButtonText,
-  ForwardIconContainer,
+  Container,
   ErrorImage,
+  ForwardIconContainer,
+  SubTitle,
+  Title,
+  Wrapper,
 } from "./styles";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import BackToTopButton from "../../components/BackToTopButton";
 
 const ErrorPage = () => {
+  const { t } = useTranslation("errorpage");
   return (
     <>
       <Navbar />
       <Container>
         <Wrapper>
           <Title>404</Title>
-          <SubTitle>Không tìm thấy trang</SubTitle>
+          <SubTitle>{t("not found")}</SubTitle>
           <TextButton theme="filled">
             <ButtonContent as={Link} to={"/"}>
-              <ButtonText>Go back</ButtonText>
+              <ButtonText>{t("go back")}</ButtonText>
               <ForwardIconContainer />
             </ButtonContent>
           </TextButton>

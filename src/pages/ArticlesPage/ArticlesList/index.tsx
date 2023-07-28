@@ -22,6 +22,7 @@ import {
 import Pagination from "../../../components/Pagination";
 import Loading from "../../../components/Loading";
 import { articleApi } from "../../../api";
+import { useTranslation } from "react-i18next";
 
 interface Filters {
   page: number;
@@ -31,6 +32,8 @@ interface Filters {
 }
 
 const ArticlesList = () => {
+  const { t } = useTranslation("articles");
+
   const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useAppDispatch();
@@ -54,6 +57,7 @@ const ArticlesList = () => {
     const updatedQueryString = queryString.stringify(filters);
     navigate(`?${updatedQueryString}`, { replace: true });
     window.scroll(0, 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, filters]);
 
   useEffect(() => {
@@ -120,8 +124,8 @@ const ArticlesList = () => {
         <Container>
           <FilterContainer>
             <TitleContainer>
-              <Title>Bộ Lọc</Title>
-              <ClearBtn onClick={handleClearFilters}>Xoá</ClearBtn>
+              <Title>{t("filters")}</Title>
+              <ClearBtn onClick={handleClearFilters}>{t("clear")}</ClearBtn>
             </TitleContainer>
             <SearchContainer>
               <SearchBar onSubmit={handleSearchChange} />

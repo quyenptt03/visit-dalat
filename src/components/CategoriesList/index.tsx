@@ -1,22 +1,25 @@
-import { useAppSelector } from "../../redux/hook";
+import { useTranslation } from "react-i18next";
 import { ReactComponent as CloseIcon } from "../../assets/icons/x-icon.svg";
+import { useAppSelector } from "../../redux/hook";
 import {
-  Title,
-  Container,
   CategoryItem,
   CheckboxContainer,
   CheckboxInput,
   CheckboxLabel,
   CheckboxName,
-  NumOfArticles,
   CloseBtnContainer,
+  Container,
+  NumOfArticles,
+  Title,
 } from "./styles";
 
 const CategoriesList = ({ handleCategoryCheck, isChecked }: any) => {
+  const { t } = useTranslation("articles");
+
   const { categories } = useAppSelector((state) => state.categories);
   return (
     <>
-      <Title>Chọn một phân loại</Title>
+      <Title>{t("select category")}</Title>
       <Container>
         {categories?.map((category) => (
           <CategoryItem key={category._id}>

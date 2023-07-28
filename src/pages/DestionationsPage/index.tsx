@@ -7,24 +7,29 @@ import BackToTopButton from "../../components/BackToTopButton";
 import { HotelsCarousel } from "../../components/Carousel";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { useTranslation } from "react-i18next";
 const DestinationsPage = () => {
+  const { t } = useTranslation("destinations");
   return (
     <>
       <Navbar />
       <Background
-        title="Địa Điểm Nổi Bật Ở Đà Lạt"
-        subtitle="Lorrem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
+        title={t("hero image.title")}
+        subtitle={t("hero image.subtitle")}
         img={bgImg}
       />
       <SectionMarginer>
         <SectionHeader
-          field="Địa điểm"
-          title="Những Địa Điểm Du Lịch ở Đà Lạt"
+          field={t("destinations.field")}
+          title={t("destinations.title")}
         />
         <DestinationsList />
       </SectionMarginer>
       <SectionMarginer background={true}>
-        <SectionHeader field="Lưu trú" title="Nơi nghỉ chân tuyệt vời" />
+        <SectionHeader
+          field={t("places to stay.places to stay")}
+          title={t("places to stay.best places to stay in Dalat")}
+        />
         <HotelsCarousel />
       </SectionMarginer>
       <Footer />

@@ -1,0 +1,14 @@
+{
+  "sign up": "Sign up to",
+  "email placeholder": "Enter your email",
+  "name": "Name",
+  "name placeholder": "Enter your name",
+  "password": "Password",
+  "password placeholder": "Enter your password",
+  "confirm password": "Confirm password",
+  "confirm password placeholder": "Confirm your password",
+  "register": "Register",
+  "callout": "Already have an Account ?",
+  "login": "Login",
+  "register success noti": "Register successfully!!!"
+}

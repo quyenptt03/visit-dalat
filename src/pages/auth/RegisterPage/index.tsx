@@ -1,12 +1,12 @@
 import { unwrapResult } from "@reduxjs/toolkit";
+import { enqueueSnackbar } from "notistack";
+import { useNavigate } from "react-router-dom";
 import LoginBG from "../../../assets/images/login-bg-img.png";
 import Logo from "../../../components/Logo";
 import { register } from "../../../redux/auth/authSlice";
 import { useAppDispatch } from "../../../redux/hook";
 import RegisterForm from "./components/RegisterForm";
 import { Background, Container, LogoContainer } from "./styles";
-import { enqueueSnackbar } from "notistack";
-import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
   const dispatch = useAppDispatch();

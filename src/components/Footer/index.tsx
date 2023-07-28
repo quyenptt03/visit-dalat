@@ -1,50 +1,50 @@
-import React from "react";
+import { useTranslation } from "react-i18next";
+import { ReactComponent as FacebookIcon } from "../../assets/icons/facebook-icon.svg";
+import { ReactComponent as GithubIcon } from "../../assets/icons/github-icon.svg";
+import { ReactComponent as InstagramIcon } from "../../assets/icons/instagram-icon.svg";
+import { ReactComponent as TwitterIcon } from "../../assets/icons/twitter-icon.svg";
+import { ReactComponent as YoutubeIcon } from "../../assets/icons/youtube-icon.svg";
 import Logo from "../Logo";
 import {
-  Container,
-  Content,
-  Title,
-  Row2,
-  WorkWithUs,
-  WorkWithUsList,
-  WorkWithUsItem,
   Connect,
   ConnectItem,
   ConnectList,
-  Row3,
+  Container,
+  Content,
   Copyright,
   LegalInfo,
   LegalInfoItem,
+  Row2,
+  Row3,
+  Title,
+  WorkWithUs,
+  WorkWithUsItem,
+  WorkWithUsList,
 } from "./styles";
 
-import { ReactComponent as FacebookIcon } from "../../assets/icons/facebook-icon.svg";
-import { ReactComponent as InstagramIcon } from "../../assets/icons/instagram-icon.svg";
-import { ReactComponent as YoutubeIcon } from "../../assets/icons/youtube-icon.svg";
-import { ReactComponent as TwitterIcon } from "../../assets/icons/twitter-icon.svg";
-import { ReactComponent as GithubIcon } from "../../assets/icons/github-icon.svg";
-
 const Footer = () => {
+  const { t } = useTranslation("footer");
   return (
     <Container>
       <Content>
         <Logo theme="light" />
         <Row2>
           <WorkWithUs>
-            <Title>Về chúng tôi</Title>
+            <Title>{t("about us")}</Title>
             <WorkWithUsList>
               <WorkWithUsItem>
-                <a href="/">Sự kiện</a>
+                <a href="/">{t("event")}</a>
               </WorkWithUsItem>
               <WorkWithUsItem>
-                <a href="/">Truyền thông</a>
+                <a href="/">{t("media")}</a>
               </WorkWithUsItem>
               <WorkWithUsItem>
-                <a href="/">Du lịch lữ hành</a>
+                <a href="/">{t("travel trade")}</a>
               </WorkWithUsItem>
             </WorkWithUsList>
           </WorkWithUs>
           <Connect>
-            <Title>Liên hệ</Title>
+            <Title>{t("contact")}</Title>
             <ConnectList>
               <ConnectItem>
                 <a
@@ -98,19 +98,19 @@ const Footer = () => {
           <Copyright>© VisitDalat.com 2023</Copyright>
           <LegalInfo>
             <LegalInfoItem>
-              <a href="/">Điều khoản sử dụng</a>
+              <a href="/">{t("term of use")}</a>
             </LegalInfoItem>
             <LegalInfoItem>
-              <a href="/">Bảo mật thông tin</a>
+              <a href="/">{t("privacy statement")}</a>
             </LegalInfoItem>
             <LegalInfoItem>
-              <a href="/">Khả năng truy cập</a>
+              <a href="/">{t("accessibility")}</a>
             </LegalInfoItem>
             <LegalInfoItem>
-              <a href="/">Cookies</a>
+              <a href="/">{t("cookies")}</a>
             </LegalInfoItem>
             <LegalInfoItem>
-              <a href="/">Phản hồi</a>
+              <a href="/">{t("feedback")}</a>
             </LegalInfoItem>
           </LegalInfo>
         </Row3>

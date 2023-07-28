@@ -5,8 +5,10 @@ import { URL } from "../../../../api/axiosClient";
 import { useAppSelector } from "../../../../redux/hook";
 import { Container, Image, PopUpContent, Title } from "./styles";
 import Loading from "../../../../components/Loading";
+import { useTranslation } from "react-i18next";
 
 const Map = () => {
+  const { t } = useTranslation("destination");
   const { isLoading, destination } = useAppSelector(
     (state) => state.destination
   );
@@ -19,7 +21,7 @@ const Map = () => {
   });
   return (
     <Container>
-      <Title>Bản đồ</Title>
+      <Title>{t("map")}</Title>
       {isLoading ? (
         <Loading loading={isLoading} color="#1d764a" size={50} />
       ) : (

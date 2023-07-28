@@ -15,6 +15,7 @@ import {
   Title,
 } from "./styles";
 import Loading from "../../../../../components/Loading";
+import { useTranslation } from "react-i18next";
 
 type FormData = {
   email: string;
@@ -23,6 +24,8 @@ type FormData = {
   confirmPassword: string;
 };
 const RegisterForm = ({ onSubmit }: any) => {
+  const { t } = useTranslation("register");
+
   const schema = yup
     .object({
       email: yup
@@ -33,11 +36,12 @@ const RegisterForm = ({ onSubmit }: any) => {
       password: yup
         .string()
         .required("Please enter your password")
-        .min(6, "must contain 6 characters"),
-      // .matches(
-      //   /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
-      //   "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
-      // ),
+        // .min(6, "must contain 6 characters"),
+        .matches(
+          // eslint-disable-next-line no-useless-escape
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+          "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
+        ),
       confirmPassword: yup
         .string()
         .required("Please confirm your password")
@@ -64,45 +68,45 @@ const RegisterForm = ({ onSubmit }: any) => {
     <Container>
       <Greeting>Welcome!</Greeting>
       <Heading>
-        <Title>Sign up to</Title>
+        <Title>{t("register")}</Title>
         <SubTitle>Lorem Ipsum is simply</SubTitle>
       </Heading>
       <Form onSubmit={form.handleSubmit(handleSubmit)}>
         <InputField
           name="email"
           label="email"
-          placeholder="Enter you email"
+          placeholder={t("email placeholder")}
           form={form}
         />
         <InputField
           name="name"
-          label="name"
-          placeholder="Enter you name"
+          label={t("name")}
+          placeholder={t("name placeholder")}
           form={form}
         />
         <PasswordField
           name="password"
-          label="password"
-          placeholder="Enter you password"
+          label={t("password")}
+          placeholder={t("password placeholder")}
           form={form}
         />
 
         <PasswordField
           name="confirmPassword"
-          label="confirm password"
-          placeholder="Confirm your password"
+          label={t("confirm password")}
+          placeholder={t("confirm password placeholder")}
           form={form}
         />
         <SubmitButton type="submit" disabled={isSubmitting}>
           {isSubmitting ? (
             <Loading loading={isSubmitting} size={20} color="#fff" />
           ) : (
-            "Register"
+            `${t("register")}`
           )}
         </SubmitButton>
       </Form>
       <Span>
-        Already have an Account ? <AuthLink href="/login">Login</AuthLink>
+        {t("callout")} <AuthLink href="/login">{t("login")}</AuthLink>
       </Span>
     </Container>
   );

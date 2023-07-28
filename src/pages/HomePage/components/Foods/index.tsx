@@ -21,42 +21,65 @@ import BanhCan from "../../../../assets/foods/banh-can.png";
 import BanhTrangNuong from "../../../../assets/foods/banh-trang-nuong.png";
 
 import Food from "./Food";
+import { useTranslation } from "react-i18next";
 
 const Foods = () => {
+  const { t } = useTranslation("home");
   return (
     <Container>
       <Col>
         <AboveImg>
-          <Food imageSrc={StrawberryImg} caption="Dâu tây Đà Lạt" />
+          <Food
+            imageSrc={StrawberryImg}
+            caption={t("foods and drinks.strawberry")}
+          />
         </AboveImg>
         <BelowImg>
-          <Food imageSrc={BanhMiXiuMai} caption="Bánh mì xíu mại" />
+          <Food
+            imageSrc={BanhMiXiuMai}
+            caption={t("foods and drinks.banh mi xiu mai")}
+          />
         </BelowImg>
       </Col>
       <Col2>
         <TopRow>
           <TopRowImg>
-            <Food imageSrc={BunBo} caption="Bún bò" />
+            <Food
+              imageSrc={BunBo}
+              caption={t("foods and drinks.beef noddle")}
+            />
           </TopRowImg>
           <TopRowImg>
-            <Food imageSrc={AvocadoCream} caption="Kem bơ" />
+            <Food
+              imageSrc={AvocadoCream}
+              caption={t("foods and drinks.avocado icecream")}
+            />
           </TopRowImg>
         </TopRow>
         <SecondRow>
           <SecondRowImg1>
-            <Food imageSrc={MutDacSan} caption="Các loại mứt đặc sản" />
+            <Food
+              imageSrc={MutDacSan}
+              caption={t("foods and drinks.sweet jams")}
+            />
           </SecondRowImg1>
           <SecondRowImg2>
-            <Food imageSrc={NemNuong} caption="Nem nướng" />
+            <Food
+              imageSrc={NemNuong}
+              caption={t("foods and drinks.nem nuong")}
+            />
           </SecondRowImg2>
         </SecondRow>
       </Col2>
       <Col>
         <AboveImg>
-          <Food imageSrc={BanhCan} caption="Bánh căn" />
+          <Food imageSrc={BanhCan} caption={t("foods and drinks.banh can")} />
         </AboveImg>
         <BelowImg>
-          <Food imageSrc={BanhTrangNuong} caption="Bánh tráng nướng" />
+          <Food
+            imageSrc={BanhTrangNuong}
+            caption={t("foods and drinks.banh trang nuong")}
+          />
         </BelowImg>
       </Col>
     </Container>

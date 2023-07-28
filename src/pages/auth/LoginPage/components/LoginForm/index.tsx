@@ -1,6 +1,8 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import * as yup from "yup";
+import Loading from "../../../../../components/Loading";
 import InputField from "../../../../../components/form-controls/InputField";
 import PasswordField from "../../../../../components/form-controls/PasswordField";
 import {
@@ -14,7 +16,6 @@ import {
   SubmitButton,
   Title,
 } from "./styles";
-import Loading from "../../../../../components/Loading";
 
 type FormData = {
   email: string;
@@ -22,6 +23,8 @@ type FormData = {
 };
 
 const LoginForm = ({ onSubmit }: any) => {
+  const { t } = useTranslation("login");
+
   const schema = yup
     .object({
       email: yup
@@ -49,32 +52,32 @@ const LoginForm = ({ onSubmit }: any) => {
     <Container>
       <Greeting>Welcome!</Greeting>
       <Heading>
-        <Title>Sign in to</Title>
+        <Title>{t("sign in")}</Title>
         <SubTitle>Lorem Ipsum is simply</SubTitle>
       </Heading>
       <Form onSubmit={form.handleSubmit(handleSubmit)}>
         <InputField
           name="email"
           label="email"
-          placeholder="Enter you email"
+          placeholder={t("email placeholder")}
           form={form}
         />
         <PasswordField
           name="password"
-          label="password"
-          placeholder="Enter you password"
+          label={t("password")}
+          placeholder={t("password placeholder")}
           form={form}
         />
         <SubmitButton type="submit" disabled={isSubmitting}>
           {isSubmitting ? (
             <Loading loading={isSubmitting} size={20} color="#fff" />
           ) : (
-            "Login"
+            `${t("login")}`
           )}
         </SubmitButton>
       </Form>
       <Span>
-        Don't have an Account ? <AuthLink href="/register">Register</AuthLink>
+        {t("callout")} <AuthLink href="/register">{t("register")}</AuthLink>
       </Span>
     </Container>
   );

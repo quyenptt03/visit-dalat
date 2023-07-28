@@ -1,29 +1,31 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../../../../redux/hook";
-import { getSingleArticle } from "../../../../redux/article/actions";
-import { TextButton } from "../../../../components/Button";
 import { ReactComponent as SaveIcon } from "../../../../assets/icons/save-icon.svg";
 import { ReactComponent as ShareIcon } from "../../../../assets/icons/share-icon.svg";
+import { TextButton } from "../../../../components/Button";
+import Loading from "../../../../components/Loading";
+import { getSingleArticle } from "../../../../redux/article/actions";
+import { useAppDispatch, useAppSelector } from "../../../../redux/hook";
 import {
-  Container,
+  Action,
   ArticleContainer,
   ArticleHero,
-  Title,
-  Action,
-  Buttons,
   ButtonContent,
-  IconText,
+  Buttons,
+  Container,
   Icon,
+  IconText,
   Image,
-  ParagraphContainer,
   Paragraph,
-  ParagraphTitle,
+  ParagraphContainer,
   ParagraphContent,
+  ParagraphTitle,
+  Title,
 } from "./styles";
-import Loading from "../../../../components/Loading";
+import { useTranslation } from "react-i18next";
 
 const Article = () => {
+  const { t } = useTranslation("article");
   const dispatch = useAppDispatch();
   const location = useLocation();
   const articleId = location.pathname.split("/articles/")[1];
@@ -33,8 +35,6 @@ const Article = () => {
   }, [articleId, dispatch]);
 
   const { isLoading, article } = useAppSelector((state) => state.article);
-  console.log({ isLoading, article });
-
   return (
     <Container>
       {isLoading ? (
@@ -47,7 +47,7 @@ const Article = () => {
               <Buttons>
                 <TextButton theme="noOutlined">
                   <ButtonContent>
-                    <IconText>Lưu</IconText>
+                    <IconText>{t("save")}</IconText>
                     <Icon>
                       <SaveIcon />
                     </Icon>
@@ -55,7 +55,7 @@ const Article = () => {
                 </TextButton>
                 <TextButton theme="noOutlined">
                   <ButtonContent>
-                    <IconText>Chia sẻ</IconText>
+                    <IconText>{t("share")}</IconText>
                     <Icon>
                       <ShareIcon />
                     </Icon>

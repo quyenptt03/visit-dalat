@@ -14,6 +14,7 @@ import {
   ButtonText,
   ForwardIconContainer,
 } from "./styles";
+import { useTranslation } from "react-i18next";
 
 interface IPlaceProps {
   field?: string;
@@ -26,6 +27,7 @@ interface IPlaceProps {
 }
 
 const Place = (props: IPlaceProps) => {
+  const { t } = useTranslation("home");
   const { field, title, p, imageAdr, mapImg, showBtn, url } = props;
   return (
     <PlaceContainer>
@@ -38,7 +40,7 @@ const Place = (props: IPlaceProps) => {
           {showBtn && (
             <TextButton theme="filled">
               <ButtonContent as={Link} to={url}>
-                <ButtonText>Khám phá</ButtonText>
+                <ButtonText>{t("button.explore")}</ButtonText>
                 <ForwardIconContainer />
               </ButtonContent>
             </TextButton>

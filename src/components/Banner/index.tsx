@@ -1,37 +1,35 @@
-import React from "react";
-import bannerBG from "../../assets/images/banner-background.svg";
-import { TextButton } from "../Button";
+import { useTranslation } from "react-i18next";
 import { ReactComponent as SaveIcon } from "../../assets/icons/save-icon.svg";
 import { ReactComponent as ShareIcon } from "../../assets/icons/share-icon.svg";
+import bannerBG from "../../assets/images/banner-background.svg";
+import { TextButton } from "../Button";
 import {
-  Container,
   Background,
-  Wrapper,
+  ButtonContent,
+  Buttons,
+  Container,
+  Desc,
+  Icon,
+  IconText,
   Texts,
   Title,
-  Desc,
-  Buttons,
-  ButtonContent,
-  IconText,
-  Icon,
+  Wrapper,
 } from "./styles";
+
 const Banner = () => {
+  const { t } = useTranslation("articles");
   return (
     <Container>
       <Background src={bannerBG} alt="banner" />
       <Wrapper>
         <Texts>
-          <Title>Tất Cả Bài Viết</Title>
-          <Desc>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad
-          </Desc>
+          <Title>{t("title")}</Title>
+          <Desc>{t("subtitle")}</Desc>
         </Texts>
         <Buttons>
           <TextButton theme="noOutlined">
             <ButtonContent>
-              <IconText>Lưu</IconText>
+              <IconText>{t("save")}</IconText>
               <Icon>
                 <SaveIcon />
               </Icon>
@@ -39,7 +37,7 @@ const Banner = () => {
           </TextButton>
           <TextButton theme="noOutlined">
             <ButtonContent>
-              <IconText>Chia sẻ</IconText>
+              <IconText>{t("share")}</IconText>
               <Icon>
                 <ShareIcon />
               </Icon>

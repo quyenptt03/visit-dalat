@@ -19,45 +19,47 @@ import Activity4 from "../../../assets/images/activity4.png";
 import Activity5 from "../../../assets/images/activity5.png";
 import Activity6 from "../../../assets/images/activity6.png";
 import Activity7 from "../../../assets/images/activity7.png";
+import { useTranslation } from "react-i18next";
 
 type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
 const ActivitiesCarousel = () => {
+  const { t } = useTranslation("home");
   const activities = [
     {
       image: Activity1,
-      title: "Cắm trại",
-      subTitle: "132 hoạt động",
+      title: t("featured activities.camping"),
+      subTitle: `132 ${t("featured activities.activities")}`,
     },
     {
       image: Activity2,
-      title: "Cáp treo",
-      subTitle: "132 hoạt động",
+      title: t("featured activities.cable car"),
+      subTitle: `132 ${t("featured activities.activities")}`,
     },
     {
       image: Activity3,
-      title: "Leo núi",
-      subTitle: "132 hoạt động",
+      title: t("featured activities.climbing"),
+      subTitle: `132 ${t("featured activities.activities")}`,
     },
     {
       image: Activity4,
-      title: "Vượt thác",
-      subTitle: "132 hoạt động",
+      title: t("featured activities.water rafting"),
+      subTitle: `132 ${t("featured activities.activities")}`,
     },
     {
       image: Activity5,
-      title: "Đạp vịt",
-      subTitle: "132 hoạt động",
+      title: t("featured activities.pedalo"),
+      subTitle: `132 ${t("featured activities.activities")}`,
     },
     {
       image: Activity6,
-      title: "Săn mây",
-      subTitle: "132 hoạt động",
+      title: t("featured activities.cloud hunting"),
+      subTitle: `132 ${t("featured activities.activities")}`,
     },
     {
       image: Activity7,
-      title: "Zipline",
-      subTitle: "132 hoạt động",
+      title: t("featured activities.zipline"),
+      subTitle: `132 ${t("featured activities.activities")}`,
     },
   ];
 

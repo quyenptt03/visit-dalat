@@ -1,45 +1,48 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
-import {
-  Container,
-  Image,
-  HomeContainer,
-  WrapTitle,
-  SubTitle,
-  Title,
-  SeeMoreBtn,
-  SeeMoreSpan,
-  SeeMoreTitle,
-  ArrowBtns,
-  IconContainer,
-  SlideNumberContainer,
-  CurrentSlideNumber,
-  TotalSlideNumber,
-  Slash,
-  CustomDotsContainer,
-  CustomDot,
-  DotsList,
-  FeaturedLocations,
-  FeaturedLocationCard,
-  LocationIconContainer,
-  LocationSeeMore,
-  LocationTitle,
-  LocationTitleWrapper,
-  LocationCardBg,
-} from "./styles";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import { ReactComponent as LocationIcon } from "../../../assets/icons/location-icon.svg";
+import { ReactComponent as NextIcon } from "../../../assets/icons/next-icon2.svg";
+import { ReactComponent as PrevIcon } from "../../../assets/icons/prev-icon2.svg";
 import home1 from "../../../assets/images/home-1.png";
 import home2 from "../../../assets/images/home-2.png";
 import home3 from "../../../assets/images/home3.png";
 import home4 from "../../../assets/images/home4.png";
-import { ReactComponent as NextIcon } from "../../../assets/icons/next-icon2.svg";
-import { ReactComponent as PrevIcon } from "../../../assets/icons/prev-icon2.svg";
-import { ReactComponent as LocationIcon } from "../../../assets/icons/location-icon.svg";
+import {
+  ArrowBtns,
+  Container,
+  CurrentSlideNumber,
+  CustomDot,
+  CustomDotsContainer,
+  DotsList,
+  FeaturedLocationCard,
+  FeaturedLocations,
+  HomeContainer,
+  IconContainer,
+  Image,
+  LocationCardBg,
+  LocationIconContainer,
+  LocationSeeMore,
+  LocationTitle,
+  LocationTitleWrapper,
+  SeeMoreBtn,
+  SeeMoreSpan,
+  SeeMoreTitle,
+  Slash,
+  SlideNumberContainer,
+  SubTitle,
+  Title,
+  TotalSlideNumber,
+  WrapTitle,
+} from "./styles";
 
 type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
 const HomeCarousel = () => {
+  const { t } = useTranslation("home");
+
   const images = [home1, home2, home3, home4];
   const slide = useRef<SliderRef>(null);
   const [slideIndex, setSlideIndex] = useState(0);
@@ -85,8 +88,8 @@ const HomeCarousel = () => {
         {images.map((image, index) => (
           <HomeContainer key={index}>
             <WrapTitle>
-              <SubTitle>Khám phá</SubTitle>
-              <Title>Đà Lạt</Title>
+              <SubTitle>{t("hero image.explore")}</SubTitle>
+              <Title>{t("hero image.Dalat")}</Title>
             </WrapTitle>
             <FeaturedLocations>
               <FeaturedLocationCard>
@@ -95,9 +98,11 @@ const HomeCarousel = () => {
                   <LocationIcon />
                 </LocationIconContainer>
                 <LocationTitleWrapper>
-                  <LocationTitle>Hồ Tuyền Lâm</LocationTitle>
+                  <LocationTitle>
+                    {t("hero image.Tuyen Lam lake")}
+                  </LocationTitle>
                   <LocationSeeMore href="/destinations/646845f80c759a65d4fcf817">
-                    Tìm hiểu thêm
+                    {t("hero image.read more")}
                   </LocationSeeMore>
                 </LocationTitleWrapper>
               </FeaturedLocationCard>
@@ -107,9 +112,9 @@ const HomeCarousel = () => {
                   <LocationIcon />
                 </LocationIconContainer>
                 <LocationTitleWrapper>
-                  <LocationTitle>Thung lũng tình yêu</LocationTitle>
+                  <LocationTitle>{t("hero image.love valley")}</LocationTitle>
                   <LocationSeeMore href="/destinations/646845f80c759a65d4fcf818">
-                    Tìm hiểu thêm
+                    {t("hero image.read more")}
                   </LocationSeeMore>
                 </LocationTitleWrapper>
               </FeaturedLocationCard>
@@ -119,9 +124,11 @@ const HomeCarousel = () => {
                   <LocationIcon />
                 </LocationIconContainer>
                 <LocationTitleWrapper>
-                  <LocationTitle>Núi Langbiang</LocationTitle>
+                  <LocationTitle>
+                    {t("hero image.Langbiang mountain")}
+                  </LocationTitle>
                   <LocationSeeMore href="/destinations/646845f80c759a65d4fcf815">
-                    Tìm hiểu thêm
+                    {t("hero image.read more")}
                   </LocationSeeMore>
                 </LocationTitleWrapper>
               </FeaturedLocationCard>
@@ -151,7 +158,7 @@ const HomeCarousel = () => {
       </ArrowBtns>
       <SeeMoreBtn>
         <SeeMoreSpan />
-        <SeeMoreTitle>Xem thêm</SeeMoreTitle>
+        <SeeMoreTitle>{t("hero image.see more")}</SeeMoreTitle>
       </SeeMoreBtn>
     </Container>
   );

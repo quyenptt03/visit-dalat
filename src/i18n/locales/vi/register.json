@@ -1,0 +1,14 @@
+{
+  "sign up": "Đăng ký",
+  "email placeholder": "Nhập vào email",
+  "name": "Tên",
+  "name placeholder": "Nhập tên",
+  "password": "Mật khẩu",
+  "password placeholder": "Nhập mật khẩu",
+  "confirm password": "Nhập lại mật khẩu",
+  "confirm password placeholder": "Nhập lại mật khẩu",
+  "register": "Đăng kí",
+  "callout": "Đã có tài khoản ?",
+  "login": "Đăng nhập",
+  "register success noti": "Đăng kí tài khoản thành công!!!"
+}

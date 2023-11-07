@@ -2,11 +2,11 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const CarouselContainer = styled.div`
-  ${tw`xxl:mx-32 laptop:mx-24`};
+  ${tw`3xl:mx-32 laptop:mx-24`};
 `;
 
 export const SliderContainer = styled.div`
-  ${tw`mt-5 xxl:mt-7`};
+  ${tw`mt-5 3xl:mt-7`};
 `;
 
 export const SwiperBtns = styled.div`
@@ -17,5 +17,5 @@ export const NextButtonContainer = styled.div`
   ${tw`ml-5`}
 `;
 export const ItemContainer = styled.div`
-  ${tw`w-full tablet:w-1/2 xxl:w-1/3`}
+  ${tw`w-full tablet:w-1/2 3xl:w-1/3`}
 `;

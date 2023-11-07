@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   ${tw`flex flex-col items-center justify-center gap-7`}
 `;
 const Title = styled.h1`
-  ${tw`text-5xl font-extrabold xxl:text-8xl text-primary laptop:text-6xl `}
+  ${tw`text-5xl font-extrabold 3xl:text-8xl text-primary laptop:text-6xl `}
 `;
 const SubTitle = styled.h2`
   ${tw`text-xl font-bold text-black laptop:text-3xl`}
@@ -18,7 +18,7 @@ const ButtonContent = styled.div`
   ${tw`flex items-center justify-center`}
 `;
 const ButtonText = styled.span`
-  ${tw`mr-5 text-base font-bold xxl:text-xl`}
+  ${tw`mr-5 text-base font-bold 3xl:text-xl`}
 `;
 const ForwardIconContainer = styled(ForwardIcon)`
   ${tw` stroke-primary`}

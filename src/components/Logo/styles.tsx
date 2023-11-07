@@ -8,7 +8,6 @@ const LogoText = styled.div`
   ${tw`
     ml-4
     text-base
-    tablet:text-lg
     tracking-[0.2em]
     uppercase
     font-black
@@ -24,6 +23,6 @@ export const DarkLogo = styled(LogoText)`
 `;
 export const Image = styled.div`
   img {
-    ${tw`w-auto h-12 xxl:h-full`}
+    ${tw`w-auto h-12 tablet:h-11 3xl:h-full`}
   }
 `;

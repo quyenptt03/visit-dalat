@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 const Container = styled.div`
-  ${tw`relative grid w-full grid-cols-12 mt-20 h-80 xxl:mt-24 bg-bg-blue `}
+  ${tw`relative grid w-full grid-cols-12 mt-20 h-80 3xl:mt-24 bg-bg-blue `}
 `;
 const Background = styled.img`
   ${tw`absolute h-full tablet:block hidden`}
@@ -14,10 +14,10 @@ const Texts = styled.div`
   ${tw`tablet:w-1/2 w-full`}
 `;
 const Title = styled.h1`
-  ${tw`text-3xl font-bold xxl:text-4xl mb-5`}
+  ${tw`text-3xl font-bold 3xl:text-4xl mb-5`}
 `;
 const Desc = styled.p`
-  ${tw`text-sm xxl:text-base`}
+  ${tw`text-sm 3xl:text-base`}
 `;
 const Buttons = styled.div`
   ${tw``}
@@ -26,7 +26,7 @@ const ButtonContent = styled.div`
   ${tw`flex items-center justify-center text-primary`}
 `;
 const IconText = styled.span`
-  ${tw`mr-2 text-sm font-bold xxl:text-base`}
+  ${tw`mr-2 text-sm font-bold 3xl:text-base`}
 `;
 const Icon = styled.div`
   svg path {

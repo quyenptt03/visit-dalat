@@ -16,5 +16,5 @@ export const NextButtonContainer = styled.div`
   ${tw`ml-5 mr-5 `}
 `;
 export const ItemContainer = styled.div`
-  ${tw`w-full tablet:w-1/2 xxl:w-1/4 desktop:w-1/3`}
+  ${tw`w-full tablet:w-1/2 2xl:w-1/4 desktop:w-1/3`}
 `;

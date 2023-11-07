@@ -1,16 +1,16 @@
 import tw from "twin.macro";
 import styled from "styled-components";
 const Container = styled.div`
-  ${tw`laptop:h-96 xxl:h-[474px] bg-dark-green`};
+  ${tw`laptop:h-96 3xl:h-[474px] bg-dark-green`};
 `;
 const Content = styled.div`
-  ${tw`xxl:px-[8.25rem] xxl:pt-[5.25rem] laptop:px-24 laptop:pt-16 pt-1 tablet:mb-0`}
+  ${tw`3xl:px-[8.25rem] 3xl:pt-[5.25rem] laptop:px-24 laptop:pt-16 pt-1 tablet:mb-0`}
 `;
 const Title = styled.h4`
-  ${tw`mt-3 mb-3 font-semibold text-white capitalize xxl:mb-6 xxl:text-lg laptop:mb-5 laptop:text-base laptop:mt-0`}
+  ${tw`mt-3 mb-3 font-semibold text-white capitalize 3xl:mb-6 3xl:text-lg laptop:mb-5 laptop:text-base laptop:mt-0`}
 `;
 const Row2 = styled.div`
-  ${tw`grid grid-cols-4 pl-4 mt-3 xxl:mt-12 laptop:mt-10 laptop:pl-0`}
+  ${tw`grid grid-cols-4 pl-4 mt-3 3xl:mt-12 laptop:mt-10 laptop:pl-0`}
 `;
 const WorkWithUs = styled.div`
   ${tw`col-span-4 laptop:col-span-1`}
@@ -20,7 +20,7 @@ const WorkWithUsList = styled.ul``;
 const WorkWithUsItem = styled.li`
   ${tw`mb-2`}
   a {
-    ${tw`font-medium text-white capitalize xxl:text-lg laptop:text-sm`}
+    ${tw`font-medium text-white capitalize 3xl:text-lg laptop:text-sm`}
   }
 `;
 const Connect = styled.div`
@@ -39,7 +39,7 @@ const Row3 = styled.div`
   ${tw`grid grid-cols-12 mt-5 ml-4 laptop:mt-12 laptop:ml-0`}
 `;
 const Copyright = styled.span`
-  ${tw`col-span-12 mt-6 mb-5 font-normal text-white laptop:col-span-3 xxl:text-base laptop:text-xs laptop:my-0`}
+  ${tw`col-span-12 mt-6 mb-5 font-normal text-white laptop:col-span-3 3xl:text-base laptop:text-xs laptop:my-0`}
 `;
 const LegalInfo = styled.ul`
   ${tw`flex flex-col col-span-12 laptop:col-span-9 laptop:flex-row row-[1] laptop:row-auto`}
@@ -47,7 +47,7 @@ const LegalInfo = styled.ul`
 const LegalInfoItem = styled.li`
   ${tw`mr-10`}
   a {
-    ${tw`font-medium text-white xxl:text-base laptop:text-sm`}
+    ${tw`font-medium text-white 3xl:text-base laptop:text-sm`}
   }
 `;
 // const LanguageContainer = styled.div`

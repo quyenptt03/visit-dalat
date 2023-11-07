@@ -13,7 +13,7 @@ import Details from "./components/Details";
 import Map from "./components/Map";
 
 const PageContainer = styled.div`
-  ${tw`mt-20 xxl:mt-24`}
+  ${tw`mt-20 3xl:mt-24`}
 `;
 
 const DetailPlace = () => {

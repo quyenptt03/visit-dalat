@@ -11,7 +11,7 @@ const ArticleHero = styled.div`
   ${tw`grid grid-cols-6 mb-12`}
 `;
 const Title = styled.h1`
-  ${tw`col-span-6 text-3xl font-extrabold text-center text-black laptop:col-span-4 laptop:col-start-2 xxl:text-6xl`}
+  ${tw`col-span-6 text-3xl font-extrabold text-center text-black laptop:col-span-4 laptop:col-start-2 3xl:text-6xl`}
 `;
 const Action = styled.div`
   ${tw`col-span-6 my-5 text-center laptop:col-span-4 laptop:col-start-2`}
@@ -23,7 +23,7 @@ const ButtonContent = styled.div`
   ${tw`flex items-center justify-center text-primary`}
 `;
 const IconText = styled.span`
-  ${tw`mr-2 text-sm font-bold xxl:text-base`}
+  ${tw`mr-2 text-sm font-bold 3xl:text-base`}
 `;
 const Icon = styled.div`
   svg path {

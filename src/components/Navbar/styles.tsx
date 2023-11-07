@@ -2,14 +2,17 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 import { ReactComponent as SearchIcon } from "../../assets/icons/search-icon.svg";
+
 interface NavbarProps {
   $open?: boolean;
 }
+
 export const NavbarContainer = styled.div`
   ${tw`fixed top-0 z-30 flex items-center justify-between w-full h-24 pl-20 pr-32 mx-auto /*border-b border-b-secondary*/`}
 `;
+
 export const NavbarContainer2 = styled.div<{ $open?: boolean }>`
-  ${tw` laptop:py-0 bg-white fixed top-0 z-50 laptop:flex laptop:items-center w-full tablet:h-24 h-20 laptop:pl-20 laptop:pr-32 mx-auto  /* border-b border-b-secondary*/ justify-between`}
+  ${tw` laptop:py-0 bg-white fixed top-0 z-50 laptop:flex laptop:items-center w-full tablet:h-20 3xl:h-24 h-20 laptop:pl-20 laptop:pr-32 mx-auto  /* border-b border-b-secondary*/ justify-between`}
   background: ${(props: NavbarProps) =>
     props.$open === true ? "var(--secondary-color)" : "#fff"};
 `;
@@ -24,7 +27,7 @@ export const Icon = styled.button`
   }
 `;
 export const SearchIconContainer = styled(SearchIcon)`
-  ${tw`hidden stroke-black laptop:w-5 laptop:h-5 xxl:w-full xxl:h-full laptop:block`}
+  ${tw`hidden stroke-black laptop:w-5 laptop:h-5 3xl:w-full 3xl:h-full laptop:block`}
 `;
 export const WishListContainer = styled.a`
   ${tw`laptop:mr-11`}
@@ -46,10 +49,10 @@ export const LanguageContainer = styled.div`
   ${tw`flex items-center col-span-6 mr-5 laptop:text-sm`}
 `;
 export const Language = styled.select`
-  ${tw`text-xl font-semibold bg-transparent outline-none appearance-none cursor-pointer text-primary`}
+  ${tw`text-lg font-semibold bg-transparent outline-none appearance-none cursor-pointer text-primary`}
 `;
 export const LanguageOptions = styled.option`
-  ${tw`text-base font-bold text-black uppercase laptop:text-3xl`}
+  ${tw`text-base font-bold text-black uppercase laptop:text-lg`}
 `;
 export const LanguageLabel = styled.label`
   ${tw`mr-3 text-black`}

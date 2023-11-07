@@ -6,10 +6,10 @@ interface ButtonProps {
 }
 
 // export const PostContainer = styled.div`
-//   ${tw`block mb-14 xxl:w-96 laptop:w-80`}
+//   ${tw`block mb-14 3xl:w-96 laptop:w-80`}
 // `;
 export const PostContainer = styled.div`
-  ${tw`block w-full px-5 mb-14`}
+  ${tw`block w-full px-5 mb-14 2xl:px-0 2xl:pr-6 3xl:px-5`}
 `;
 export const ImageContainer = styled.div`
   ${tw`relative w-full overflow-hidden rounded-t-lg rounded-br-lg cursor-pointer`}
@@ -32,10 +32,10 @@ export const PostImage = styled.img`
   }
 `;
 export const PostTitle = styled.div`
-  ${tw`w-[calc(100%-3rem)] mt-5 mb-1 xxl:text-lg font-bold capitalize text-raven-black cursor-pointer laptop:text-base h-8`}
+  ${tw`3xl:w-[calc(100%-3rem)] w-[calc(100%-2.75rem)] mt-5 mb-1 3xl:text-lg font-bold capitalize text-raven-black cursor-pointer laptop:text-base h-8`}
 `;
 export const PostDescription = styled.div`
-  ${tw`w-[calc(100%-3rem)] xxl:text-base font-medium  leading-7 text-gray laptop:text-sm`}
+  ${tw`3xl:w-[calc(100%-3rem)] w-[calc(100%-2.75rem)] 3xl:text-base font-medium  leading-7 text-gray laptop:text-sm`}
 `;
 export const ButtonContainer = styled.div`
   ${tw`absolute bottom-0 right-0`}

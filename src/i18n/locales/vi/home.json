@@ -2,7 +2,7 @@
   "hero image": {
     "explore": "khám phá",
     "Dalat": "Đà Lạt",
-    "see more": "xem thêm",
+    "see more": "Xem thêm",
     "read more": "Tìm hiểu thêm",
     "Tuyen Lam lake": "Hồ Tuyền Lâm",
     "love valley": "Thung lũng tình yêu",
@@ -46,7 +46,8 @@
   },
   "places to stay": {
     "places to stay": "Lưu trú",
-    "best places to stay in Dalat": "Nơi nghỉ chân lý tưởng"
+    "best places to stay in Dalat": "Nơi nghỉ chân lý tưởng",
+    "see more": "Xem thêm"
   },
   "button": {
     "explore": "khám phá"

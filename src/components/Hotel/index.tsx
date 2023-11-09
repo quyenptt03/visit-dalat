@@ -1,7 +1,14 @@
 import React from "react";
+import { IconButton } from "../Button";
 import StarRatings from "react-star-ratings";
 
-import { Container, ImageContainer, Image, Title } from "./styles";
+import {
+  Container,
+  ImageContainer,
+  Image,
+  Title,
+  ButtonContainer,
+} from "./styles";
 
 interface IHotelProps {
   imgSrc: string;
@@ -15,6 +22,9 @@ const HotelCard = (props: IHotelProps) => {
     <Container>
       <ImageContainer>
         <Image src={imgSrc} alt="hotel" loading="lazy" />
+        <ButtonContainer>
+          <IconButton type="saveBtn" />
+        </ButtonContainer>
       </ImageContainer>
       <Title>{title}</Title>
       <StarRatings

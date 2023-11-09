@@ -8,16 +8,36 @@ import {
   SwiperBtns,
   NextButtonContainer,
   ItemContainer,
+  Button,
+  ButtonText,
+  ForwardIconContainer,
 } from "./styles";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Hotel1 from "../../../assets/hotels/hotel1.png";
 import Hotel2 from "../../../assets/hotels/hotel2.png";
 import Hotel3 from "../../../assets/hotels/hotel3.png";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import defaultData from "../../../data/places-to-stay.json";
 
 type SliderRef = { slickNext: () => any; slickPrev: () => any };
 
-const HotelsCarousel = () => {
+interface IHotelProps {
+  title: string;
+  rating: number;
+  images: Array<string>;
+}
+
+interface IHotelCarouselProps {
+  hotelsInfo?: Array<IHotelProps>;
+  showSeeMoreBtn: boolean;
+}
+
+const HotelsCarousel = (props: IHotelCarouselProps) => {
+  const { showSeeMoreBtn, hotelsInfo } = props;
+  const infos = hotelsInfo ? hotelsInfo : defaultData.hotels;
+  const { t } = useTranslation("home");
   const slide = useRef<SliderRef>(null);
   const [disablePrevBtn, setDisablePrevBtn] = useState(true);
   const [disableNextBtn, setDisableNextBtn] = useState(false);
@@ -60,7 +80,7 @@ const HotelsCarousel = () => {
       setDisablePrevBtn(false);
     }
 
-    if (currentSlide === 3) {
+    if (currentSlide === infos.length - 3) {
       setDisableNextBtn(true);
     } else {
       setDisableNextBtn(false);
@@ -69,6 +89,12 @@ const HotelsCarousel = () => {
 
   return (
     <CarouselContainer>
+      {showSeeMoreBtn && (
+        <Button as={Link} to={"/destinations/places-to-stay"}>
+          <ButtonText>{t("places to stay.see more")}</ButtonText>
+          <ForwardIconContainer />
+        </Button>
+      )}
       <SwiperBtns>
         <IconButton
           type="prevBtn"
@@ -85,48 +111,15 @@ const HotelsCarousel = () => {
       </SwiperBtns>
       <SliderContainer>
         <Slider ref={slide} {...settings} afterChange={handleAfterChange}>
-          <ItemContainer>
-            <HotelCard
-              imgSrc={Hotel1}
-              title="Ana Mandara Villas Dalat Resort & Spa"
-              star={4.5}
-            />
-          </ItemContainer>
-          <ItemContainer>
-            <HotelCard
-              imgSrc={Hotel2}
-              title="Dalat Palace Heritage Hotel"
-              star={4.5}
-            />
-          </ItemContainer>
-          <ItemContainer>
-            <HotelCard
-              imgSrc={Hotel3}
-              title="Terracotta Hotel and Resort Dalat"
-              star={4.5}
-            />
-          </ItemContainer>
-          <ItemContainer>
-            <HotelCard
-              imgSrc={Hotel1}
-              title="Ana Mandara Villas Dalat Resort & Spa"
-              star={4}
-            />
-          </ItemContainer>
-          <ItemContainer>
-            <HotelCard
-              imgSrc={Hotel2}
-              title="Ana Mandara Villas Dalat Resort & Spa"
-              star={3.5}
-            />
-          </ItemContainer>
-          <ItemContainer>
-            <HotelCard
-              imgSrc={Hotel3}
-              title="Ana Mandara Villas Dalat Resort & Spa"
-              star={5}
-            />
-          </ItemContainer>
+          {infos.map((info: IHotelProps) => (
+            <ItemContainer>
+              <HotelCard
+                imgSrc={info.images[0]}
+                title={info.title}
+                star={info.rating}
+              />
+            </ItemContainer>
+          ))}
         </Slider>
       </SliderContainer>
     </CarouselContainer>

@@ -1,0 +1,248 @@
+{
+  "hotels": [
+    {
+      "id": 1,
+      "title": "Khách sạn Peach Valley",
+      "rating": 4.8,
+      "images": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696565.jpg?k=2672044e125e393bcb3017214998a59b23ba61b353432973f97f2f0d372c95bd&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281345082.jpg?k=f99a42806835c67d3570e9469ada0bef74621ef8b8001adc719ca27268a61504&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281483810.jpg?k=ff58bd2caea2ee482fb963d5de914f53064b50f48842ec222e64e27166cb6e7b&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696566.jpg?k=3722c8673a15ba8a5750bc8b7858d1e85c7e66acc2fc61116e7bc79a07d6ed36&o=&hp=1"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Khách sạn Kanari Đà Lạt",
+      "rating": 4.8,
+      "images": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/298940080.jpg?k=1e15e06d530fdd45b8a782da7f070575456236e7d7020b8d7d08340a89478579&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/484445881.jpg?k=0da5459ee6d89aab49678dbebe0d794bb7e7ce5e9cbc0392cb31c10faa24de5e&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/221772409.jpg?k=76415a10b02cf074531edfbba8a0221615dc1b7a30be42b69acde51859329302&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/298940092.jpg?k=70c31cbe5f46c2d101e425770374e185cd14822888b10fadcabfcec98c1a4550&o=&hp=1"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "The Luxe Hotel  Da Lat",
+      "rating": 4.8,
+      "images": [
+        "https://pix8.agoda.net/hotelImages/4942635/-1/c5a4033fa1032a9e016017166655d32b.jpg?ce=0&s=512x384",
+        "https://pix8.agoda.net/hotelImages/4942635/-1/b187d324a6a84778c776140660182c9b.jpg?ca=0&ce=1&s=512x384",
+        "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/160552961.jpg?k=3f8937f38b5543d51c3da704d33a4b1a975321b6ff15feab0201af90f0f43731&o="
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Khách sạn Peach Valley",
+      "rating": 4.8,
+      "images": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696565.jpg?k=2672044e125e393bcb3017214998a59b23ba61b353432973f97f2f0d372c95bd&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281345082.jpg?k=f99a42806835c67d3570e9469ada0bef74621ef8b8001adc719ca27268a61504&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281483810.jpg?k=ff58bd2caea2ee482fb963d5de914f53064b50f48842ec222e64e27166cb6e7b&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696566.jpg?k=3722c8673a15ba8a5750bc8b7858d1e85c7e66acc2fc61116e7bc79a07d6ed36&o=&hp=1"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Khách sạn Kanari Đà Lạt",
+      "rating": 4.8,
+      "images": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/298940080.jpg?k=1e15e06d530fdd45b8a782da7f070575456236e7d7020b8d7d08340a89478579&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/484445881.jpg?k=0da5459ee6d89aab49678dbebe0d794bb7e7ce5e9cbc0392cb31c10faa24de5e&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/221772409.jpg?k=76415a10b02cf074531edfbba8a0221615dc1b7a30be42b69acde51859329302&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/298940092.jpg?k=70c31cbe5f46c2d101e425770374e185cd14822888b10fadcabfcec98c1a4550&o=&hp=1"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "The Luxe Hotel  Da Lat",
+      "rating": 4.8,
+      "images": [
+        "https://pix8.agoda.net/hotelImages/4942635/-1/c5a4033fa1032a9e016017166655d32b.jpg?ce=0&s=512x384",
+        "https://pix8.agoda.net/hotelImages/4942635/-1/b187d324a6a84778c776140660182c9b.jpg?ca=0&ce=1&s=512x384",
+        "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/160552961.jpg?k=3f8937f38b5543d51c3da704d33a4b1a975321b6ff15feab0201af90f0f43731&o="
+      ]
+    }
+  ],
+  "motels": [
+    {
+      "id": 1,
+      "title": "Khách sạn Peach Valley",
+      "rating": 4.8,
+      "images": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696565.jpg?k=2672044e125e393bcb3017214998a59b23ba61b353432973f97f2f0d372c95bd&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281345082.jpg?k=f99a42806835c67d3570e9469ada0bef74621ef8b8001adc719ca27268a61504&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281483810.jpg?k=ff58bd2caea2ee482fb963d5de914f53064b50f48842ec222e64e27166cb6e7b&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696566.jpg?k=3722c8673a15ba8a5750bc8b7858d1e85c7e66acc2fc61116e7bc79a07d6ed36&o=&hp=1"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Khách sạn Kanari Đà Lạt",
+      "rating": 4.8,
+      "images": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/298940080.jpg?k=1e15e06d530fdd45b8a782da7f070575456236e7d7020b8d7d08340a89478579&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/484445881.jpg?k=0da5459ee6d89aab49678dbebe0d794bb7e7ce5e9cbc0392cb31c10faa24de5e&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/221772409.jpg?k=76415a10b02cf074531edfbba8a0221615dc1b7a30be42b69acde51859329302&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/298940092.jpg?k=70c31cbe5f46c2d101e425770374e185cd14822888b10fadcabfcec98c1a4550&o=&hp=1"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "The Luxe Hotel  Da Lat",
+      "rating": 4.8,
+      "images": [
+        "https://pix8.agoda.net/hotelImages/4942635/-1/c5a4033fa1032a9e016017166655d32b.jpg?ce=0&s=512x384",
+        "https://pix8.agoda.net/hotelImages/4942635/-1/b187d324a6a84778c776140660182c9b.jpg?ca=0&ce=1&s=512x384",
+        "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/160552961.jpg?k=3f8937f38b5543d51c3da704d33a4b1a975321b6ff15feab0201af90f0f43731&o="
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Khách sạn Peach Valley",
+      "rating": 4.8,
+      "images": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696565.jpg?k=2672044e125e393bcb3017214998a59b23ba61b353432973f97f2f0d372c95bd&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281345082.jpg?k=f99a42806835c67d3570e9469ada0bef74621ef8b8001adc719ca27268a61504&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281483810.jpg?k=ff58bd2caea2ee482fb963d5de914f53064b50f48842ec222e64e27166cb6e7b&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696566.jpg?k=3722c8673a15ba8a5750bc8b7858d1e85c7e66acc2fc61116e7bc79a07d6ed36&o=&hp=1"
+      ]
+    }
+  ],
+  "homestays": [
+    {
+      "id": 1,
+      "title": "Khách sạn Peach Valley",
+      "rating": 4.8,
+      "images": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696565.jpg?k=2672044e125e393bcb3017214998a59b23ba61b353432973f97f2f0d372c95bd&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281345082.jpg?k=f99a42806835c67d3570e9469ada0bef74621ef8b8001adc719ca27268a61504&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281483810.jpg?k=ff58bd2caea2ee482fb963d5de914f53064b50f48842ec222e64e27166cb6e7b&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696566.jpg?k=3722c8673a15ba8a5750bc8b7858d1e85c7e66acc2fc61116e7bc79a07d6ed36&o=&hp=1"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Khách sạn Kanari Đà Lạt",
+      "rating": 4.8,
+      "images": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/298940080.jpg?k=1e15e06d530fdd45b8a782da7f070575456236e7d7020b8d7d08340a89478579&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/484445881.jpg?k=0da5459ee6d89aab49678dbebe0d794bb7e7ce5e9cbc0392cb31c10faa24de5e&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/221772409.jpg?k=76415a10b02cf074531edfbba8a0221615dc1b7a30be42b69acde51859329302&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/298940092.jpg?k=70c31cbe5f46c2d101e425770374e185cd14822888b10fadcabfcec98c1a4550&o=&hp=1"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "The Luxe Hotel  Da Lat",
+      "rating": 4.8,
+      "images": [
+        "https://pix8.agoda.net/hotelImages/4942635/-1/c5a4033fa1032a9e016017166655d32b.jpg?ce=0&s=512x384",
+        "https://pix8.agoda.net/hotelImages/4942635/-1/b187d324a6a84778c776140660182c9b.jpg?ca=0&ce=1&s=512x384",
+        "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/160552961.jpg?k=3f8937f38b5543d51c3da704d33a4b1a975321b6ff15feab0201af90f0f43731&o="
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Khách sạn Peach Valley",
+      "rating": 4.8,
+      "images": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696565.jpg?k=2672044e125e393bcb3017214998a59b23ba61b353432973f97f2f0d372c95bd&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281345082.jpg?k=f99a42806835c67d3570e9469ada0bef74621ef8b8001adc719ca27268a61504&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281483810.jpg?k=ff58bd2caea2ee482fb963d5de914f53064b50f48842ec222e64e27166cb6e7b&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696566.jpg?k=3722c8673a15ba8a5750bc8b7858d1e85c7e66acc2fc61116e7bc79a07d6ed36&o=&hp=1"
+      ]
+    }
+  ],
+  "resorts": [
+    {
+      "id": 1,
+      "title": "Khách sạn Peach Valley",
+      "rating": 4.8,
+      "images": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696565.jpg?k=2672044e125e393bcb3017214998a59b23ba61b353432973f97f2f0d372c95bd&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281345082.jpg?k=f99a42806835c67d3570e9469ada0bef74621ef8b8001adc719ca27268a61504&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281483810.jpg?k=ff58bd2caea2ee482fb963d5de914f53064b50f48842ec222e64e27166cb6e7b&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696566.jpg?k=3722c8673a15ba8a5750bc8b7858d1e85c7e66acc2fc61116e7bc79a07d6ed36&o=&hp=1"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Khách sạn Kanari Đà Lạt",
+      "rating": 4.8,
+      "images": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/298940080.jpg?k=1e15e06d530fdd45b8a782da7f070575456236e7d7020b8d7d08340a89478579&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/484445881.jpg?k=0da5459ee6d89aab49678dbebe0d794bb7e7ce5e9cbc0392cb31c10faa24de5e&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/221772409.jpg?k=76415a10b02cf074531edfbba8a0221615dc1b7a30be42b69acde51859329302&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/298940092.jpg?k=70c31cbe5f46c2d101e425770374e185cd14822888b10fadcabfcec98c1a4550&o=&hp=1"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "The Luxe Hotel  Da Lat",
+      "rating": 4.8,
+      "images": [
+        "https://pix8.agoda.net/hotelImages/4942635/-1/c5a4033fa1032a9e016017166655d32b.jpg?ce=0&s=512x384",
+        "https://pix8.agoda.net/hotelImages/4942635/-1/b187d324a6a84778c776140660182c9b.jpg?ca=0&ce=1&s=512x384",
+        "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/160552961.jpg?k=3f8937f38b5543d51c3da704d33a4b1a975321b6ff15feab0201af90f0f43731&o="
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Khách sạn Peach Valley",
+      "rating": 4.8,
+      "images": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696565.jpg?k=2672044e125e393bcb3017214998a59b23ba61b353432973f97f2f0d372c95bd&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281345082.jpg?k=f99a42806835c67d3570e9469ada0bef74621ef8b8001adc719ca27268a61504&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281483810.jpg?k=ff58bd2caea2ee482fb963d5de914f53064b50f48842ec222e64e27166cb6e7b&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696566.jpg?k=3722c8673a15ba8a5750bc8b7858d1e85c7e66acc2fc61116e7bc79a07d6ed36&o=&hp=1"
+      ]
+    }
+  ],
+  "camping and slamping": [
+    {
+      "id": 1,
+      "title": "Khách sạn Peach Valley",
+      "rating": 4.8,
+      "images": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696565.jpg?k=2672044e125e393bcb3017214998a59b23ba61b353432973f97f2f0d372c95bd&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281345082.jpg?k=f99a42806835c67d3570e9469ada0bef74621ef8b8001adc719ca27268a61504&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281483810.jpg?k=ff58bd2caea2ee482fb963d5de914f53064b50f48842ec222e64e27166cb6e7b&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696566.jpg?k=3722c8673a15ba8a5750bc8b7858d1e85c7e66acc2fc61116e7bc79a07d6ed36&o=&hp=1"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Khách sạn Kanari Đà Lạt",
+      "rating": 4.8,
+      "images": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/298940080.jpg?k=1e15e06d530fdd45b8a782da7f070575456236e7d7020b8d7d08340a89478579&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/484445881.jpg?k=0da5459ee6d89aab49678dbebe0d794bb7e7ce5e9cbc0392cb31c10faa24de5e&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/221772409.jpg?k=76415a10b02cf074531edfbba8a0221615dc1b7a30be42b69acde51859329302&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/298940092.jpg?k=70c31cbe5f46c2d101e425770374e185cd14822888b10fadcabfcec98c1a4550&o=&hp=1"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "The Luxe Hotel  Da Lat",
+      "rating": 4.8,
+      "images": [
+        "https://pix8.agoda.net/hotelImages/4942635/-1/c5a4033fa1032a9e016017166655d32b.jpg?ce=0&s=512x384",
+        "https://pix8.agoda.net/hotelImages/4942635/-1/b187d324a6a84778c776140660182c9b.jpg?ca=0&ce=1&s=512x384",
+        "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/160552961.jpg?k=3f8937f38b5543d51c3da704d33a4b1a975321b6ff15feab0201af90f0f43731&o="
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Khách sạn Peach Valley",
+      "rating": 4.8,
+      "images": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696565.jpg?k=2672044e125e393bcb3017214998a59b23ba61b353432973f97f2f0d372c95bd&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281345082.jpg?k=f99a42806835c67d3570e9469ada0bef74621ef8b8001adc719ca27268a61504&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281483810.jpg?k=ff58bd2caea2ee482fb963d5de914f53064b50f48842ec222e64e27166cb6e7b&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/331696566.jpg?k=3722c8673a15ba8a5750bc8b7858d1e85c7e66acc2fc61116e7bc79a07d6ed36&o=&hp=1"
+      ]
+    }
+  ]
+}

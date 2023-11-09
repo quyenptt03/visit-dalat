@@ -6,10 +6,11 @@ import {
   DestinationDetailsPage,
   ArticlesPage,
   ArticleDetailsPage,
+  PlacesToStayPage,
   ErrorPage,
+  LoginPage,
+  RegisterPage,
 } from "./pages";
-import LoginPage from "./pages/auth/LoginPage";
-import RegisterPage from "./pages/auth/RegisterPage";
 
 function App() {
   const { pathname } = useLocation();
@@ -23,6 +24,10 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/destinations" element={<DestinationsPage />} />
+        <Route
+          path="/destinations/places-to-stay"
+          element={<PlacesToStayPage />}
+        />
         <Route path="/destinations/:id" element={<DestinationDetailsPage />} />
         <Route path="/articles" element={<ArticlesPage />} />
         <Route path="/articles/:id" element={<ArticleDetailsPage />} />

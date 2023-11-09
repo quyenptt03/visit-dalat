@@ -80,7 +80,7 @@ const HotelsSection = () => {
         field={t("places to stay.places to stay")}
         title={t("places to stay.best places to stay in Dalat")}
       />
-      <HotelsCarousel />
+      <HotelsCarousel showSeeMoreBtn={true} />
     </SectionMarginer>
   );
 };

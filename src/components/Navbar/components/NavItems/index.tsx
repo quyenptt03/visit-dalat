@@ -7,10 +7,10 @@ const NavItems = () => {
   const { t } = useTranslation("nav");
   return (
     <ListContainer>
-      <NavItem to="/" text={t("home")} />
+      {/* <NavItem to="/" text={t("home")} /> */}
       <NavItem to="/destinations" text={t("destinations")} />
-      {/* <NavItem to="/" text="Hoạt động" />
-      <NavItem to="/" text="Ẩm thực" /> */}
+      <NavItem to="/activities" text="Hoạt động" />
+      <NavItem to="/cuisines" text="Ẩm thực" />
       <NavItem to="/articles" text={t("articles")} />
     </ListContainer>
   );

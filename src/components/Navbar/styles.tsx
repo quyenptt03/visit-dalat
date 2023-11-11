@@ -40,7 +40,7 @@ export const WishListContainer = styled.a`
 `;
 
 export const Nav = styled.div`
-  ${tw`flex flex-col items-center justify-around w-full h-screen mt-3 transition-all duration-300 ease-linear laptop:justify-between laptop:w-2/3 laptop:flex-row laptop:bg-white bg-secondary laptop:h-full laptop:mt-0 laptop:translate-x-0`}
+  ${tw`flex flex-col items-center justify-around w-full h-screen mt-3 transition-all duration-300 ease-linear laptop:justify-between laptop:w-3/4 laptop:flex-row laptop:bg-white bg-secondary laptop:h-full laptop:mt-0 laptop:translate-x-0`}
   transform: ${(props: NavbarProps) =>
     props.$open === true ? "translateX(0)" : "translateX(100%);"};
 `;

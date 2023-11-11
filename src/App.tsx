@@ -11,6 +11,7 @@ import {
   LoginPage,
   RegisterPage,
 } from "./pages";
+import ArticlePageV2 from "./pages/ArticlePageV2";
 
 function App() {
   const { pathname } = useLocation();
@@ -29,7 +30,7 @@ function App() {
           element={<PlacesToStayPage />}
         />
         <Route path="/destinations/:id" element={<DestinationDetailsPage />} />
-        <Route path="/articles" element={<ArticlesPage />} />
+        <Route path="/articles" element={<ArticlePageV2 />} />
         <Route path="/articles/:id" element={<ArticleDetailsPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>

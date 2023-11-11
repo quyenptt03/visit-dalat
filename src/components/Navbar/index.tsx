@@ -25,7 +25,6 @@ import {
   UserContainer,
   WishListContainer,
 } from "./styles";
-// import i18n from "../../i18n/i18n";
 
 const useOutsideClick = (handler: Function) => {
   let domNode = useRef<any>();

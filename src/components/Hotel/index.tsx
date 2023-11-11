@@ -9,6 +9,7 @@ import {
   Title,
   ButtonContainer,
 } from "./styles";
+import { Link } from "react-router-dom";
 
 interface IHotelProps {
   imgSrc: string;
@@ -19,7 +20,7 @@ interface IHotelProps {
 const HotelCard = (props: IHotelProps) => {
   const { imgSrc, title, star } = props;
   return (
-    <Container>
+    <Container as={Link} to={"/destinations/646845f80c759a65d4fcf81c"}>
       <ImageContainer>
         <Image src={imgSrc} alt="hotel" loading="lazy" />
         <ButtonContainer>

@@ -28,12 +28,14 @@ const HotelCard = (props: IHotelProps) => {
         </ButtonContainer>
       </ImageContainer>
       <Title>{title}</Title>
-      <StarRatings
-        rating={star}
-        starDimension="20px"
-        starSpacing="3px"
-        starRatedColor="#FF9921"
-      />
+      {star != 0 && (
+        <StarRatings
+          rating={star}
+          starDimension="20px"
+          starSpacing="3px"
+          starRatedColor="#FF9921"
+        />
+      )}
     </Container>
   );
 };

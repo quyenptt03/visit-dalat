@@ -18,7 +18,7 @@ export const NextButtonContainer = styled.div`
   ${tw`ml-5`}
 `;
 export const ItemContainer = styled.div`
-  ${tw`w-full tablet:w-1/2 3xl:w-1/3`}
+  ${tw`w-full tablet:w-1/2 3xl:w-1/3 3xl:h-[323px] laptop:h-72 2xl:h-64 h-56`}
 `;
 export const Button = styled.div`
   ${tw`flex start-0 ml-3`}

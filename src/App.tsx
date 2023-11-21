@@ -10,6 +10,7 @@ import {
   ErrorPage,
   LoginPage,
   RegisterPage,
+  ActivitiesPage,
 } from "./pages";
 import ArticlePageV2 from "./pages/ArticlePageV2";
 
@@ -31,7 +32,9 @@ function App() {
         />
         <Route path="/destinations/:id" element={<DestinationDetailsPage />} />
         <Route path="/articles" element={<ArticlePageV2 />} />
+        <Route path="/articlesv1" element={<ArticlesPage />} />
         <Route path="/articles/:id" element={<ArticleDetailsPage />} />
+        <Route path="/activities" element={<ActivitiesPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>

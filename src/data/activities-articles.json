@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    "imgSrc": "https://www.vn.kayak.com/rimg/himg/b7/8e/fa/hotelsdotcom-429950-bee427d9_w-070011.jpg?width=1366&height=768&xhint=1080&yhint=666&crop=true"
+  },
+  {
+    "id": 2,
+    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    "imgSrc": "https://statics.vinpearl.com/thanh-pho-da-lat-3_1687965188.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    "imgSrc": "https://motogo.vn/wp-content/uploads/2023/05/homestay-da-lat-rung-thong-3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+    "imgSrc": "https://bazaarvietnam.vn/wp-content/uploads/2023/10/harper-bazaar-cac-dia-diem-du-lich-da-lat-hot-1-e1698564363958.jpg"
+  }
+]

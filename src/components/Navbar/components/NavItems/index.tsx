@@ -10,7 +10,7 @@ const NavItems = () => {
       {/* <NavItem to="/" text={t("home")} /> */}
       <NavItem to="/destinations" text={t("destinations")} />
       <NavItem to="/activities" text="Hoạt động" />
-      <NavItem to="/cuisines" text="Ẩm thực" />
+      <NavItem to="/foods" text="Ẩm thực" />
       <NavItem to="/articles" text={t("articles")} />
     </ListContainer>
   );

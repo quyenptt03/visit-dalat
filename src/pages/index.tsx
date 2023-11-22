@@ -6,6 +6,7 @@ import ArticlePageV2 from "./ArticlePageV2";
 import ArticleDetailsPage from "./ArticleDetailsPage";
 import PlacesToStayPage from "./PlacesToStayPage";
 import ActivitiesPage from "./ActivitiesPage";
+import FoodPage from "./FoodPage";
 import LoginPage from "./auth/LoginPage";
 import RegisterPage from "./auth/RegisterPage";
 import ErrorPage from "./ErrorPage";
@@ -19,6 +20,7 @@ export {
   ArticleDetailsPage,
   PlacesToStayPage,
   ActivitiesPage,
+  FoodPage,
   LoginPage,
   RegisterPage,
   ErrorPage,

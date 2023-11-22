@@ -1,0 +1,186 @@
+{
+  "foods": [
+    {
+      "id": 1,
+      "imgSrc": "https://nld.mediacdn.vn/2020/7/17/1041002192957544049433235675327414643273418n-15949552688401678246193.jpg",
+      "title": "Một bữa ăn đầy đủ dưỡng chất và dễ nấu thì món"
+    },
+    {
+      "id": 2,
+      "imgSrc": "https://r2.nucuoimekong.com/wp-content/uploads/dac-san-noi-tieng-tai-da-lat.jpg",
+      "title": "Một bữa ăn đầy đủ dưỡng chất và dễ nấu thì món canh đu đủ "
+    },
+    {
+      "id": 3,
+      "imgSrc": "https://r2.nucuoimekong.com/wp-content/uploads/xien-que-nuong.jpg",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    },
+    {
+      "id": 4,
+      "imgSrc": "https://cdn3.ivivu.com/2022/09/b%C3%A1nh-%C6%B0%E1%BB%9Bt-l%C3%B2ng-g%C3%A0-ivivu.jpg",
+      "title": "Một bữa ăn đầy đủ dưỡng chất và dễ nấu thì món"
+    },
+    {
+      "id": 5,
+      "imgSrc": "https://runglakimresort.com/Uploads/Images/tintuc/1280x904/batch_19-compressed-1.jpg",
+      "title": "Một bữa ăn đầy đủ dưỡng chất và dễ nấu thì món canh đu đủ "
+    },
+    {
+      "id": 6,
+      "imgSrc": "https://focusasiatravel.vn/wp-content/uploads/2019/12/ga-len-mam-bbq-quan-ngon-da-lat.jpg",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    }
+  ],
+  "foodCircles": [
+    {
+      "id": 1,
+      "imgSrc": "https://eholiday.vn/wp-content/uploads/2021/05/ban-da-biet-top-5-tiem-ban-pizza-viet-nam-nuc-tieng-tai-da-lat.jpg",
+      "title": "Bánh tráng"
+    },
+    {
+      "id": 2,
+      "imgSrc": "https://www.flynow.vn/blog/wp-content/uploads/2017/02/tumblr_inline_oeme87MBVT1tzhqeh_1280.jpg",
+      "title": "Nem nướng"
+    },
+    {
+      "id": 3,
+      "imgSrc": "https://go2joy.s3.ap-southeast-1.amazonaws.com/blog/wp-content/uploads/2022/03/29170640/banh-uot-long-ga-da-lat.jpg",
+      "title": "Bánh ướt"
+    },
+    {
+      "id": 4,
+      "imgSrc": "https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/06_2020/mon-ngon-da-lat-oc-buou-nhoi-thit.jpg",
+      "title": "Ốc bưu nhồi thịt"
+    },
+    {
+      "id": 5,
+      "imgSrc": "https://divui.com/blog/wp-content/uploads/2016/11/an-gi-o-da-lat-a16.jpg",
+      "title": "Bò bía"
+    },
+    {
+      "id": 6,
+      "imgSrc": "https://media.mia.vn/uploads/blog-du-lich/top-10-dia-chi-mua-dau-tay-ngon-nhat-da-lat-cover-1634698408.jpg",
+      "title": "Dâu tây"
+    },
+    {
+      "id": 7,
+      "imgSrc": "https://eholiday.vn/wp-content/uploads/2021/05/ban-da-biet-top-5-tiem-ban-pizza-viet-nam-nuc-tieng-tai-da-lat.jpg",
+      "title": "Bánh tráng"
+    },
+    {
+      "id": 8,
+      "imgSrc": "https://www.flynow.vn/blog/wp-content/uploads/2017/02/tumblr_inline_oeme87MBVT1tzhqeh_1280.jpg",
+      "title": "Nem nướng"
+    },
+    {
+      "id": 9,
+      "imgSrc": "https://go2joy.s3.ap-southeast-1.amazonaws.com/blog/wp-content/uploads/2022/03/29170640/banh-uot-long-ga-da-lat.jpg",
+      "title": "Bánh ướt"
+    },
+    {
+      "id": 10,
+      "imgSrc": "https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/06_2020/mon-ngon-da-lat-oc-buou-nhoi-thit.jpg",
+      "title": "Ốc bưu nhồi thịt"
+    },
+    {
+      "id": 11,
+      "imgSrc": "https://divui.com/blog/wp-content/uploads/2016/11/an-gi-o-da-lat-a16.jpg",
+      "title": "Bò bía"
+    },
+    {
+      "id": 12,
+      "imgSrc": "https://media.mia.vn/uploads/blog-du-lich/top-10-dia-chi-mua-dau-tay-ngon-nhat-da-lat-cover-1634698408.jpg",
+      "title": "Dâu tây"
+    }
+  ],
+  "foodArticles": [
+    {
+      "id": 1,
+      "title": "Thưởng thức 10 đặc sản Đà Lạt - tinh túy ẩm thực xứ ngàn hoa",
+      "imgSrc": "https://ik.imagekit.io/tvlk/blog/2022/09/dac-san-da-lat-4.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Những món ngon, quán đẹp bỏ qua thì tiếc ở Đà Lạt",
+      "imgSrc": "https://nld.mediacdn.vn/291774122806476800/2022/12/31/quan-bep-vuon-da-lat-1-16724827720771859224101.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Tổng hợp 30 quán ăn ngon ở Đà Lạt phải ăn thử một lần",
+      "imgSrc": "https://media.foody.vn/blogscontents/foody-upload-api-foody-admin-nha00022-637453698603062199-210104151100.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "imgSrc": "https://vietngon.vn/wp-content/uploads/2022/11/Quan-nhau-Da-Lat-1.jpg"
+    }
+  ],
+  "featuredRestaurants": [
+    {
+      "id": 1,
+      "title": "8678",
+      "rating": 4.8,
+      "images": [
+        "https://lh5.googleusercontent.com/RAq1s0YYKwF0YNCU4pXagNJFuTmNV6itJoyTe4SuiaTA6G-vJhWeS6vvewGCX4b1Kel3iY_k2_Wto2aYPJwS1AUFulhA2AwnikK8RaXHUQyibPEkMpH6ryLe9-ElSWacAKhBjfQ=s0",
+        "https://agotourist.com/wp-content/uploads/2022/04/khu-cam-trai-luxcamp.jpg",
+        "https://cdn.alongwalk.info/vn/wp-content/uploads/2022/04/15050001/image-review-trai-nghiem-tour-cam-trai-cung-lux-camp-da-lat-164994840116304.jpg",
+        "https://cdn.alongwalk.info/wp-content/uploads/2022/05/30060655/image-nhung-dia-diem-glamping-da-lat-don-tim-ai-me-xe-dich-165384041478511.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Quán cơm ngày 3 bữa",
+      "rating": 4.8,
+      "images": [
+        "https://www.kkday.com/vi/blog/wp-content/uploads/1-240.jpg",
+        "https://glamptrip.vn/wp-content/uploads/2022/09/305630535_148836941170682_2267731857392315166_n.jpeg",
+        "https://cloudglamping.com/wp-content/uploads/2023/04/cloudglampingslide6.jpg",
+        "https://dalatreview.vn/wp-content/uploads/2022/10/307454909_151365520917824_1803162455413976429_n.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Blamping – Black Camping BBQ Đà Lạt",
+      "rating": 4.8,
+      "images": [
+        "https://dulichtoday.vn/wp-content/uploads/2019/01/nha-hang-da-lat-nha-hang-phap.jpg",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/459872174.jpg?k=403d4d2341b6be075776ed7fd7eadac26c6ded9c7927486b60128b367b797830&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/459846113.jpg?k=17c8f82059d6f63cb53114e94ce7328471ad27cd118a6dd056952f3d7c86d343&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/459872815.jpg?k=c0296ecd27cf7739ee24927494f1c661cfb282f0a24a187f3f95bf22a1103ea9&o=&hp=1"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Tửu lầu quán",
+      "rating": 4.8,
+      "images": [
+        "https://elitetour.com.vn/files/images/Blogs/tuytuulau2.jpeg",
+        "https://kenh14cdn.com/203336854389633024/2023/11/1/photo-15-1698805731487869070622.jpg",
+        "https://scontent.fsgn13-4.fna.fbcdn.net/v/t39.30808-6/396722793_304090355901879_7248323046610886627_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEbfZAGG3XOtcwbxLWn0E3fKyBlKavmMIkrIGUpq-YwiYpBVGdHIOlYNNVG8cZrBxmy8y6T5OC6hqE9-jffQrQ1&_nc_ohc=byXbAPy2ieAAX_AppTg&_nc_ht=scontent.fsgn13-4.fna&oh=00_AfBWvfAQLzPV19h5Szlefy_j_KXQ2FoSSa3IwUOrZvFulA&oe=6553F9F2",
+        "https://kenh14cdn.com/203336854389633024/2023/11/1/photo-14-1698805730181261821131.jpeg"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Lung Linh Glamping Đà Lạt",
+      "rating": 4.8,
+      "images": [
+        "https://static.vinwonders.com/production/quan-nuong-da-lat-banner.jpg",
+        "https://kenh14cdn.com/203336854389633024/2023/11/1/photo-15-1698805731487869070622.jpg",
+        "https://scontent.fsgn13-4.fna.fbcdn.net/v/t39.30808-6/396722793_304090355901879_7248323046610886627_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEbfZAGG3XOtcwbxLWn0E3fKyBlKavmMIkrIGUpq-YwiYpBVGdHIOlYNNVG8cZrBxmy8y6T5OC6hqE9-jffQrQ1&_nc_ohc=byXbAPy2ieAAX_AppTg&_nc_ht=scontent.fsgn13-4.fna&oh=00_AfBWvfAQLzPV19h5Szlefy_j_KXQ2FoSSa3IwUOrZvFulA&oe=6553F9F2",
+        "https://kenh14cdn.com/203336854389633024/2023/11/1/photo-14-1698805730181261821131.jpeg"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Quán hồi xưa Đà Lạt",
+      "rating": 4.8,
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKjoP58d4oXiMByT9Je-Jsth90Fep4QBlx5Q&usqp=CAU",
+        "https://kenh14cdn.com/203336854389633024/2023/11/1/photo-15-1698805731487869070622.jpg",
+        "https://scontent.fsgn13-4.fna.fbcdn.net/v/t39.30808-6/396722793_304090355901879_7248323046610886627_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEbfZAGG3XOtcwbxLWn0E3fKyBlKavmMIkrIGUpq-YwiYpBVGdHIOlYNNVG8cZrBxmy8y6T5OC6hqE9-jffQrQ1&_nc_ohc=byXbAPy2ieAAX_AppTg&_nc_ht=scontent.fsgn13-4.fna&oh=00_AfBWvfAQLzPV19h5Szlefy_j_KXQ2FoSSa3IwUOrZvFulA&oe=6553F9F2",
+        "https://kenh14cdn.com/203336854389633024/2023/11/1/photo-14-1698805730181261821131.jpeg"
+      ]
+    }
+  ]
+}

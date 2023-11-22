@@ -1,21 +1,6 @@
 import React, { useRef, useState } from "react";
-import tw from "twin.macro";
-import styled from "styled-components";
-
+import { Container, Input, InputSpan } from "./styles";
 import { ReactComponent as SearchIcon } from "../../assets/icons/search-icon.svg";
-
-const Container = styled.form`
-  ${tw`flex border-b-[1px] border-b-gray py-3 w-full`}
-`;
-const InputSpan = styled.span`
-  ${tw`mr-5`}
-  svg {
-    ${tw`w-5 h-5`}
-  }
-`;
-const Input = styled.input`
-  ${tw`w-full text-sm font-medium placeholder:text-sm placeholder:font-semibold focus:outline-none `}
-`;
 
 const SearchBar = ({ onSubmit }: any) => {
   const [searchQuery, setSearchQuery] = useState("");

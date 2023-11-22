@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const Image = styled.img`
-  ${tw`w-full h-screen `}
+  ${tw`w-full h-screen object-cover`}
 `;
 export const Container = styled.div`
   ${tw`relative !flex justify-center `}

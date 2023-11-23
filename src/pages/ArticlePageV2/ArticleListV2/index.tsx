@@ -3,7 +3,6 @@ import queryString from "query-string";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../../redux/hook";
 import { getAllArticles } from "../../../redux/article/actions";
-import Post from "../../../components/Post";
 import CategoriesList from "../../../components/CategoriesList";
 import SearchBar from "../../../components/SearchBar";
 import { getAllCategories } from "../../../redux/category/actions";
@@ -44,12 +43,15 @@ const ArticleListV2 = () => {
   const location = useLocation();
   const dispatch = useAppDispatch();
   const { articles, isLoading } = useAppSelector((state) => state.articles);
+  const { articles: featuredArticles } = useAppSelector(
+    (state) => state.featuredArticles
+  );
   const [totalArticles, setTotalArticles] = useState(0);
   const [filters, setFilters] = useState<Filters>(() => {
     const params = queryString.parse(location.search);
     return {
       page: Number(params.page) || 1,
-      limit: Number(params.limit) || 24,
+      limit: Number(params.limit) || 12,
       categories: (params.categories || "") as string,
       searchQuery: (params.searchQuery || "") as string,
     };
@@ -117,64 +119,82 @@ const ArticleListV2 = () => {
   const handleClearFilters = () => {
     setFilters({
       page: 1,
-      limit: 24,
+      limit: 12,
       categories: "",
       searchQuery: "",
     });
   };
   return (
     <>
-      <Container>
-        <LeftSideContainer>
-          <ContentContainer>
-            <ArticleV1 />
-            <ArticleV1 swap={true} />
-            <ArticleV1 />
-            <ArticleV1 swap={true} />
-            <ArticleV1 />
-            <ArticleV1 swap={true} />
-            <ArticleV1 />
-          </ContentContainer>
-          <PaginationContainer className="custom-pagination">
-            <Pagination
-              pagination={{
-                page: filters.page,
-                limit: filters.limit,
-                total: totalArticles,
-              }}
-              handlePageChange={handlePageChange}
-            />
-          </PaginationContainer>
-        </LeftSideContainer>
-        <RightSideContainer>
-          <FilterContainer>
-            <TitleContainer>
-              <Title>{t("filters")}</Title>
-              <ClearBtn onClick={handleClearFilters}>{t("clear")}</ClearBtn>
-            </TitleContainer>
-            <SearchContainer>
-              <SearchBar onSubmit={handleSearchChange} />
-            </SearchContainer>
-            <CategoriesContainer>
-              <CategoriesList
-                handleCategoryCheck={handleCategoryCheck}
-                isChecked={isChecked}
+      {isLoading ? (
+        <Loading loading={isLoading} color="#1d764a" size={50} />
+      ) : (
+        <Container>
+          <LeftSideContainer>
+            <ContentContainer>
+              {articles?.map((article, index) =>
+                index % 2 == 0 ? (
+                  <ArticleV1
+                    imgSrc={article.featuredImage}
+                    name={article.title}
+                    description={article.body[0].pContent}
+                    url={`/articles/${article._id}`}
+                    key={article._id}
+                  />
+                ) : (
+                  <ArticleV1
+                    imgSrc={article.featuredImage}
+                    name={article.title}
+                    description={article.body[0].pContent}
+                    url={`/articles/${article._id}`}
+                    key={article._id}
+                    swap={true}
+                  />
+                )
+              )}
+            </ContentContainer>
+            <PaginationContainer className="custom-pagination">
+              <Pagination
+                pagination={{
+                  page: filters.page,
+                  limit: filters.limit,
+                  total: totalArticles,
+                }}
+                handlePageChange={handlePageChange}
               />
-            </CategoriesContainer>
-          </FilterContainer>
-          <FeaturedArticles>
-            <TitleContainer>
-              <Title>Bài viết nổi bật</Title>
-            </TitleContainer>
-            <ArticleV2 />
-            <ArticleV2 />
-            <ArticleV2 />
-            <ArticleV2 />
-            <ArticleV2 />
-            <ArticleV2 />
-          </FeaturedArticles>
-        </RightSideContainer>
-      </Container>
+            </PaginationContainer>
+          </LeftSideContainer>
+          <RightSideContainer>
+            <FilterContainer>
+              <TitleContainer>
+                <Title>{t("filters")}</Title>
+                <ClearBtn onClick={handleClearFilters}>{t("clear")}</ClearBtn>
+              </TitleContainer>
+              <SearchContainer>
+                <SearchBar onSubmit={handleSearchChange} />
+              </SearchContainer>
+              <CategoriesContainer>
+                <CategoriesList
+                  handleCategoryCheck={handleCategoryCheck}
+                  isChecked={isChecked}
+                />
+              </CategoriesContainer>
+            </FilterContainer>
+            <FeaturedArticles>
+              <TitleContainer>
+                <Title>Bài viết nổi bật</Title>
+              </TitleContainer>
+              {featuredArticles?.map((article) => (
+                <ArticleV2
+                  url={`/articles/${article._id}`}
+                  name={article.title}
+                  imgSrc={article.featuredImage}
+                />
+              ))}
+            </FeaturedArticles>
+          </RightSideContainer>
+        </Container>
+      )}
     </>
   );
 };

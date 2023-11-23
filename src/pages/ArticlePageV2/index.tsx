@@ -15,7 +15,7 @@ const ArticlePageV2 = () => {
           "Lorrem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut "
         }
         img={
-          "https://photo2.tinhte.vn/data/attachment-files/2022/09/6122275_da_lat_7.jpg"
+          "https://iso.500px.com/wp-content/uploads/2022/09/Honister-Pass-By-Daniel-Casson-2.jpeg"
         }
       />
       <SectionMarginer>

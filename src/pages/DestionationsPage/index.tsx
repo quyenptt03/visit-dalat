@@ -16,7 +16,7 @@ const DestinationsPage = () => {
       <Background
         title={t("hero image.title")}
         subtitle={t("hero image.subtitle")}
-        img={bgImg}
+        img={"https://cdn.mos.cms.futurecdn.net/33ey9QdnBu642B68fJE2Xf.jpg"}
       />
       <SectionMarginer>
         <SectionHeader

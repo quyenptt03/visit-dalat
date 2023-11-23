@@ -43,7 +43,12 @@ type SliderRef = { slickNext: () => any; slickPrev: () => any };
 const HomeCarousel = () => {
   const { t } = useTranslation("home");
 
-  const images = [home1, home2, home3, home4];
+  const images = [
+    home1,
+    "https://iso.500px.com/wp-content/uploads/2022/07/Sunset-somewhere-in-Iowa-By-Vath.-Sok-2.jpeg",
+    "https://images.pexels.com/photos/14976664/pexels-photo-14976664.jpeg?cs=srgb&dl=pexels-nadia-vasil%27eva-14976664.jpg&fm=jpg",
+    "https://wallup.net/wp-content/uploads/2016/01/243256-landscape-nature-forest-mist-path-sunlight-trees-colorful-sunrise-pine_trees.jpg",
+  ];
   const slide = useRef<SliderRef>(null);
   const [slideIndex, setSlideIndex] = useState(0);
   const [disablePrevBtn, setDisablePrevBtn] = useState(true);

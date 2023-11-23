@@ -17,10 +17,10 @@ const InputName = styled.h5`
   ${tw`font-semibold text-base mb-2`}
 `;
 const Textarea = styled.textarea`
-  ${tw`border-2 border-black p-2 text-base text-black w-full`}
+  ${tw`border-[1px] border-black p-2 text-base text-black w-full`}
 `;
 const Input = styled.input`
-  ${tw`border-2 h-10 w-full p-1`}
+  ${tw`border-[1px] h-10 w-full p-1`}
 `;
 const SubmitButton = styled.button`
   ${tw`transition-all duration-200 ease-linear px-8 py-4 border-transparent laptop:px-10 laptop:py-4 3xl:px-12 3xl:py-6 text-primary bg-primary text-base font-medium text-white hover:text-primary hover:bg-secondary`}
